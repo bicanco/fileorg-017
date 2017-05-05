@@ -1,0 +1,31 @@
+********* TAMANHO DOS CAMPOS
+
+========TAMANHO FIXO=========
+documento 				(com \0)	| 19 chars (19 bytes)
+dataHoraCadastro 		(com \0)	| 20 chars (20 bytes)
+dataHoraAtualizacao		(com \0)	| 20 chars (20 bytes)
+ticket								| unsigned int (4 bytes)
+
+=======TAMANHO VARIAVEL======
+dominio, nome, cidade, UF
+
+********* ORDEM DOS CAMPOS
+1. documento
+2. dataHoraCadastro
+3. dataHoraAtualizacao
+4. ticket
+5. dominio
+6. nome
+7. cidade
+8. UF
+
+
+********* ORDEM NO CSV
+[0] dominio
+[1] documento
+[2] nome
+[3] cidade
+[4] UF
+[5] dataHoraCadastro
+[6] dataHoraAtualiza
+[7] ticket
