@@ -9,6 +9,7 @@
 /**
 	leCSV
 	Le um registro completo de um arquivo, organizado no padrao CSV.
+	
 	PARAMETRO -arquivo- | ponteiro do arquivo CSV
 	RETORNA | vetor de strings, cada uma com o valor de um campo do registro
 **/
@@ -16,6 +17,7 @@ char **leCSV(FILE *arquivo){
 	char **dados;
 	int tamanho;
 	char c;
+	int i;
 
 	dados = (char **) calloc(8,sizeof(char *));
 	for (i = 0; i < 8; i++){ // leia os 8 campos de um registro
@@ -24,7 +26,7 @@ char **leCSV(FILE *arquivo){
 			c = fgetc(arquivo);
 			dados[i] = (char *) realloc(dados[i],sizeof(char)*(tamanho+1));
 			dados[i][tamanho++] = c;
-		} while(c != ';');
+		} while(c != ';' && c != '\n');
 		dados[i][tamanho-1] = '\0';
 	}
 

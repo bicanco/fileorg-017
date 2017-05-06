@@ -1,18 +1,18 @@
 ********* TAMANHO DOS CAMPOS
 
 ========TAMANHO FIXO=========
-documento 				(com \0)	| 19 chars (19 bytes)
+documento 				(com \0)	| 20 chars (20 bytes)
 dataHoraCadastro 		(com \0)	| 20 chars (20 bytes)
 dataHoraAtualizacao		(com \0)	| 20 chars (20 bytes)
 ticket								| unsigned int (4 bytes)
 
 =======TAMANHO VARIAVEL======
-dominio, nome, cidade, UF
+dominio, nome, cidade, UF (strings com )
 
 ********* ORDEM DOS CAMPOS
 1. documento
 2. dataHoraCadastro
-3. dataHoraAtualizacao
+3. dataHoraAtualiza
 4. ticket
 5. dominio
 6. nome
