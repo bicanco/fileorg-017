@@ -9,6 +9,6 @@
 #ifndef _INDICADOR_H_
 #define _INDICADOR_H_
 
-char* criaRegistro_com_indicador(char** string, int* tam_registro);
-char* criarArquivo_Indicador(FILE *origin);
+char* criaRegistro_com_indicador(char** string, FILE *fds);
+
 #endif
