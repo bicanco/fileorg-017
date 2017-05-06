@@ -9,6 +9,8 @@
 #ifndef _INDICADOR_H_
 #define _INDICADOR_H_
 
-char* criaRegistro_com_indicador(char** string, FILE *fds);
+char* criaRegistro_com_indicador(char** string, FILE *fp);
+char *buscaRegistro_com_Indicador(FILE *fp);
+char *buscaRRN_Indicador(FILE *fp, int rrn);
 
 #endif
