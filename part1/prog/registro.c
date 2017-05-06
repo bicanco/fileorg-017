@@ -36,7 +36,7 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
     *tamanhoRegistro = 20+20+20+4+16+tamNome+tamDominio+tamCidade+tamUF;
 
     // alocando memoria para guardar temporariamente o registro
-    registro = (char*) malloc(sizeof(char)*(*tamanhoRegistro));  
+    registro = (char *) malloc(sizeof(char)*(*tamanhoRegistro));  
     int indice = 0;
     int tam, campoInt;
     

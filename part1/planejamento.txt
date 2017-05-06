@@ -4,7 +4,7 @@ Buscar: TO DO
 Ler tudo: TO DO
 
 REGISTRO COM INDICADOR DE TAMANHOS (Fer)
-Escrever: TO DO
+Escrever: DOING
 Buscar: TO DO
 Ler tudo: TO DO
 
@@ -13,15 +13,15 @@ Escrever: TO DO
 Buscar: TO DO
 Ler tudo: TO DO
 
-MANIPULAÇÃO DE REGISTRO ÚNICO (Toschi)
-Montar o registro a partir dos dados do CSV: DOING (Fer/Toschi)
+MANIPULAÇÃO DE REGISTRO ÚNICO
+Montar o registro a partir dos dados do CSV: DONE (Fer/Toschi)
 Printar todos os registros: TO DO
 Printar um registro: TO DO
 Printar um campo de um registro: TO DO
 Comparar um registro com uma string de busca: TO DO
 COMPARAÇÃO COM FUCKING ACENTO: TO DO
 
-INTERFACE E LEITURA DO INPUT (Toschi)
+INTERFACE E LEITURA DO INPUT
 Função que lê um registro do CSV e retorna um char**: DONE (David)
-Interface do usuário: TO DO
-Leitura do input: TO DO
+Interface do usuário: DOING
+Leitura do input: DONE

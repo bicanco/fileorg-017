@@ -1,5 +1,15 @@
+all:
+	gcc interface.c CSV.c registro.c indicador.c -o dominios -I./
+
 test:
-	gcc interface.c CSV.c registro.c -o dominios -I./
+	gcc test.c CSV.c registro.c -o dominiostest -I./
+
+run:
+	./dominios
 
 runtest:
-	./dominios
+	./dominiostest
+
+runcl:
+	clear
+	@./dominios
