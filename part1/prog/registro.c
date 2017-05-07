@@ -130,3 +130,25 @@ void imprimeRegistro(char *registro){
 
     free(indicesCampos);
 }
+
+void imprimeCampo(char *registro, int campo){
+   
+    int *indicesCampos = mapeiaRegistro(registro);
+    int indice =  indicesCampos[campo];
+
+    switch (indice){
+            case 0: printf("Documento: %s\n\n\n", &registro[indice]); break;
+            case 1: printf("Cadastro feito em %s\n", &registro[indice]); break;
+            case 2: printf("Última atualização em %s\n", &registro[indice]); break;
+            case 3:
+                memcpy(&campoInt, &registro[indice], sizeof(int));
+                printf("(ticket %d)\n", campoInt);
+                break;
+            case 4: printf("Domínio: %s ", &registro[indice]); break;
+            case 5: printf("\nÓrgão/Entidade:\n%s\n", &registro[indice]); break;
+            case 6: printf("Cidade: %s ", &registro[indice]); break;
+            case 7: printf("UF: %s\n", &registro[indice]); break;
+        }
+   free(indicesCampos);  
+
+}
