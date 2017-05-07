@@ -17,8 +17,9 @@ MANIPULAÇÃO DE REGISTRO ÚNICO
 Montar o registro a partir dos dados do CSV: DONE (Fer/Toschi)
 Colocar uma string em maiúsculas (incluindo acentos): DONE (Fer/Toschi)
 Printar um registro: DONE (Toschi)
+Printar todos os registros: DONE (Toschi)
+Fazer busca por RRN: DONE (Toschi)
 
-Printar todos os registros: TO DO
 Printar um campo de um registro: TO DO
 Comparar um registro com uma string de busca: TO DO
 
