@@ -135,6 +135,7 @@ void imprimeCampo(char *registro, int campo){
    
     int *indicesCampos = mapeiaRegistro(registro);
     int indice =  indicesCampos[campo];
+    int campoInt;
 
     switch (indice){
             case 0: printf("Documento: %s\n\n\n", &registro[indice]); break;

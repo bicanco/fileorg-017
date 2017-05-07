@@ -9,7 +9,7 @@
 #ifndef _INDICADOR_H_
 #define _INDICADOR_H_
 
-char *insereRegistro_Indicador(char** string, FILE *fp);
+void insereRegistro_Indicador(char** string, FILE *fp);
 char *buscaRegistro_Indicador(FILE *fp);
 char *buscaRRN_Indicador(FILE *fp, int rrn);
 

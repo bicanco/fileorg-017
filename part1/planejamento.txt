@@ -9,9 +9,9 @@ Buscar: DONE
 Ler tudo: DONE
 
 REGISTRO COM NUMERO FIXO DE CAMPOS (Lek)
-Escrever: TO DO
-Buscar: TO DO
-Ler tudo: TO DO
+Escrever: DONE
+Buscar: DONE
+Ler tudo: DONE
 
 MANIPULAÇÃO DE REGISTRO ÚNICO
 Montar o registro a partir dos dados do CSV: DONE (Fer/Toschi)

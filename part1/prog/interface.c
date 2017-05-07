@@ -7,6 +7,7 @@
 #include "registro.h"
 #include "indicador.h"
 #include "delimitador.h"
+#include "numeroFixo.h"
 #include "caractere.h"
 
 typedef enum {
@@ -103,6 +104,9 @@ int main (int argc, char *argv[]){
 
 		case METODO_NUMERO_FIXO:
 			arquivoSaida = fopen(SAIDA_NUMEROFIXO, "w+");
+			insereRegistro = (void (*)(char **, FILE *)) &insereRegistro_NumeroFixo;
+			buscaRegistro = (char *(*)(FILE *)) &buscaRegistro_NumeroFixo;
+			buscaRRN = (char *(*)(FILE *, int)) &buscaRRN_NumeroFixo;
 			break;
 	}
 
