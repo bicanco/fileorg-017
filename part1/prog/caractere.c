@@ -7,7 +7,7 @@
 #define INDICA_MINUSC_ACENTO -96
 #define TRANSF_MINUSC_MAIUSC_ACENTO -32
 
-void limpaEntradaInt(){
+void limpaEntrada(){
 	char c;
 	do {
 		c = fgetc(stdin);
