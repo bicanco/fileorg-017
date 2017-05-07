@@ -78,7 +78,6 @@ char *buscaRRN_Delimitador(FILE *fp, int rrn){
 		c = fgetc(fp);
 		if(c == '#'){//quando acha o delimitador de final de registro passa para o proximo registro
 			i++;
-			fseek(fp, FIXOS, SEEK_CUR);
 			if(i != rrn)fseek(fp, FIXOS, SEEK_CUR);
 		}else if(!feof(fp))fseek(fp, -1, SEEK_CUR);
 	}
