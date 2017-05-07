@@ -11,7 +11,7 @@
 
 #define FIXOS 64
 
-void criaRegistro_com_delimitador(char**, FILE*);
+void criaRegistro_Delimitador(char**, FILE*);
 char *buscaRRN_Delimitador(FILE*, int);
 
 #endif
