@@ -102,7 +102,7 @@ int *mapeiaRegistro(char *registro){
     return mapaIndices;
 }
 
-void imprimeRegistro(char *registro, int tamanhoRegistro){
+void imprimeRegistro(char *registro){
     int sequenciaImpressao[] = {4, 3, 1, 2, 5, 6, 7, 0};
     int contadorCampos, campoInt;
 
@@ -110,7 +110,6 @@ void imprimeRegistro(char *registro, int tamanhoRegistro){
     int indice;
 
     for (contadorCampos = 0; contadorCampos < 8; contadorCampos++){
-        //printf("** CAMPO %d\n", sequenciaImpressao[contadorCampos]);
         indice = indicesCampos[sequenciaImpressao[contadorCampos]];
 
         // imprimindo o campo certo
@@ -129,4 +128,5 @@ void imprimeRegistro(char *registro, int tamanhoRegistro){
         }
     }
 
+    free(indicesCampos);
 }

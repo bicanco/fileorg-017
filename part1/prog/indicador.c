@@ -17,7 +17,7 @@
 
 **/
 
-void criaRegistro_com_indicador(char** csv, FILE *fds){
+void insereRegistro_Indicador(char** csv, FILE *fds){
 	int tamanho;
 	//lendo um registro com campos de tamanhos fixos e campos tamanhos variaveis respectivamente
 	char *registro = criaRegistro(csv,&tamanho);
@@ -33,14 +33,20 @@ void criaRegistro_com_indicador(char** csv, FILE *fds){
 	RETORNA | vetor de bytes, que contém o registro criado
 
 */
-char *buscaRegistro_com_Indicador(FILE *fp){
+char *buscaRegistro_Indicador(FILE *fp){
 	char *registro= NULL;
 	int tam;
+	char c;
+
+	c = fgetc(fp);
+    if(feof(fp)) return registro;
+    fseek(fp, -1, SEEK_CUR);	
+
 	//le o tamanho do registro
 	fread(&tam,sizeof(int),1,fp);
 	//aloca memoria e armazena todo registro
 	registro = (char*)realloc(registro,sizeof(char)*tam);
-	fread(registro,sizeof(char*),1,fp);
+	fread(registro,sizeof(char),tam,fp);
 	//retorna registro pronto
 	return registro;
 }

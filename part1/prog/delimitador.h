@@ -11,8 +11,8 @@
 
 #define FIXOS 64
 
-void criaRegistro_Delimitador(char**, FILE*);
-char *buscaRegistro_Delimitador(FILE*);
-char *buscaRRN_Delimitador(FILE*, int);
+void insereRegistro_Delimitador(char **, FILE *);
+char *buscaRegistro_Delimitador(FILE *);
+char *buscaRRN_Delimitador(FILE *, int);
 
 #endif

@@ -9,6 +9,6 @@
 #define _REGISTRO_H_
 
 char *criaRegistro(char **entradas, int *tamanhoRegistro);
-void imprimeRegistro(char *registro, int tamanhoRegistro);
+void imprimeRegistro(char *registro);
 
 #endif

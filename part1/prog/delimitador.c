@@ -1,8 +1,9 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<string.h>
-#include"registro.h"
-#include"delimitador.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+#include "registro.h"
+#include "delimitador.h"
 
 /**
 	Cria registro Com Delimitador
@@ -12,7 +13,7 @@
 	PARAMETRO -csv- | campos lidos do arquivo CSV
     	PARAMETRO -fds- | arquivo de saida
 **/
-void criaRegistro_Delimitador(char **csv, FILE *fds){
+void insereRegistro_Delimitador(char **csv, FILE *fds){
 	int tamanho;
 	char *registro;
 
@@ -33,11 +34,14 @@ char *buscaRegistro_Delimitador(FILE *fp){
         char c;
         int tamanho = 0, aux;
 
-        if(feof(fp))return registro;
+        c = fgetc(fp);
+        if(feof(fp)) return registro;
+        fseek(fp, -1, SEEK_CUR);
+
         registro = (char *) realloc(registro, sizeof(char)*FIXOS);
         fread(registro, sizeof(char), FIXOS, fp);//le os campos de tamanho fixo
 
-        do{//le os campos de tamanho variavel ate achar o indicadro de final de registro
+        do {//le os campos de tamanho variavel ate achar o indicadro de final de registro
                 fread(&aux, sizeof(char), 4, fp);
                 registro = (char *) realloc(registro, sizeof(char)*(FIXOS+tamanho+aux+4));
                 memcpy(&registro[FIXOS+tamanho], &aux, 4);
@@ -45,8 +49,9 @@ char *buscaRegistro_Delimitador(FILE *fp){
                 tamanho += aux+4;
                 c = fgetc(fp);
                 fseek(fp, -1,SEEK_CUR);
-        }while(c != '#');
+        } while(c != '#');
 
+        fseek(fp, 1, SEEK_CUR);
         return registro;
 
 }
