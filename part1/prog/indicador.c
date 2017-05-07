@@ -36,11 +36,17 @@ void insereRegistro_Indicador(char** csv, FILE *fds){
 char *buscaRegistro_Indicador(FILE *fp){
 	char *registro= NULL;
 	int tam;
+	char c;
+
+	c = fgetc(fp);
+    if(feof(fp)) return registro;
+    fseek(fp, -1, SEEK_CUR);	
+
 	//le o tamanho do registro
 	fread(&tam,sizeof(int),1,fp);
 	//aloca memoria e armazena todo registro
 	registro = (char*)realloc(registro,sizeof(char)*tam);
-	fread(registro,sizeof(char*),1,fp);
+	fread(registro,sizeof(char),tam,fp);
 	//retorna registro pronto
 	return registro;
 }
