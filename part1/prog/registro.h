@@ -10,5 +10,6 @@
 
 char *criaRegistro(char **entradas, int *tamanhoRegistro);
 void imprimeRegistro(char *registro);
+void imprimeCampo(char *registro, int campo);
 
 #endif
