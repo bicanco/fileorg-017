@@ -21,6 +21,36 @@ void criaRegistro_Delimitador(char **csv, FILE *fds){
 	fwrite("#", sizeof(char), 1, fds);//escreve-se o delimitador de final de registro
 
 }
+
+/**
+        BuscaRegistro com delimitador de final de registro
+        Le o registro na posicao que o ponteiro do arquivo está apontando.
+        PARAMETRO -fp- | ponteiro do arquivo
+        RETORNA | vetor de bytes, que contém o registro encontrado
+**/
+char *buscaRegistro_Delimitador(FILE *fp){
+        char *registro = NULL;
+        char c;
+        int tamanho = 0, aux;
+
+        if(feof(fp))return registro;
+        registro = (char *) realloc(registro, sizeof(char)*FIXOS);
+        fread(registro, sizeof(char), FIXOS, fp);//le os campos de tamanho fixo
+
+        do{//le os campos de tamanho variavel ate achar o indicadro de final de registro
+                fread(&aux, sizeof(char), 4, fp);
+                registro = (char *) realloc(registro, sizeof(char)*(FIXOS+tamanho+aux+4));
+                memcpy(&registro[FIXOS+tamanho], &aux, 4);
+                fread(&registro[FIXOS+tamanho+4], sizeof(char), aux, fp);
+                tamanho += aux+4;
+                c = fgetc(fp);
+                fseek(fp, -1,SEEK_CUR);
+        }while(c != '#');
+
+        return registro;
+
+}
+
 /**
 	Busca RRN com delimitador de final de registro
 	Busca com o indicador de final de registro o rrn desejado.
