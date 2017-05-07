@@ -41,7 +41,7 @@ char *buscaRRN_Delimitador(FILE *fp, int rrn){
 		fread(&tamanho, sizeof(int), 1, fp);
 		fseek(fp, tamanho, SEEK_CUR);
 		c = fgetc(fp);
-		fseek(fp, -1, SEEK_CUR);
+		if(!feof(fp))fseek(fp, -1, SEEK_CUR);
 		if(c == '#'){//quando acha o delimitador de final de registro passa para o proximo registro
 			rrn++;
 			fseek(fp, FIXOS, SEEK_CUR);
