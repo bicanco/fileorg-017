@@ -63,21 +63,34 @@ char *buscaRRN_Indicador(FILE *fp, int rrn){
 	int tam;
 	int pos = ftell(fp); //vai armazenar a posicao original do fp
 	int i = 0;
+	char c;
 
 	// mandando o fp para o inicio do arquivo
 	fseek(fp,0,SEEK_SET);
 
 	// procurando o rrn
-	while(i!=rrn){
+	while(i != rrn && !feof(fp)){
+		c = fgetc(fp);
+		if(feof(fp)){
+			return registro;
+		}
+        fseek(fp, -1, SEEK_CUR);
+
 		fread(&tam,sizeof(int),1,fp);
 		fseek(fp,tam,SEEK_CUR);
 		i++;
 	}
+
+	c = fgetc(fp);
+	c = fgetc(fp);
+	if(feof(fp)) return registro;
+    fseek(fp, -2, SEEK_CUR);
+
 	// lendo o tamanho do registro
 	fread(&tam,sizeof(int),1,fp);
 	//alocando memoria e guardando o registro numa string
 	registro = (char*)realloc(registro,sizeof(char)*tam);
-	fread(registro,sizeof(char*),1,fp);
+	fread(registro,sizeof(char), tam, fp);
 	//vontado fp para a posicao que estava no inicio da funcao
 	fseek(fp,pos,SEEK_SET);
 

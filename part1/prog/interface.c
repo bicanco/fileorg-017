@@ -37,6 +37,7 @@ int main (int argc, char *argv[]){
 	char *nomeArquivoEntrada = NULL;
 	FILE *arquivoEntrada, *arquivoSaida;
 	char **dadosEntrada, *registroAux;
+	int RRNAux;
 
 	void (*insereRegistro)(char **, FILE *);
 	char *(*buscaRegistro)(FILE *);
@@ -163,7 +164,27 @@ int main (int argc, char *argv[]){
 			break;
 
 			case FUNCAO_BUSCA_RRN:
-			printf("SOON");
+				RRNAux = -1;
+
+				while (RRNAux == -1){
+					printf(">> Digite a identificação númerica do registro: ");
+
+					if (scanf("%d", &RRNAux) == 0){
+						limpaEntrada();
+						printf("\nEntrada inválida. Digite novamente.\n");
+						continue;
+					}
+				}
+
+				printf("\n\n");
+				registroAux = buscaRRN(arquivoSaida, RRNAux);
+				if (registroAux != NULL){
+					imprimeRegistro(registroAux);
+					free(registroAux);
+				} else {
+					printf("Registro não encontrado.\n");
+				}
+
 			break;
 			
 			case FUNCAO_CAMPO_RRN:
