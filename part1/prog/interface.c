@@ -99,7 +99,7 @@ int main (int argc, char *argv[]){
 			arquivoSaida = fopen(SAIDA_DELIMITADOR, "w+");
 			insereRegistro = (void (*)(char **, FILE *)) &insereRegistro_Delimitador;
 			buscaRegistro = (char *(*)(FILE *)) &buscaRegistro_Delimitador;
-			buscaRRN = (char *(*)(FILE *, int)) &buscaRRN_Delimitador;
+			buscaRRN = (char *(*)(FILE *, int)) &buscaRRN2_Delimitador;
 			break;
 
 		case METODO_NUMERO_FIXO:

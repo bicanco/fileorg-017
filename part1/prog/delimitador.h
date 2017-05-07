@@ -14,5 +14,6 @@
 void insereRegistro_Delimitador(char **, FILE *);
 char *buscaRegistro_Delimitador(FILE *);
 char *buscaRRN_Delimitador(FILE *, int);
+char* buscaRRN2_Delimitador(FILE *fp, int RRN);
 
 #endif
