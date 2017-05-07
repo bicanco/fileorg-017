@@ -1,9 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <ctype.h>
 
 #include "CSV.h"
+#include "registro.h"
 #include "indicador.h"
+#include "caractere.h"
 
 typedef enum {
 	METODO_INDICADOR_TAMANHO = 1,
@@ -16,33 +19,14 @@ typedef enum {
 #define SAIDA_DELIMITADOR		"dados_delimitador.dat"
 #define SAIDA_NUMEROFIXO		"dados_numerofixo.dat"
 
-void limpaEntradaInt(){
-	char c;
-	do {
-		c = fgetc(stdin);
-	} while (c != '\n');
-}
-
-char *leString(){
-	char *str = NULL;
-	char c;
-	int contador = 0;
-
-	do {
-		c = fgetc(stdin);
-		str = (char *) realloc(str, sizeof(char) * (contador + 1));
-		str[contador++] = c;
-	} while (c != '\n');
-
-	str[--contador] = '\0';
-	return str;
-}
-
 int main (int argc, char *argv[]){
 	int metodoRegistro = -1;
 	char *nomeArquivoEntrada = NULL;
 	FILE *arquivoEntrada, *arquivoSaida;
 	char **dadosEntrada; 
+
+	char *debug, *debug2;
+	int debugt;
 
 	// escolhendo o metodo para separar os registros
 	while (metodoRegistro == -1){
@@ -107,6 +91,13 @@ int main (int argc, char *argv[]){
 					break;
 
 				case 2: // para delimitador
+					debug = leString();
+					debug2 = leString();
+					stringMaisculaAcentos(debug);
+					stringMaisculaAcentos(debug2);
+					printf("*1: %s\n", debug);
+					printf("*2: %s\n", debug2);
+					printf(">> %d\n", strcmp(debug, debug2));
 					break;
 
 				case 3: // para numero fixo de campos

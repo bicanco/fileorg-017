@@ -1,10 +1,10 @@
 ********* TAMANHO DOS CAMPOS
 
 ========TAMANHO FIXO=========
-documento 				(com \0)	| 20 chars (20 bytes)
-dataHoraCadastro 		(com \0)	| 20 chars (20 bytes)
-dataHoraAtualizacao		(com \0)	| 20 chars (20 bytes)
-ticket								| unsigned int (4 bytes)
+documento 			(com \0)	| 20 chars (20 bytes)
+dataHoraCadastro 	(com \0)	| 20 chars (20 bytes)
+dataHoraAtualiza	(com \0)	| 20 chars (20 bytes)
+ticket							| unsigned int (4 bytes)
 
 =======TAMANHO VARIAVEL======
 dominio, nome, cidade, UF (strings com )
@@ -29,3 +29,44 @@ dominio, nome, cidade, UF (strings com )
 [5] dataHoraCadastro
 [6] dataHoraAtualiza
 [7] ticket
+
+
+********* IMPRESSAO
+DOMÍNIO: bc.gov.br (ticket 133801)
+Cadastro feito em 30/12/1998 18:22:39
+Última atualização em 17/06/2015 22:20:33
+
+ÓRGÃO/ENTIDADE:
+Banco Central do Brasil
+Brasília (Distrito Federal)
+CNPJ: 000.038.166/0001-05
+
+SEQUENCIA: {4, 3, 1, 2, 5, 6, 7, 0}
+
+******** MÁSCARAS DE IMPRESSÃO
+[0] "CNPJ: %s\n"
+[1] "Cadastro feito em %s\n"
+[2] "Última atualização em %s\n"
+[3] "(ticket %d)\n"
+[4] "DOMÍNIO: %s "
+[5] "\nÓRGÃO/ENTIDADE:\n%s\n"
+[6] "%s "
+[7] "(%s)\n"
+
+******** ACENTOS
+á : Á | -61, -95 : -61, -127
+é : É | -61, -87 : -61, -119
+í : Í | -61, -83 : -61, -115
+ó : Ó | -61, -77 : -61, -109
+ú : Ú | -61, -70 : -61, -102
+
+à : À | -61, -96 : -61, -128
+
+â : Â |	-61, -94 : -61, -126
+ê : Ê |	-61, -86 : -61, -118
+ô : Õ | -61, -76 : -61, -108
+
+ã : Ã |	-61, -93 : -61, -125
+õ : Õ | -61, -75 : -61, -107
+
+ç : Ç | -61, -89 : -61, -121
