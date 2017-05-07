@@ -1,13 +1,16 @@
 #include <numeroFixo.h>
+#include <registro.h>
 
-void escrever(char* CSV, FILE *fp){
+void escrever(char** CSV, FILE *fp){
 	//CSV = string de entrada com todos os campos
 	//fp  = FILE* ja aberto atenteriormente, referente ao arquivo a ser escrito
 	int len; 
+	char* registro;
 
+	registro = criaRegistro(CSV);
 	//Len = numero de bytes contidos no 
-	len = strlen(CSV);
-	fwrite(CSV, sizeof(char), len, fp);
+	len = strlen(registro);
+	fwrite(registro, sizeof(char), len, fp);
 }
 
 
@@ -31,6 +34,7 @@ char* busca(FILE *fp){
 
 	tamanhoFixo = documentoSize + dataHoraCadastroSize + dataHoraAtualizacaoSize + ticketSize;
 	tamanhoVariado = 0;
+	fseek(fp, tamanhoFixo, SEEK_CUR);
 	for(i=0; i<nVariavel; i++){
 		//Le o tamanho do proximo campo e armazena o valor em tamanho;
 		fread(&tamanho, sizeof(int), 1, fp);
@@ -38,10 +42,9 @@ char* busca(FILE *fp){
 		tamanhoVariado += sizeof(int)+tamanho;
 	}
 
-	reg = (char*)malloc(sizeof(char)*(tamanhoVariado+1)); //+1 por causa do '\0'
-	fseek(fp, -tamanhoVariado, SEEK_CUR); //volta ao inicio do registro
-	fread(reg, sizeof(char), tamanhoVariado, fp);
-	reg[tamanhoVariado] = '\0';
+	reg = (char*)malloc(sizeof(char)*(tamanhoFixo+tamanhoVariado)); //+1 por causa do '\0'
+	fseek(fp, -(tamanhoFixo+tamanhoVariado), SEEK_CUR); //volta ao inicio do registro
+	fread(reg, sizeof(char), tamanhoFixo+tamanhoVariado, fp);
 
 	return reg;
 }

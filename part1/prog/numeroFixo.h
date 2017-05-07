@@ -7,7 +7,7 @@
 
 #define nVariavel 4 //numero de campos de tamanho variavel
 //tamanho em byte dos campos fixos
-#define documentoSize 19
+#define documentoSize 20
 #define dataHoraCadastroSize 20
 #define dataHoraAtualizacaoSize 20
 #define ticketSize 4
