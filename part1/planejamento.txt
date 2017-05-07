@@ -1,7 +1,7 @@
 REGISTRO COM DELIMITADOR (#) (David)
-Escrever: DOING
-Buscar: TO DO
-Ler tudo: TO DO
+Escrever: DONE
+Buscar: DONE
+Ler tudo: DONE
 
 REGISTRO COM INDICADOR DE TAMANHOS (Fer)
 Escrever: DONE
