@@ -36,7 +36,7 @@ char *buscaRRN_Delimitador(FILE *fp, int rrn){
 	char *registro = NULL;
 
 	fseek(fp, 0, SEEK_SET);
-	fseek(fp, FIXOS, SEEK_CUR);
+	if(rrn != 0)fseek(fp, FIXOS, SEEK_CUR);
 	while(i != rrn && !feof(fp)){//procura pelo RRN desejado
 		fread(&tamanho, sizeof(int), 1, fp);
 		fseek(fp, tamanho, SEEK_CUR);
