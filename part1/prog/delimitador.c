@@ -55,8 +55,8 @@ char *buscaRRN_Delimitador(FILE *fp, int rrn){
 	do{//escrevendo o registro em uma string (char *)
 		fread(&aux, sizeof(int), 1, fp);
 		registro = (char *) realloc(registro, sizeof(char)*(FIXOS+tamanho+aux+4));
-		memcpy(&aux,registro[FIXOS+tamanho], 4);
-		fread(&registro[FIXOE+tamanho+4], sizeof(char), aux, fp);
+		memcpy(&aux,&registro[FIXOS+tamanho], 4);
+		fread(&registro[FIXOS+tamanho+4], sizeof(char), aux, fp);
 		tamanho += aux+4;
 		c = fgetc(fp);
 		fseek(fp, -1,SEEK_CUR);
