@@ -16,9 +16,9 @@ void criaRegistro_com_delimitador(char **csv, FILE *fds){
 	int tamanho;
 	char *registro;
 
-	registro = criaRegistro(csv, &tamanho);
-	fwrite(registro, sizeof(char), tamanho, fds);
-	fwrite("#", sizeof(char), 1, fds);
+	registro = criaRegistro(csv, &tamanho);//cria-se o registro para escrever no arquivo
+	fwrite(registro, sizeof(char), tamanho, fds);//escreve-se o registro
+	fwrite("#", sizeof(char), 1, fds);//escreve-se o delimitador de final de registro
 
 }
 /**
@@ -37,22 +37,22 @@ char *buscaRRN_Delimitador(FILE *fp, int rrn){
 
 	fseek(fp, 0, SEEK_SET);
 	fseek(fp, FIXOS, SEEK_CUR);
-	while(i != rrn && !feof(arquivo)){
+	while(i != rrn && !feof(arquivo)){//procura pelo RRN desejado
 		fread(&tamanho, sizeof(int), 1, fp);
 		fseek(fp, tamanho, SEEK_CUR);
 		c = fgetc(fp);
 		fseek(fp, -1, SEEK_CUR);
-		if(c == '#'){
+		if(c == '#'){//quando acha o delimitador de final de registro passa para o proximo registro
 			rrn++;
 			fseek(fp, FIXOS, SEEK_CUR);
 		}
 	}
-	if(feof(fp))return registro;
+	if(feof(fp))return registro;//se nao acho o RRN retorna NULL
 	
 	registro = (char *) realloc(registro, sizeof(char)*FIXOS);
 	fread(registro, sizeof(char), FIXOS, fp);
 	tamanho = 0;
-	do{
+	do{//escrevendo o registro em uma string (char *)
 		fread(&aux, sizeof(int), 1, fp);
 		registro = (char *) realloc(registro, sizeof(char)*(FIXOS+tamanho+aux+4));
 		memcpy(&aux,registro[FIXOS+tamanho], 4);
@@ -62,5 +62,5 @@ char *buscaRRN_Delimitador(FILE *fp, int rrn){
 		fseek(fp, -1,SEEK_CUR);
 	}while(c != '#' && !feof(fp));
 
-	return registro;
+	return registro;//retorna o registro encontrado
 }
