@@ -48,3 +48,19 @@ char* busca(FILE *fp){
 
 	return reg;
 }
+
+
+char* buscaRRN(FILE *fp, int RRN){
+	int i = 0;
+	char* reg;
+
+	while(!feof(fp) && i<RRN){
+		reg = busca(fp);
+		i++;
+		if(i < RNN) free(reg);
+	}
+	if(feof(fp)){
+		return NULL;
+	}
+	else return reg;
+}
