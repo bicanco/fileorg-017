@@ -37,7 +37,7 @@ char *buscaRRN_Delimitador(FILE *fp, int rrn){
 
 	fseek(fp, 0, SEEK_SET);
 	fseek(fp, FIXOS, SEEK_CUR);
-	while(i != rrn && !feof(arquivo)){//procura pelo RRN desejado
+	while(i != rrn && !feof(fp)){//procura pelo RRN desejado
 		fread(&tamanho, sizeof(int), 1, fp);
 		fseek(fp, tamanho, SEEK_CUR);
 		c = fgetc(fp);
