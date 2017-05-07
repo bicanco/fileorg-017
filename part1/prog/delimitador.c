@@ -12,7 +12,7 @@
 	PARAMETRO -csv- | campos lidos do arquivo CSV
     	PARAMETRO -fds- | arquivo de saida
 **/
-void criaRegistro_com_delimitador(char **csv, FILE *fds){
+void criaRegistro_Delimitador(char **csv, FILE *fds){
 	int tamanho;
 	char *registro;
 
