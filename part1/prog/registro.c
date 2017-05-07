@@ -81,3 +81,52 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
 
     return registro;
 }
+
+int *mapeiaRegistro(char *registro){
+    int *mapaIndices = (int *) malloc(sizeof(int) * 8);
+    int i, indiceAux, tamanhoCampo;
+
+    mapaIndices[0] = 0;
+    mapaIndices[1] = 20;
+    mapaIndices[2] = 40;
+    mapaIndices[3] = 60;
+    mapaIndices[4] = 68;
+    indiceAux = 64;
+
+    for (i = 5; i < 8; i++){
+        memcpy(&tamanhoCampo, &registro[indiceAux], sizeof(int));
+        indiceAux += sizeof(int) + tamanhoCampo;
+        mapaIndices[i] = indiceAux + sizeof(int);
+    }
+
+    return mapaIndices;
+}
+
+void imprimeRegistro(char *registro, int tamanhoRegistro){
+    int sequenciaImpressao[] = {4, 3, 1, 2, 5, 6, 7, 0};
+    int contadorCampos, campoInt;
+
+    int *indicesCampos = mapeiaRegistro(registro);
+    int indice;
+
+    for (contadorCampos = 0; contadorCampos < 8; contadorCampos++){
+        //printf("** CAMPO %d\n", sequenciaImpressao[contadorCampos]);
+        indice = indicesCampos[sequenciaImpressao[contadorCampos]];
+
+        // imprimindo o campo certo
+        switch (sequenciaImpressao[contadorCampos]){
+            case 0: printf("CNPJ: %s\n\n\n", &registro[indice]); break;
+            case 1: printf("Cadastro feito em %s\n", &registro[indice]); break;
+            case 2: printf("Última atualização em %s\n", &registro[indice]); break;
+            case 3:
+                memcpy(&campoInt, &registro[indice], sizeof(int));
+                printf("(ticket %d)\n", campoInt);
+                break;
+            case 4: printf("DOMÍNIO: %s ", &registro[indice]); break;
+            case 5: printf("\nÓRGÃO/ENTIDADE:\n%s\n", &registro[indice]); break;
+            case 6: printf("%s ", &registro[indice]); break;
+            case 7: printf("(%s)\n", &registro[indice]); break;
+        }
+    }
+
+}
