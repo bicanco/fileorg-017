@@ -24,6 +24,7 @@ void insereRegistro_Delimitador(char **csv, FILE *fds){
 	fwrite(registro, sizeof(char), tamanho, fds);//escreve-se o registro
 	fwrite(&delimitador, sizeof(char), 1, fds);//escreve-se o delimitador de final de registro
 
+	free(registro);
 }
 
 /**
