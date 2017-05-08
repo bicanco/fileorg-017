@@ -13,6 +13,8 @@ void insereRegistro_NumeroFixo(char** CSV, FILE *fp){
 	registro = criaRegistro(CSV, &len);
 	//Len = numero de bytes contidos no registro
 	fwrite(registro, sizeof(char), len, fp);
+
+	free(registro);
 }
 
 //   campoFixo1campoFixo2campoFixo4campoFixo4\SIZE\CampoVariado1\SIZE\CampoVariado2\SIZE\CampoVariado3\SIZE\CampoVariado4
