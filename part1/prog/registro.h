@@ -11,5 +11,7 @@
 char *criaRegistro(char **entradas, int *tamanhoRegistro);
 void imprimeRegistro(char *registro);
 void imprimeCampo(char *registro, int campo);
+int comparacao_string(char *registro, char *buscando, int campo);
+int comparacao(char *registro, int campo, char *busca);
 
 #endif
