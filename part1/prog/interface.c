@@ -26,8 +26,32 @@ typedef enum {
 	FUNCAO_BUSCA_RRN,
 	FUNCAO_CAMPO_RRN,
 	FUNCAO_SAIR,
-	FUNCAO_QUANT,
+	FUNCAO_QUANT
 } Menu_Funcao;
+
+typedef enum {
+	CAMPOI_VAZIO = -1,
+	CAMPOI_DOCUMENTO,
+	CAMPOI_DATA_CADASTRO,
+	CAMPOI_DATA_ATUALIZA,
+	CAMPOI_TICKET,
+	CAMPOI_DOMINIO,
+	CAMPOI_NOME,
+	CAMPOI_CIDADE,
+	CAMPOI_UF,
+	CAMPOI_QUANT
+} Menu_CampoImprimir;
+
+typedef enum {
+	CAMPOB_VAZIO = -1,
+	CAMPOB_DOCUMENTO,
+	CAMPOB_TICKET,
+	CAMPOB_DOMINIO,
+	CAMPOB_NOME,
+	CAMPOB_CIDADE,
+	CAMPOB_UF,
+	CAMPOB_QUANT
+} Menu_CampoBuscar;
 
 #define SAIDA_INDICADORTAMANHO 	"dados_indicadortamanho.dat"
 #define SAIDA_DELIMITADOR		"dados_delimitador.dat"
@@ -38,6 +62,8 @@ int main (int argc, char *argv[]){
 
 	int metodoRegistro = METODO_VAZIO;
 	int funcaoMenu = FUNCAO_VAZIO;
+	int campoImprimir, campoBuscar, buscaConcluida;
+	char *stringBusca;
 	char *nomeArquivoEntrada = NULL;
 	FILE *arquivoEntrada, *arquivoSaida;
 	char **dadosEntrada, *registroAux;
@@ -48,7 +74,7 @@ int main (int argc, char *argv[]){
 	char *(*buscaRRN)(FILE *, int);
 
 	char *debug, *debug2;
-	int debugt;
+	int debugt, debugi;
 
 	// escolhendo o metodo para separar os registros
 	while (metodoRegistro == METODO_VAZIO){
@@ -173,7 +199,88 @@ int main (int argc, char *argv[]){
 			break;
 
 			case FUNCAO_BUSCA_CAMPO:
-			printf("SOON");
+				campoBuscar = CAMPOB_VAZIO;
+				stringBusca = NULL;
+				buscaConcluida = 0;
+
+				printf("\n\n");
+				while (campoBuscar == CAMPOB_VAZIO){
+					printf("%d. Numero do documento\n", CAMPOB_DOCUMENTO);
+					printf("%d. Ticket de cadastro\n", CAMPOB_TICKET);
+					printf("%d. Dominio\n", CAMPOB_DOMINIO);
+					printf("%d. Nome do(a) orgao/entidade\n", CAMPOB_NOME);
+					printf("%d. Cidade\n", CAMPOB_CIDADE);
+					printf("%d. UF\n", CAMPOB_UF);
+					printf(">> Escolha que campo vai ser usado como critério de busca: ");
+					
+					if (scanf("%d", &campoBuscar) == 0){
+						limpaEntrada();
+						printf("\nEntrada invalida. Digite novamente.\n");
+						continue;
+					}
+
+					if (campoBuscar <= CAMPOB_VAZIO || campoBuscar >= CAMPOB_QUANT){
+						printf("\nMetodo invalido. Escolha outro.\n");
+						campoBuscar = CAMPOB_VAZIO;
+						continue;
+					}
+				}
+
+				// arrumando campo
+				switch (campoBuscar){
+					case CAMPOB_TICKET:
+						campoBuscar = CAMPOI_TICKET; break;
+
+					case CAMPOB_DOMINIO:
+						campoBuscar = CAMPOI_DOMINIO; break;
+
+					case CAMPOB_NOME:
+						campoBuscar = CAMPOI_NOME; break;
+
+					case CAMPOB_CIDADE:
+						campoBuscar = CAMPOI_CIDADE; break;
+
+					case CAMPOB_UF:
+						campoBuscar = CAMPOI_UF; break;
+				}
+
+				limpaEntrada();
+				printf("\n\n");
+				while (stringBusca == NULL){
+					printf(">> Digite o que deve ser buscado: ");
+					stringBusca = leString();
+
+					if (stringBusca == NULL || stringBusca[0] == '\0'){
+						printf("\nEntrada invalida. Digite novamente.\n");
+						if (stringBusca != NULL){
+							free(stringBusca);
+							stringBusca = NULL;
+						}
+					}
+				}
+
+				fseek(arquivoSaida, 0, SEEK_SET);
+				while(!feof(arquivoSaida)){
+					registroAux = buscaRegistro(arquivoSaida);
+					if (registroAux != NULL){
+						if (comparaCampo(registroAux, campoBuscar, stringBusca) == 0){
+							// achou um campo valido
+							imprimeRegistro(registroAux);
+							buscaConcluida = 1;
+
+							if (!feof(arquivoSaida)){
+								printf("\n\nAperte ENTER para mostrar o proximo resultado da busca...\n");
+								limpaEntrada();
+							}
+						}
+
+						free(registroAux);
+						if (feof(arquivoSaida)) break;
+					}
+				}
+
+				if (!buscaConcluida)
+					printf("\n\nNenhum registro foi encontrado.\n");
 			break;
 
 			case FUNCAO_BUSCA_RRN:
@@ -207,7 +314,62 @@ int main (int argc, char *argv[]){
 			break;
 			
 			case FUNCAO_CAMPO_RRN:
-			printf("SOON");
+				RRNAux = -1;
+				campoImprimir = CAMPOI_VAZIO;
+
+				while (RRNAux == -1){
+					printf(">> Digite a identificacao numerica do registro: ");
+
+					if (scanf("%d", &RRNAux) == 0){
+						limpaEntrada();
+						printf("\nEntrada invalida. Digite novamente.\n");
+						RRNAux = -1;
+						continue;
+					}
+
+					if (RRNAux < 0){
+						printf("\nA identificacao numerica deve ser positiva. Digite novamente.\n");
+						RRNAux = -1;
+						continue;
+					}
+				}
+
+				printf("\n\n");
+
+				while (campoImprimir == CAMPOI_VAZIO){
+					printf("%d. Numero do documento\n", CAMPOI_DOCUMENTO);
+					printf("%d. Data e hora do cadastro\n", CAMPOI_DATA_CADASTRO);
+					printf("%d. Data e hora da ultima atualizacao\n", CAMPOI_DATA_ATUALIZA);
+					printf("%d. Ticket de cadastro\n", CAMPOI_TICKET);
+					printf("%d. Dominio\n", CAMPOI_DOMINIO);
+					printf("%d. Nome do(a) orgao/entidade\n", CAMPOI_NOME);
+					printf("%d. Cidade\n", CAMPOI_CIDADE);
+					printf("%d. UF\n", CAMPOI_UF);
+					printf(">> Escolha um campo a ser buscado: ");
+					
+					if (scanf("%d", &campoImprimir) == 0){
+						limpaEntrada();
+						printf("\nEntrada invalida. Digite novamente.\n");
+						continue;
+					}
+
+					if (campoImprimir <= CAMPOI_VAZIO || campoImprimir >= CAMPOI_QUANT){
+						printf("\nMetodo invalido. Escolha outro.\n");
+						campoImprimir = CAMPOI_VAZIO;
+						continue;
+					}
+				}
+
+				printf("\n\n");
+				registroAux = buscaRRN(arquivoSaida, RRNAux);
+				if (registroAux != NULL){
+					imprimeCampo(registroAux, campoImprimir);
+					free(registroAux);
+				} else {
+					printf("Registro nao encontrado.\n");
+				}
+
+				printf("\n\n");
 			break;
 		}
 

@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "caractere.h"
+
 /**
     criaRegistro
     Cria e arruma um registro, de acordo com dados recebidos do arquivo CSV e 
@@ -143,51 +145,53 @@ void imprimeCampo(char *registro, int campo){
     int indice =  indicesCampos[campo];
     int campoInt;
 
-    switch (indice){
-        case 0: printf("Documento: %s\n\n\n", &registro[indice]); break;
+    switch (campo){
+        case 0: printf("Documento: %s\n", &registro[indice]); break;
         case 1: printf("Cadastro feito em %s\n", &registro[indice]); break;
         case 2: printf("Ultima atualizacao em %s\n", &registro[indice]); break;
         case 3:
             memcpy(&campoInt, &registro[indice], sizeof(int));
-            printf("(ticket %d)\n", campoInt);
+            printf("Ticket: %d\n", campoInt);
             break;
-        case 4: printf("Dominio: %s ", &registro[indice]); break;
-        case 5: printf("\nOrgao/Entidade:\n%s\n", &registro[indice]); break;
-        case 6: printf("Cidade: %s ", &registro[indice]); break;
+        case 4: printf("Dominio: %s\n", &registro[indice]); break;
+        case 5: printf("Orgao/Entidade: %s\n", &registro[indice]); break;
+        case 6: printf("Cidade: %s\n", &registro[indice]); break;
         case 7: printf("UF: %s\n", &registro[indice]); break;
     }
    free(indicesCampos);  
 
-}/*
-int comparacao_string(char *registro, char *buscando, int campo){
-    int compara = strcmp(registro[campo],buscando);
-    if(compara == 0) return 1;
-    return 0;
-
 }
 
-int comparacao(char *registro, int campo, char *busca){
-    int tam_registro = strlen(registro);
+int comparaCampo(char *registro, int campo, char *busca){
     int tam_busca = strlen(busca);
     char *reg_cpy;
-    char *busca_cpy = (char*)malloc(sizeof(char)*tam_busca);
     
-    
-
     int *indicesCampos = mapeiaRegistro(registro);
     int indice = indicesCampos[campo];
-    int result;
-    if(indice == 3){ // caso seja o ticket
-        reg_cpy = (char*)malloc(sizeof(char)*4);
-        memcpy(&reg_cpy,&registro[indice],sizeof(int));
-    }else{
-        reg_cpy = (char*)malloc(sizeof(char)*tam_registro);
-        stringMaisculaAcentos(reg_cpy);
-        stringMaisculaAcentos(busca_cpy);
-    }
-        result = comparacao_string(reg_cpy,busca_cpy,indice);
-  
-    return result;
+    free(indicesCampos);
 
+    int tam_campo, campoInt, buscaInt;
+
+    int result;
+
+    if (campo == 3){ // caso seja o ticket
+        memcpy(&campoInt, &registro[indice], sizeof(int));
+        buscaInt = atoi(busca);
+
+        if (campoInt == buscaInt) return 0;
+            else return 1;
+    } else {
+        tam_campo = strlen(&registro[indice]);
+        tam_campo++; // adicionar \0 na conta     
+        reg_cpy = (char*)malloc(sizeof(char)*tam_campo);
+
+        memcpy(reg_cpy, &registro[indice], sizeof(char) * tam_campo);
+
+        stringMaisculaAcentos(reg_cpy);
+        stringMaisculaAcentos(busca);
+        result = strcmp(reg_cpy, busca);
+
+        free(reg_cpy);
+        return result;
+    }
 }
-*/

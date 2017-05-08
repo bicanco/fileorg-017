@@ -19,14 +19,11 @@ Colocar uma string em maiúsculas (incluindo acentos): DONE (Fer/Toschi)
 Printar um registro: DONE (Toschi)
 Printar todos os registros: DONE (Toschi)
 Fazer busca por RRN: DONE (Toschi)
-
-Printar um campo de um registro: TO DO
-Comparar um registro com uma string de busca: TO DO
-
+Printar um campo de um registro: DONE (Fer)
+Comparar um registro com uma string de busca: DONE (Toschi)
 
 INTERFACE E LEITURA DO INPUT
 Função que lê um registro do CSV e retorna um char**: DONE (David)
 Leitura do input: DONE (Toschi)
-
-Interface do usuário: DOING
+Interface do usuário: DONE (Toschi)
 

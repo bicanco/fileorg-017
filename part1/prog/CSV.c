@@ -5,6 +5,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+
+#include "caractere.h"
 
 /**
 	leCSV
@@ -16,7 +19,7 @@
 char **leCSV(FILE *arquivo){
 	char **dados;
 	int tamanho;
-	char c;
+	char c, acento;
 	int i;
 
 	dados = (char **) calloc(8,sizeof(char *));
@@ -24,8 +27,16 @@ char **leCSV(FILE *arquivo){
 		tamanho = 0;
 		do {
 			c = fgetc(arquivo);
-			dados[i] = (char *) realloc(dados[i],sizeof(char)*(tamanho+1));
-			dados[i][tamanho++] = c;
+			acento = acentoWin1252_UTF8(c);
+
+			if (acento == 0){
+				dados[i] = (char *) realloc(dados[i],sizeof(char)*(tamanho+1));
+				dados[i][tamanho++] = c;	
+			} else {
+				dados[i] = (char *) realloc(dados[i],sizeof(char)*(tamanho+2));
+				dados[i][tamanho++] = INDICA_ACENTO;
+				dados[i][tamanho++] = acento;
+			}			
 		} while (c != ';' && c != '\n' && c != EOF);
 		dados[i][tamanho-1] = '\0';
 	}
