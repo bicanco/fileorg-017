@@ -24,6 +24,7 @@ void insereRegistro_Indicador(char** csv, FILE *fds){
 	fwrite(&tamanho,sizeof(int),1,fds);
 	fwrite(registro,sizeof(char),tamanho,fds);
 
+	free(registro);
 }
 
 /*
