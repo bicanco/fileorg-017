@@ -26,7 +26,8 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
     // escrita no arquivo     
     int sequenciaEntradas[] = {1,5,6,7,0,2,4,3};
 
-    char *campo, *nulo = NULL;  
+    char *campo;
+    int campoNulo;
     int contadorCampos = 0;
     char *registro;    
     
@@ -44,6 +45,7 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
     
     // para cada um dos campos, na ordem de serem colocados no registro
     for (contadorCampos = 0; contadorCampos < 8; contadorCampos++){
+        campoNulo = 0;
 
         // pegue o registro certo, de acordo com a sequencia     
         campo = entradas[sequenciaEntradas[contadorCampos]];
@@ -77,11 +79,14 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
                 if (strcmp(campo, "null") == 0){
                     // o campo eh nulo
                     campo = (char *) calloc(tam, sizeof(char));
+                    campoNulo = 1;
                 }
             }
             
             // escrever string no registro
             memcpy(&registro[indice], campo, tam);
+
+            if (campoNulo) free(campo);
         }
         
         // atualizar indice percorrido no registro

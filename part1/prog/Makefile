@@ -13,3 +13,6 @@ runtest:
 runcl:
 	clear
 	@./dominios
+
+debug:
+	valgrind -v --leak-check=full --track-origins=yes ./dominios
