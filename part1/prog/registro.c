@@ -152,3 +152,34 @@ void imprimeCampo(char *registro, int campo){
    free(indicesCampos);  
 
 }
+int comparacao_string(char *registro, char *buscando, int campo){
+    int compara = strcmp(registro[campo],buscando);
+    if(compara == 0) return 1;
+    return 0;
+
+}
+
+int comparacao(char *registro, int campo, char *busca){
+    int tam_registro = strlen(registro);
+    int tam_busca = strlen(busca);
+    char *reg_cpy;
+    char *busca_cpy = (char*)malloc(sizeof(char)*tam_busca);
+    
+    
+
+    int *indicesCampos = mapeiaRegistro(registro);
+    int indice = indicesCampos[campo];
+    int result;
+    if(indice == 3){ // caso seja o ticket
+        reg_cpy = (char*)malloc(sizeof(char)*4);
+        memcpy(&reg_cpy,&registro[indice],sizeof(int));
+    }else{
+        reg_cpy = (char*)malloc(sizeof(char)*tam_registro);
+        stringMaisculaAcentos(reg_cpy);
+        stringMaisculaAcentos(busca_cpy);
+    }
+        result = comparacao_string(reg_cpy,busca_cpy,indice);
+  
+    return result;
+
+}
