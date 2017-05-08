@@ -81,7 +81,7 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
             }
             
             // escrever string no registro
-            memcpy(&registro[indice], campo, tam);
+            memcpy(&registro[indice], campo, tam); 
         }
         
         // atualizar indice percorrido no registro
