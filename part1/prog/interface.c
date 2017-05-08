@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <locale.h>
 
 #include "CSV.h"
 #include "registro.h"
@@ -33,6 +34,8 @@ typedef enum {
 #define SAIDA_NUMEROFIXO		"dados_numerofixo.dat"
 
 int main (int argc, char *argv[]){
+	setlocale(LC_ALL,"utf-8");
+
 	int metodoRegistro = METODO_VAZIO;
 	int funcaoMenu = FUNCAO_VAZIO;
 	char *nomeArquivoEntrada = NULL;
@@ -49,20 +52,20 @@ int main (int argc, char *argv[]){
 
 	// escolhendo o metodo para separar os registros
 	while (metodoRegistro == METODO_VAZIO){
-		printf("\nCONFIGURAÇÃO: método de separação dos registros\n");
+		printf("\nCONFIGURACAO: metodo de separacao dos registros\n");
 		printf("%d. Indicadores de tamanho\n", METODO_INDICADOR_TAMANHO);
 		printf("%d. Delimitadores entre registros\n", METODO_DELIMITADOR);
-		printf("%d. Número fixo de registros\n", METODO_NUMERO_FIXO);
-		printf(">> Escolha um método: ");
+		printf("%d. Numero fixo de registros\n", METODO_NUMERO_FIXO);
+		printf(">> Escolha um metodo: ");
 		
 		if (scanf("%d", &metodoRegistro) == 0){
 			limpaEntrada();
-			printf("\nEntrada inválida. Digite novamente.\n");
+			printf("\nEntrada invalida. Digite novamente.\n");
 			continue;
 		}
 
 		if (metodoRegistro <= METODO_VAZIO || metodoRegistro >= METODO_QUANT){
-			printf("\nMétodo inválido. Escolha outro.\n");
+			printf("\nMetodo invalido. Escolha outro.\n");
 			metodoRegistro = METODO_VAZIO;
 			continue;
 		}
@@ -72,13 +75,13 @@ int main (int argc, char *argv[]){
 
 	// encontrando o arquivo de entrada
 	while (nomeArquivoEntrada == NULL){
-		printf("\nCONFIGURAÇÃO: arquivo de entrada de dados\n");
+		printf("\nCONFIGURACAO: arquivo de entrada de dados\n");
 		printf(">> Digite o nome do arquivo de entrada: ");
 		nomeArquivoEntrada = leString();
 
 		arquivoEntrada = fopen(nomeArquivoEntrada, "r");
 		if (arquivoEntrada == NULL){
-			printf("\nErro na abertura do arquivo. Verifique se o nome dele está correto.\n");
+			printf("\nErro na abertura do arquivo. Verifique se o nome dele esta correto.\n");
 			free(nomeArquivoEntrada);
 			nomeArquivoEntrada = NULL;
 			continue;
@@ -99,7 +102,7 @@ int main (int argc, char *argv[]){
 			arquivoSaida = fopen(SAIDA_DELIMITADOR, "w+");
 			insereRegistro = (void (*)(char **, FILE *)) &insereRegistro_Delimitador;
 			buscaRegistro = (char *(*)(FILE *)) &buscaRegistro_Delimitador;
-			buscaRRN = (char *(*)(FILE *, int)) &buscaRRN2_Delimitador;
+			buscaRRN = (char *(*)(FILE *, int)) &buscaRRN_Delimitador;
 			break;
 
 		case METODO_NUMERO_FIXO:
@@ -115,30 +118,33 @@ int main (int argc, char *argv[]){
 		dadosEntrada = leCSV(arquivoEntrada);
 		if (!feof(arquivoEntrada)){
 			insereRegistro(dadosEntrada, arquivoSaida);
-		}
-
-		liberaCSV(dadosEntrada);
+			liberaCSV(dadosEntrada);
+		} else {
+			insereRegistro(dadosEntrada, arquivoSaida);
+			liberaCSV(dadosEntrada);
+			break;
+		}	
 	}
 
 	while (funcaoMenu != FUNCAO_SAIR){
 		// escolhendo o metodo para separar os registros
 		while (funcaoMenu == FUNCAO_VAZIO){
-			printf("\n**BANCO DE DADOS DE DOMÍNIOS GOVERNAMENTAIS DE INTERNET**\n");
+			printf("\n**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**\n");
 			printf("%d. Mostrar todos os registros\n", FUNCAO_MOSTRAR_TODOS);
 			printf("%d. Buscar um registro por um campo\n", FUNCAO_BUSCA_CAMPO);
-			printf("%d. Buscar um registro por identificação numérica\n", FUNCAO_BUSCA_RRN);
-			printf("%d. Buscar um campo por identificação numérica\n", FUNCAO_CAMPO_RRN);
+			printf("%d. Buscar um registro por identificacao numerica\n", FUNCAO_BUSCA_RRN);
+			printf("%d. Buscar um campo por identificacao numerica\n", FUNCAO_CAMPO_RRN);
 			printf("%d. Sair do programa\n", FUNCAO_SAIR);
-			printf(">> Escolha uma função para ser executada: ");
+			printf(">> Escolha uma funcao para ser executada: ");
 			
 			if (scanf("%d", &funcaoMenu) == 0){
 				limpaEntrada();
-				printf("\nEntrada inválida. Digite novamente.\n");
+				printf("\nEntrada invalida. Digite novamente.\n");
 				continue;
 			}
 
 			if (funcaoMenu <= FUNCAO_VAZIO || funcaoMenu >= FUNCAO_QUANT){
-				printf("\nMétodo inválido. Escolha outro.\n");
+				printf("\nMetodo invalido. Escolha outro.\n");
 				funcaoMenu = FUNCAO_VAZIO;
 				continue;
 			}
@@ -157,8 +163,11 @@ int main (int argc, char *argv[]){
 						imprimeRegistro(registroAux);
 						free(registroAux);
 
-						printf("\n\nAperte ENTER para mostrar o próximo registro...\n");
-						limpaEntrada();
+						if (!feof(arquivoSaida)){
+							printf("\n\nAperte ENTER para mostrar o proximo registro...\n");
+							limpaEntrada();
+						}
+						
 					}
 				}
 			break;
@@ -171,11 +180,18 @@ int main (int argc, char *argv[]){
 				RRNAux = -1;
 
 				while (RRNAux == -1){
-					printf(">> Digite a identificação númerica do registro: ");
+					printf(">> Digite a identificacao numerica do registro: ");
 
 					if (scanf("%d", &RRNAux) == 0){
 						limpaEntrada();
-						printf("\nEntrada inválida. Digite novamente.\n");
+						printf("\nEntrada invalida. Digite novamente.\n");
+						RRNAux = -1;
+						continue;
+					}
+
+					if (RRNAux < 0){
+						printf("\nA identificacao numerica deve ser positiva. Digite novamente.\n");
+						RRNAux = -1;
 						continue;
 					}
 				}
@@ -186,9 +202,8 @@ int main (int argc, char *argv[]){
 					imprimeRegistro(registroAux);
 					free(registroAux);
 				} else {
-					printf("Registro não encontrado.\n");
+					printf("Registro nao encontrado.\n");
 				}
-
 			break;
 			
 			case FUNCAO_CAMPO_RRN:

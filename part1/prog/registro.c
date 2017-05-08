@@ -22,17 +22,17 @@
 char *criaRegistro(char **entradas, int *tamanhoRegistro){
     // sequencia de campos da entrada do arquivo CSV a ser
     // escrita no arquivo     
-    int sequenciaEntradas[] = {1,5,6,7,0,2,3,4};
+    int sequenciaEntradas[] = {1,5,6,7,0,2,4,3};
 
-    char *campo;  
+    char *campo, *nulo = NULL;  
     int contadorCampos = 0;
     char *registro;    
     
     // calculando tamanho do registro
     int tamDominio = strlen(entradas[0]) + 1;  
     int tamNome = strlen(entradas[2]) + 1; 
-    int tamCidade = strlen(entradas[3]) + 1;   
-    int tamUF =  strlen(entradas[4]) + 1;  
+    int tamUF = strlen(entradas[3]) + 1;   
+    int tamCidade =  strlen(entradas[4]) + 1;  
     *tamanhoRegistro = 20+20+20+4+16+tamNome+tamDominio+tamCidade+tamUF;
 
     // alocando memoria para guardar temporariamente o registro
@@ -51,8 +51,8 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
             case 0: tam = tamDominio; break; // dominio
             case 1: tam = 20; break; // documento
             case 2: tam = tamNome; break; // nome
-            case 3: tam = tamCidade; break; // cidade
-            case 4: tam = tamUF; break; // uf
+            case 3: tam = tamUF; break; // cidade
+            case 4: tam = tamCidade; break; // uf
             case 5: case 6: tam = 20; break; // dataHoraCadastro, dataHoraAtualiza
             case 7: tam = sizeof(int); break; // ticket
         }
@@ -66,9 +66,16 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
 
         } else { // colocar uma string no registro
             if (contadorCampos >= 4){
-            	// o campo eh de tamanho variavel, colocar indicador de tamanho
+            	// o campo eh de tamanho variavel
+                // colocar indicador de tamanho
                 memcpy(&registro[indice], &tam, sizeof(int));
             	indice += sizeof(int);
+            } else {
+                // o campo eh de tamanho fixo, verifique se eh nulo
+                if (strcmp(campo, "null") == 0){
+                    // o campo eh nulo
+                    campo = (char *) calloc(tam, sizeof(char));
+                }
             }
             
             // escrever string no registro
@@ -116,13 +123,13 @@ void imprimeRegistro(char *registro){
         switch (sequenciaImpressao[contadorCampos]){
             case 0: printf("CNPJ: %s\n\n\n", &registro[indice]); break;
             case 1: printf("Cadastro feito em %s\n", &registro[indice]); break;
-            case 2: printf("Última atualização em %s\n", &registro[indice]); break;
+            case 2: printf("Ultima atualizacao em %s\n", &registro[indice]); break;
             case 3:
                 memcpy(&campoInt, &registro[indice], sizeof(int));
                 printf("(ticket %d)\n", campoInt);
                 break;
-            case 4: printf("DOMÍNIO: %s ", &registro[indice]); break;
-            case 5: printf("\nÓRGÃO/ENTIDADE:\n%s\n", &registro[indice]); break;
+            case 4: printf("DOMINIO: %s ", &registro[indice]); break;
+            case 5: printf("\nORGAO/ENTIDADE:\n%s\n", &registro[indice]); break;
             case 6: printf("%s ", &registro[indice]); break;
             case 7: printf("(%s)\n", &registro[indice]); break;
         }
@@ -139,19 +146,19 @@ void imprimeCampo(char *registro, int campo){
     switch (indice){
         case 0: printf("Documento: %s\n\n\n", &registro[indice]); break;
         case 1: printf("Cadastro feito em %s\n", &registro[indice]); break;
-        case 2: printf("Última atualização em %s\n", &registro[indice]); break;
+        case 2: printf("Ultima atualizacao em %s\n", &registro[indice]); break;
         case 3:
             memcpy(&campoInt, &registro[indice], sizeof(int));
             printf("(ticket %d)\n", campoInt);
             break;
-        case 4: printf("Domínio: %s ", &registro[indice]); break;
-        case 5: printf("\nÓrgão/Entidade:\n%s\n", &registro[indice]); break;
+        case 4: printf("Dominio: %s ", &registro[indice]); break;
+        case 5: printf("\nOrgao/Entidade:\n%s\n", &registro[indice]); break;
         case 6: printf("Cidade: %s ", &registro[indice]); break;
         case 7: printf("UF: %s\n", &registro[indice]); break;
     }
    free(indicesCampos);  
 
-}
+}/*
 int comparacao_string(char *registro, char *buscando, int campo){
     int compara = strcmp(registro[campo],buscando);
     if(compara == 0) return 1;
@@ -183,3 +190,4 @@ int comparacao(char *registro, int campo, char *busca){
     return result;
 
 }
+*/

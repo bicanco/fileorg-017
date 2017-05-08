@@ -24,8 +24,8 @@ dominio, nome, cidade, UF (strings com )
 [0] dominio
 [1] documento
 [2] nome
-[3] cidade
-[4] UF
+[3] UF
+[4] cidade
 [5] dataHoraCadastro
 [6] dataHoraAtualiza
 [7] ticket
