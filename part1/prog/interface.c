@@ -281,6 +281,8 @@ int main (int argc, char *argv[]){
 
 				if (!buscaConcluida)
 					printf("\n\nNenhum registro foi encontrado.\n");
+
+				free(stringBusca);
 			break;
 
 			case FUNCAO_BUSCA_RRN:
