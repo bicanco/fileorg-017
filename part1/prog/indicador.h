@@ -1,8 +1,8 @@
 /**
     indicador
-    Funções que manipulam um arquivo unico de campos de tamanho
-    variaveis com indicador de tamanho, campos de tamanho fixos e
-    registros de tamanhos variaveis com indicadores de tamanho, 
+    Funções que manipulam um arquivo único de campos de tamanho
+    variáveis com indicador de tamanho, campos de tamanho fixos e
+    registros de tamanhos variáveis com indicadores de tamanho, 
     incluindo a inserção e busca de dados nesse padrão.
 **/
 
