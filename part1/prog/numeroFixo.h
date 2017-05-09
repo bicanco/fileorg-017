@@ -1,5 +1,13 @@
-#ifndef NUMERO_FIXO_H
-#define NUMERO_FIXO_H
+/**
+    numeroFixo
+    Funções que manipulam um arquivo unico de campos de tamanho
+    variaveis com indicador de tamanho, campos de tamanho fixos e
+    registros de tamanhos variaveis com número fixo de campos, 
+    incluindo a inserção e busca de dados nesse padrão.
+**/
+
+#ifndef _NUMERO_FIXO_H_
+#define _NUMERO_FIXO_H_
 
 #define nVariavel 4 //numero de campos de tamanho variavel
 //tamanho em byte dos campos fixos
@@ -8,9 +16,8 @@
 #define dataHoraAtualizacaoSize 20
 #define ticketSize 4
 
-
-void insereRegistro_NumeroFixo(char** CSV, FILE *fp);
-char* buscaRegistro_NumeroFixo(FILE *fp);
-char* buscaRRN_NumeroFixo(FILE *fp, int RRN);
+void insereRegistro_NumeroFixo(char **, FILE *);
+char* buscaRegistro_NumeroFixo(FILE *);
+char* buscaRRN_NumeroFixo(FILE *, int);
 
 #endif

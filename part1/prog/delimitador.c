@@ -48,30 +48,30 @@ void insereRegistro_Delimitador(char **csv, FILE *fds){
     RETORNA | vetor de bytes, que contém o registro encontrado
 **/
 char *buscaRegistro_Delimitador(FILE *fp){
-        char *registro = NULL;//váriavel que guarda o registro encontrado
-        char c;//variável utilizada para verificar a condição de final de registro
-        int tamanho = 0; //variável utilizada par guadar o tamanho do registro
+    char *registro = NULL;//váriavel que guarda o registro encontrado
+    char c;//variável utilizada para verificar a condição de final de registro
+    int tamanho = 0; //variável utilizada par guadar o tamanho do registro
 	int aux;///variável utilizada para guadar o tamanho dos campos de tamanho variável
 
-        c = fgetc(fp);//confere se o arquivo está no fim
-        if(feof(fp)) return registro;//retorna NULL se estiver no fim
-        fseek(fp, -1, SEEK_CUR);//retorna para o arquivo para a posição inicial
+    c = fgetc(fp);//confere se o arquivo está no fim
+    if(feof(fp)) return registro;//retorna NULL se estiver no fim
+    fseek(fp, -1, SEEK_CUR);//retorna para o arquivo para a posição inicial
 
-        registro = (char *) realloc(registro, sizeof(char)*FIXOS);
-        fread(registro, sizeof(char), FIXOS, fp);//le os campos de tamanho fixo
+    registro = (char *) realloc(registro, sizeof(char)*FIXOS);
+    fread(registro, sizeof(char), FIXOS, fp);//le os campos de tamanho fixo
 
-        do {//leitura e criação do registro
-                fread(&aux, sizeof(int), 1, fp);//leitura do tamanho do campo de tamanho variável
-                registro = (char *) realloc(registro, sizeof(char)*(FIXOS+tamanho+aux+4));
-                memcpy(&registro[FIXOS+tamanho], &aux, 4);//armazena o tamanho no registro em criação
-                fread(&registro[FIXOS+tamanho+4], sizeof(char), aux, fp);//le o campo de tamanho variável
-                tamanho += aux+4;//atualiza o tamanho do registro
-                c = fgetc(fp);//le o próximo caractere
-                fseek(fp, -1,SEEK_CUR);//retorna para aposição anterior do arquivo
-        } while(c != DELIMITADOR);//se for lido o delimitador, acabou o registro
+    do {//leitura e criação do registro
+            fread(&aux, sizeof(int), 1, fp);//leitura do tamanho do campo de tamanho variável
+            registro = (char *) realloc(registro, sizeof(char)*(FIXOS+tamanho+aux+4));
+            memcpy(&registro[FIXOS+tamanho], &aux, 4);//armazena o tamanho no registro em criação
+            fread(&registro[FIXOS+tamanho+4], sizeof(char), aux, fp);//le o campo de tamanho variável
+            tamanho += aux+4;//atualiza o tamanho do registro
+            c = fgetc(fp);//le o próximo caractere
+            fseek(fp, -1,SEEK_CUR);//retorna para aposição anterior do arquivo
+    } while(c != DELIMITADOR);//se for lido o delimitador, acabou o registro
 
-        fseek(fp, 1, SEEK_CUR);//avança uma posição no arquivo(DELIMITADOR)
-        return registro;//retorna o registro lido em forma de char*
+    fseek(fp, 1, SEEK_CUR);//avança uma posição no arquivo(DELIMITADOR)
+    return registro;//retorna o registro lido em forma de char*
 }
 
 /**
