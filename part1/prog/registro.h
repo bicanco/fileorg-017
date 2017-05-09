@@ -8,9 +8,9 @@
 #ifndef _REGISTRO_H_
 #define _REGISTRO_H_
 
-char *criaRegistro(char **entradas, int *tamanhoRegistro);
-void imprimeRegistro(char *registro);
-void imprimeCampo(char *registro, int campo);
-int comparaCampo(char *registro, int campo, char *busca);
+char *criaRegistro(char **, int *);
+void imprimeRegistro(char *);
+void imprimeCampo(char *, int);
+int comparaCampo(char *, int, char *);
 
 #endif

@@ -6,7 +6,7 @@
 #ifndef _CSV_H_
 #define _CSV_H_
 
-char **leCSV(FILE *arquivo);
-void liberaCSV(char **dados);
+char **leCSV(FILE *);
+void liberaCSV(char **);
 
 #endif
