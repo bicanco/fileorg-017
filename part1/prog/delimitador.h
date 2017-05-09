@@ -1,5 +1,5 @@
 /**
-    Delimitador de final de registro
+    delimitador
     Funções que manipulam um arquivo unico de campos de tamanho
     variaveis com indicador de tamanho,campos de tamanho fixos e
     registros de tamanhos variaveis com delimitador de final de registro, 
@@ -13,7 +13,6 @@
 
 void insereRegistro_Delimitador(char **, FILE *);
 char *buscaRegistro_Delimitador(FILE *);
-char *buscaRegistro2_Delimitador(FILE *fp);
 char *buscaRRN_Delimitador(FILE *, int);
 
 #endif
