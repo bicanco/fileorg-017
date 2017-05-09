@@ -9,7 +9,7 @@
 
 /**
 	insereRegistro_Delimitador
-	Cria e escreve em no arquivo de saida um registro de tamanho variavel com delimitador de final de registro,
+	Cria e escreve no arquivo de saida um registro de tamanho variavel com delimitador de final de registro,
 	de acordo com dados recebidos do arquivo CSV e a documentação do trabalho, 
 	quanto ao tamanho, à ordem e a forma com que cada campo é armazenado.
 	
