@@ -8,7 +8,7 @@
 #define DELIMITADOR -1
 
 /**
-	Cria registro Com Delimitador
+	insereRegistro_Delimitador
 	Cria e escreve em no arquivo de saida um registro de tamanho variavel com delimitador de final de registro,
 	de acordo com dados recebidos do arquivo CSV e a documentação do trabalho, 
 	quanto ao tamanho, à ordem e a forma com que cada campo é armazenado.
@@ -29,8 +29,9 @@ void insereRegistro_Delimitador(char **csv, FILE *fds){
 }
 
 /**
-        BuscaRegistro com delimitador de final de registro
+        BuscaRegistro_Delimitador
         Le o registro na posicao que o ponteiro do arquivo está apontando.
+	
         PARAMETRO -fp- | ponteiro do arquivo
         RETORNA | vetor de bytes, que contém o registro encontrado
 **/
@@ -62,8 +63,9 @@ char *buscaRegistro_Delimitador(FILE *fp){
 }
 
 /**
-	Busca RRN com delimitador de final de registro
+	buscaRRN_Delimitador
 	Busca com o indicador de final de registro o rrn desejado.
+	
 	PARAMETRO -fp- | ponteiro do arquivo
 	PARAMETRO -rrn- | rrn desejado
 	RETORNA | vetor de bytes, que contém o registro encontrado
