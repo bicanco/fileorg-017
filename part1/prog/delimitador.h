@@ -1,7 +1,7 @@
 /**
     delimitador
     Funções que manipulam um arquivo unico de campos de tamanho
-    variaveis com indicador de tamanho,campos de tamanho fixos e
+    variaveis com indicador de tamanho, campos de tamanho fixos e
     registros de tamanhos variaveis com delimitador de final de registro, 
     incluindo a criacao de arquivo e busca de um registro.
 **/
