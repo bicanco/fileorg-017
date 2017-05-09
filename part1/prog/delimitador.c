@@ -80,7 +80,7 @@ char* buscaRRN_Delimitador(FILE *fp, int RRN){
 	while(!feof(fp) && RRNatual<RRN){//enquanto não for fim de arquivo e o RRN atual é menor do que o procurado
 		reg = buscaRegistro_Delimitador(fp);//recupera o próxmo registro do arquivo
 		if (reg == NULL) return reg;//se não achar um registro no arquivo retorna NULL
-		RRNatual++;//incrementa o RRn atual
+		RRNatual++;//incrementa o RRN atual
 		if(RRNatual < RRN) free(reg);//se não for o registro desejado, desaloca o registro
 	}
 	if(feof(fp)){//se percorreu o arquivo inteiro e não achou o o registro desejado retorna NULL
