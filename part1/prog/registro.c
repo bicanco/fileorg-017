@@ -1,8 +1,8 @@
 /**
-    registro
-    Funções que manipulam um registro unico e seus campos, como
-    criacao de registro a partir de dados de entrada, impressao
-    de um registro e busca e comparacao de campos em um registro.
+    Registro
+    Funções que manipulam um registro único e seus campos, como
+    criação de registro a partir de dados de entrada, impressão
+    de um registro e busca e comparação de campos em um registro.
 **/
 
 #include <stdlib.h>
@@ -16,7 +16,6 @@
     Cria e arruma um registro, de acordo com dados recebidos do arquivo CSV e 
     a documentação do trabalho, quanto ao tamanho, à ordem e a forma com que
     cada campo é armazenado.
-
     PARAMETRO -entradas- | campos lidos do arquivo CSV
     PARAMETRO -tamanhoRegistro- | endereco de um inteiro, para ser retornado o tamanho do registro
     RETORNA | vetor de bytes, que contém o registro criado
@@ -47,10 +46,10 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
     for (contadorCampos = 0; contadorCampos < 8; contadorCampos++){
         campoNulo = 0;
 
-        // pegue o registro certo, de acordo com a sequencia     
+        // pegue o campo certo, de acordo com a sequencia     
         campo = entradas[sequenciaEntradas[contadorCampos]];
         
-        // pegue o tamanho do registro correto, de acordo com a sequencia
+        // pegue o tamanho do campo correto, de acordo com a sequencia
         switch (sequenciaEntradas[contadorCampos]){
             case 0: tam = tamDominio; break; // dominio
             case 1: tam = 20; break; // documento
@@ -96,107 +95,152 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
     return registro;
 }
 
+/*
+    mapeiaRegistro
+    Localiza e armaneza o endereco do primeiro byte de cada campo do registro.
+
+    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na ordem dos campos do arquivo binário
+    RETORNA | vetor de inteiros, que contém o endereço do primeiro byte de cada campo
+
+*/
 int *mapeiaRegistro(char *registro){
     int *mapaIndices = (int *) malloc(sizeof(int) * 8);
     int i, indiceAux, tamanhoCampo;
+    //armazenando o endereco dos campos de tamanho fixo a partir dos tamanhos pré-definidos 
+    mapaIndices[0] = 0; //documento
+    mapaIndices[1] = 20; //dataHoraCadastro
+    mapaIndices[2] = 40; //dataHoraAtualiza
+    mapaIndices[3] = 60; //ticket
+    //sabendo que o dominio vem depois de seu indicador de tamanho - cujo primeiro byte do endereço é 64 
+    //e o tamanho é de 4 bytes - é possível saber que o endereço do domínio será no byte 68 do arquivo binário
+    mapaIndices[4] = 68; // domínio
+    indiceAux = 64; // endereço do primeiro indicador de tamanho
 
-    mapaIndices[0] = 0;
-    mapaIndices[1] = 20;
-    mapaIndices[2] = 40;
-    mapaIndices[3] = 60;
-    mapaIndices[4] = 68;
-    indiceAux = 64;
-
-    for (i = 5; i < 8; i++){
-        memcpy(&tamanhoCampo, &registro[indiceAux], sizeof(int));
+    // loop até percorrer todos campos e indicadores de tamanho do registro
+    for (i = 5; i < 8; i++){ 
+         // tamanhoCampo recebe o valor do indicador de tamanho na posição indiceAux
+        memcpy(&tamanhoCampo, &registro[indiceAux], sizeof(int)); 
+        // indiceAux aponta para o próximo indicador de tamanho do campo seguinte
         indiceAux += sizeof(int) + tamanhoCampo;
+        //o vetor de mapaIndices no indice i aponta para o endereço do primeiro byte do próximo campo de tamanho variável
         mapaIndices[i] = indiceAux + sizeof(int);
     }
 
     return mapaIndices;
 }
+/*
+    imprimeRegistro
+    Imprime todos campos de um registro numa ordem compreensível ao usuário.
 
+    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na ordem dos campos do arquivo binário
+    RETORNA | 
+
+*/
 void imprimeRegistro(char *registro){
-    int sequenciaImpressao[] = {4, 3, 1, 2, 5, 6, 7, 0};
+    // sequência de campos da entrada do arquivo binário a ser
+    // impressa na tela     
+    int sequenciaImpressao[] = {4, 3, 1, 2, 5, 6, 7, 0}; 
     int contadorCampos, campoInt;
 
     int *indicesCampos = mapeiaRegistro(registro);
     int indice;
 
-    for (contadorCampos = 0; contadorCampos < 8; contadorCampos++){
+     // para cada um dos campos, na ordem de serem colocados no registro
+    for (contadorCampos = 0; contadorCampos < 8; contadorCampos++){ 
+         // pegue o endereço do campo certo, de acordo com a sequencia   
         indice = indicesCampos[sequenciaImpressao[contadorCampos]];
 
-        // imprimindo o campo certo
+        // pegue o campo correto, de acordo com a sequencia
         switch (sequenciaImpressao[contadorCampos]){
-            case 0: printf("CNPJ: %s\n\n\n", &registro[indice]); break;
-            case 1: printf("Cadastro feito em %s\n", &registro[indice]); break;
-            case 2: printf("Ultima atualizacao em %s\n", &registro[indice]); break;
-            case 3:
+            case 0: printf("CNPJ: %s\n\n\n", &registro[indice]); break; // documento
+            case 1: printf("Cadastro feito em %s\n", &registro[indice]); break; //dataHoraCadastro
+            case 2: printf("Ultima atualizacao em %s\n", &registro[indice]); break; //dataHoraAtualiza
+            case 3:                                                 // ticket
                 memcpy(&campoInt, &registro[indice], sizeof(int));
                 printf("(ticket %d)\n", campoInt);
                 break;
-            case 4: printf("DOMINIO: %s ", &registro[indice]); break;
-            case 5: printf("\nORGAO/ENTIDADE:\n%s\n", &registro[indice]); break;
-            case 6: printf("%s ", &registro[indice]); break;
-            case 7: printf("(%s)\n", &registro[indice]); break;
+            case 4: printf("DOMINIO: %s ", &registro[indice]); break; // dominio
+            case 5: printf("\nORGAO/ENTIDADE:\n%s\n", &registro[indice]); break; //nome
+            case 6: printf("%s ", &registro[indice]); break; //cidade
+            case 7: printf("(%s)\n", &registro[indice]); break; //UF
         }
     }
 
     free(indicesCampos);
 }
+/*
+    imprimeCampo
+    Imprime um campo - escolhido pelo usuário - de um registro.
 
+    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na ordem dos campos do arquivo binário
+    PARAMETRO -campo- | valor inteiro que representa o campo desejado a ser impresso
+    RETORNA | 
+
+*/
 void imprimeCampo(char *registro, int campo){
     int *indicesCampos = mapeiaRegistro(registro);
-    int indice =  indicesCampos[campo];
+    int indice =  indicesCampos[campo]; // indice recebe o endereço do primeiro byte do campo escolhido
     int campoInt;
 
     switch (campo){
-        case 0: printf("Documento: %s\n", &registro[indice]); break;
-        case 1: printf("Cadastro feito em %s\n", &registro[indice]); break;
-        case 2: printf("Ultima atualizacao em %s\n", &registro[indice]); break;
-        case 3:
+        case 0: printf("Documento: %s\n", &registro[indice]); break; // documento
+        case 1: printf("Cadastro feito em %s\n", &registro[indice]); break; //dataHoraCadastro
+        case 2: printf("Ultima atualizacao em %s\n", &registro[indice]); break; //dataHoraAtualiza
+        case 3:                                                 // ticket
             memcpy(&campoInt, &registro[indice], sizeof(int));
             printf("Ticket: %d\n", campoInt);
             break;
-        case 4: printf("Dominio: %s\n", &registro[indice]); break;
-        case 5: printf("Orgao/Entidade: %s\n", &registro[indice]); break;
-        case 6: printf("Cidade: %s\n", &registro[indice]); break;
-        case 7: printf("UF: %s\n", &registro[indice]); break;
+        case 4: printf("Domínio: %s\n", &registro[indice]); break; //domínio
+        case 5: printf("Orgao/Entidade: %s\n", &registro[indice]); break; //nome
+        case 6: printf("Cidade: %s\n", &registro[indice]); break; //cidade
+        case 7: printf("UF: %s\n", &registro[indice]); break; //UF
     }
    free(indicesCampos);  
 
 }
+/*
+    comparaCampo
+    Compara um campo de um registro com uma chave - escolhida pelo usuário.
 
-int comparaCampo(char *registro, int campo, char *busca){
-    int tam_busca = strlen(busca);
-    char *reg_cpy;
+    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na ordem dos campos do arquivo binário
+    PARAMETRO -campo- | valor inteiro que representa o campo desejado a ser impresso
+    PARAMETRO -chave- | vetor de bytes, que contém a chave que será comparada com o campo escolhido
+
+*/
+int comparaCampo(char *registro, int campo, char *chave){
+    int tam_chave = strlen(chave);
+    char *campo_cpy;
     
     int *indicesCampos = mapeiaRegistro(registro);
-    int indice = indicesCampos[campo];
+    int indice = indicesCampos[campo]; // indice recebe o endereço do primeiro byte do campo escolhido
     free(indicesCampos);
 
-    int tam_campo, campoInt, buscaInt;
+    int tam_campo, campoInt, chaveInt;
 
     int result;
+    //Comparando um campo com a chave
+    if (campo == 3){ // caso o campo a ser comparado seja o do ticket
 
-    if (campo == 3){ // caso seja o ticket
-        memcpy(&campoInt, &registro[indice], sizeof(int));
-        buscaInt = atoi(busca);
+        memcpy(&campoInt, &registro[indice], sizeof(int)); //passando o valor do ticket contido no registro para um tipo int
+        chaveInt = atoi(chave); // passando o valor inteiro contido na chave para um tipo int
 
-        if (campoInt == buscaInt) return 0;
+        //comparando os dois tipos int
+        if (campoInt == chaveInt) return 0; 
             else return 1;
-    } else {
-        tam_campo = strlen(&registro[indice]);
-        tam_campo++; // adicionar \0 na conta     
-        reg_cpy = (char*)malloc(sizeof(char)*tam_campo);
+    } else { // caso o campo a ser comparado seja qualquer um - com exceção do ticket
 
-        memcpy(reg_cpy, &registro[indice], sizeof(char) * tam_campo);
+        tam_campo = strlen(&registro[indice]); // recebendo o tamanho do campo sem contar o '\0'
+        tam_campo++; // adicionando '\0' na conta     
+        campo_cpy = (char*)malloc(sizeof(char)*tam_campo);
 
-        stringMaisculaAcentos(reg_cpy);
-        stringMaisculaAcentos(busca);
-        result = strcmp(reg_cpy, busca);
+        //armazenando o campo a ser comparado numa cópia
+        memcpy(campo_cpy, &registro[indice], sizeof(char) * tam_campo);
+        //transformando todos os bytes do vetor chave e do vetor campo_cpy da caixa baixa para a caixa alta
+        stringMaiusculaAcentos(campo_cpy);
+        stringMaiusculaAcentos(chave);
+        result = strcmp(campo_cpy, chave); // armazenando o resultado da comparação entre a nova chave com a nova cópia do campo
 
-        free(reg_cpy);
+        free(campo_cpy);
         return result;
     }
 }
