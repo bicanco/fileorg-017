@@ -24,9 +24,9 @@ char **leCSV(FILE *arquivo){
 	int i; // variavel de interação de laço
 
 	// alocando memória para guardar ponteiros para todos as strings com valores dos campos
-	dados = (char **) calloc(8,sizeof(char *));
+	dados = (char **) calloc(NUM_CAMPOS, sizeof(char *));
 
-	for (i = 0; i < 8; i++){ // leia os 8 campos de um registro
+	for (i = 0; i < NUM_CAMPOS; i++){ // leia os 8 campos de um registro
 		tamanho = 0;
 		do {
 			// pegue um caractere do arquivo
@@ -66,7 +66,7 @@ void liberaCSV(char **dados){
 	int i; // variavel de interação de laço
 
 	// para cada uma das strings, libere a memoria alocada para ela
-	for (i = 0; i < 8; i++) free(dados[i]);
+	for (i = 0; i < NUM_CAMPOS; i++) free(dados[i]);
 
 	// libere o vetor que guardava os ponteiros das strings
 	free(dados);

@@ -41,13 +41,12 @@ void insereRegistro_Indicador(char** csv, FILE *fds){
     RETORNA | vetor de bytes, que contém o registro encontrado
 **/
 char *buscaRegistro_Indicador(FILE *fp){
-	char *registro;//vetor de bytes que irá armazena os campos do registro e os indicadores de tamanho dos campos de tamanho variável
-	registro= NULL;	
+	char *registro = NULL;//vetor de bytes que irá armazena os campos do registro e os indicadores de tamanho dos campos de tamanho variável
 	int tam; //variável que contem o tamanho total do registro
 	char c; //variavel que recebe o byte para o qual o ponteiro do arquivo está apontando
 
 	c = fgetc(fp); 
-    	if(feof(fp)) return registro; //se chegou no final do arquivo retorna a string NULL
+    if(feof(fp)) return registro; //se chegou no final do arquivo retorna a string NULL
    	//se no chegou no final do arquivo
 	fseek(fp, -1, SEEK_CUR); //leva o ponteiro do arquivo para a posição anterior
 
@@ -72,7 +71,6 @@ char *buscaRRN_Indicador(FILE *fp, int rrn){
 	char *registro;//vetor de bytes que irá armazena os campos do registro e os indicadores de tamanho dos campos de tamanho variável
 	registro= NULL;	
 	nt tam; //variável que contem o tamanho total do registro
-	int pos = ftell(fp); //vai armazenar a posicao original do ponteiro do arquivo
 	int i = 0; // variável que será o contador
 	char c;//variavel que recebe o byte para o qual o ponteiro do arquivo está apontando
 
@@ -98,7 +96,7 @@ char *buscaRRN_Indicador(FILE *fp, int rrn){
 	c = fgetc(fp);
 	if(feof(fp)) return registro; //se chegou no final do arquivo retorna a string NULL
 	//se no chegou no final do arquivo
-    	fseek(fp, -2, SEEK_CUR); //leva o ponteiro do arquivo para a posições anteriores
+    fseek(fp, -2, SEEK_CUR); //leva o ponteiro do arquivo para a posições anteriores
 
 	// lendo o tamanho do registro do arquivo binário
 	fread(&tam,sizeof(int),1,fp);
@@ -106,8 +104,6 @@ char *buscaRRN_Indicador(FILE *fp, int rrn){
 	registro = (char*)realloc(registro,sizeof(char)*tam);
 	//armazenando o registro em uma string
 	fread(registro,sizeof(char), tam, fp);
-	//voltando fp para a posicao que estava no inicio da funcao
-	fseek(fp,pos,SEEK_SET);
 
 	return registro; // retornando o registro pronto
 }

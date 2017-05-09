@@ -57,14 +57,14 @@ char *buscaRegistro_Delimitador(FILE *fp){
     if(feof(fp)) return registro;//retorna NULL se estiver no fim
     fseek(fp, -1, SEEK_CUR);//retorna para o arquivo para a posição inicial
 
-    registro = (char *) realloc(registro, sizeof(char)*FIXOS);
-    fread(registro, sizeof(char), FIXOS, fp);//le os campos de tamanho fixo
+    registro = (char *) realloc(registro, sizeof(char)*TAM_CAMPOS_FIXOS);
+    fread(registro, sizeof(char), TAM_CAMPOS_FIXOS, fp);//le os campos de tamanho fixo
 
     do {//leitura e criação do registro
             fread(&aux, sizeof(int), 1, fp);//leitura do tamanho do campo de tamanho variável
-            registro = (char *) realloc(registro, sizeof(char)*(FIXOS+tamanho+aux+4));
-            memcpy(&registro[FIXOS+tamanho], &aux, 4);//armazena o tamanho no registro em criação
-            fread(&registro[FIXOS+tamanho+4], sizeof(char), aux, fp);//le o campo de tamanho variável
+            registro = (char *) realloc(registro, sizeof(char)*(TAM_CAMPOS_FIXOS+tamanho+aux+4));
+            memcpy(&registro[TAM_CAMPOS_FIXOS+tamanho], &aux, 4);//armazena o tamanho no registro em criação
+            fread(&registro[TAM_CAMPOS_FIXOS+tamanho+4], sizeof(char), aux, fp);//le o campo de tamanho variável
             tamanho += aux+4;//atualiza o tamanho do registro
             c = fgetc(fp);//le o próximo caractere
             fseek(fp, -1,SEEK_CUR);//retorna para aposição anterior do arquivo

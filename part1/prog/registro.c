@@ -25,10 +25,10 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
     // escrita no arquivo     
     int sequenciaEntradas[] = {1,5,6,7,0,2,4,3};
 
-    char *campo;
-    int campoNulo;
-    int contadorCampos = 0;
-    char *registro;    
+    char *campo; // ponteiro auxiliar para um campo
+    int campoNulo; // indicador de campo nulo
+    int contadorCampos = 0; // contador de campos
+    char *registro; // ponteiro para o registro
     
     // calculando tamanho do registro
     int tamDominio = strlen(entradas[0]) + 1;  
@@ -43,7 +43,7 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
     int tam, campoInt;
     
     // para cada um dos campos, na ordem de serem colocados no registro
-    for (contadorCampos = 0; contadorCampos < 8; contadorCampos++){
+    for (contadorCampos = 0; contadorCampos < NUM_CAMPOS; contadorCampos++){
         campoNulo = 0;
 
         // pegue o campo certo, de acordo com a sequencia     
@@ -52,15 +52,15 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
         // pegue o tamanho do campo correto, de acordo com a sequencia
         switch (sequenciaEntradas[contadorCampos]){
             case 0: tam = tamDominio; break; // dominio
-            case 1: tam = 20; break; // documento
+            case 1: tam = TAM_DOCUMENTO; break; // documento
             case 2: tam = tamNome; break; // nome
             case 3: tam = tamUF; break; // cidade
             case 4: tam = tamCidade; break; // uf
-            case 5: case 6: tam = 20; break; // dataHoraCadastro, dataHoraAtualiza
+            case 5: case 6: tam = TAM_DATAHORACADASTRO; break; // dataHoraCadastro, dataHoraAtualiza
             case 7: tam = sizeof(int); break; // ticket
         }
         
-        if (sequenciaEntradas[contadorCampos] == 7){ // colocar um inteiro no registro
+        if (sequenciaEntradas[contadorCampos] == 7){ // colocar um inteiro no registro (ticket)
             // colocando no formato de inteiro
             campoInt = atoi(campo);
             
@@ -68,7 +68,7 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
             memcpy(&registro[indice], &campoInt, tam);
 
         } else { // colocar uma string no registro
-            if (contadorCampos >= 4){
+            if (contadorCampos >= NUM_CAMPOS_FIXOS){
             	// o campo eh de tamanho variavel
                 // colocar indicador de tamanho
                 memcpy(&registro[indice], &tam, sizeof(int));
@@ -108,16 +108,16 @@ int *mapeiaRegistro(char *registro){
     int i, indiceAux, tamanhoCampo;
     //armazenando o endereco dos campos de tamanho fixo a partir dos tamanhos pré-definidos 
     mapaIndices[0] = 0; //documento
-    mapaIndices[1] = 20; //dataHoraCadastro
-    mapaIndices[2] = 40; //dataHoraAtualiza
-    mapaIndices[3] = 60; //ticket
+    mapaIndices[1] = TAM_DOCUMENTO; //dataHoraCadastro
+    mapaIndices[2] = mapaIndices[1] + TAM_DATAHORACADASTRO; //dataHoraAtualiza
+    mapaIndices[3] = mapaIndices[2] + TAM_DATAHORAATUALIZA; //ticket
     //sabendo que o dominio vem depois de seu indicador de tamanho - cujo primeiro byte do endereço é 64 
     //e o tamanho é de 4 bytes - é possível saber que o endereço do domínio será no byte 68 do arquivo binário
-    mapaIndices[4] = 68; // domínio
-    indiceAux = 64; // endereço do primeiro indicador de tamanho
+    mapaIndices[4] = mapaIndices[3] + TAM_TICKET + sizeof(int); // domínio
+    indiceAux = TAM_CAMPOS_FIXOS; // endereço do primeiro indicador de tamanho
 
     // loop até percorrer todos campos e indicadores de tamanho do registro
-    for (i = 5; i < 8; i++){ 
+    for (i = NUM_CAMPOS_FIXOS + 1; i < NUM_CAMPOS; i++){ 
          // tamanhoCampo recebe o valor do indicador de tamanho na posição indiceAux
         memcpy(&tamanhoCampo, &registro[indiceAux], sizeof(int)); 
         // indiceAux aponta para o próximo indicador de tamanho do campo seguinte
@@ -147,7 +147,7 @@ void imprimeRegistro(char *registro){
     int indice;
 
      // para cada um dos campos, na ordem de serem colocados no registro
-    for (contadorCampos = 0; contadorCampos < 8; contadorCampos++){ 
+    for (contadorCampos = 0; contadorCampos < NUM_CAMPOS; contadorCampos++){ 
          // pegue o endereço do campo certo, de acordo com a sequencia   
         indice = indicesCampos[sequenciaImpressao[contadorCampos]];
 

@@ -9,8 +9,6 @@
 #ifndef _DELIMITADOR_H_
 #define _DELIMITADOR_H_
 
-#define FIXOS 64
-
 void insereRegistro_Delimitador(char **, FILE *);
 char *buscaRegistro_Delimitador(FILE *);
 char *buscaRRN_Delimitador(FILE *, int);

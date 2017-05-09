@@ -9,13 +9,6 @@
 #ifndef _NUMERO_FIXO_H_
 #define _NUMERO_FIXO_H_
 
-#define nVariavel 4 //numero de campos de tamanho variavel
-//tamanho em byte dos campos fixos
-#define documentoSize 20
-#define dataHoraCadastroSize 20
-#define dataHoraAtualizacaoSize 20
-#define ticketSize 4
-
 void insereRegistro_NumeroFixo(char **, FILE *);
 char* buscaRegistro_NumeroFixo(FILE *);
 char* buscaRRN_NumeroFixo(FILE *, int);
