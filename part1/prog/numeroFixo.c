@@ -1,24 +1,39 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include <numeroFixo.h>
-#include <registro.h>
+#include "numeroFixo.h"
+#include "registro.h"
 
-void insereRegistro_NumeroFixo(char** CSV, FILE *fp){
+/**
+	insereRegistro_NumeroFixo
+	Cria e escreve no arquivo de saida um registro de tamanho variavel com numero fixo de campos,
+	de acordo com dados recebidos do arquivo CSV e a documentação do trabalho, 
+	quanto ao tamanho, à ordem e a forma com que cada campo é armazenado.
+	
+	PARAMETRO -CSV- | campos lidos do arquivo CSV
+    	PARAMETRO -fds- | arquivo de saida
+**/
+
+void insereRegistro_NumeroFixo(char** csv, FILE *fds){
 	//CSV = string de entrada com todos os campos
 	//fp  = FILE* ja aberto atenteriormente, referente ao arquivo a ser escrito
 	int len; 
 	char* registro;
 
-	registro = criaRegistro(CSV, &len);
+	registro = criaRegistro(csv, &len);
 	//Len = numero de bytes contidos no registro
-	fwrite(registro, sizeof(char), len, fp);
+	fwrite(registro, sizeof(char), len, fds);
 
 	free(registro);
 }
+/**
+        BuscaRegistro_NumeroFixo
+        Le o registro na posicao que o ponteiro do arquivo está apontando.
+	
+        PARAMETRO -fp- | ponteiro do arquivo
+        RETORNA | vetor de bytes, que contém o registro encontrado
+**/
 
-//   campoFixo1campoFixo2campoFixo4campoFixo4\SIZE\CampoVariado1\SIZE\CampoVariado2\SIZE\CampoVariado3\SIZE\CampoVariado4
-//   \SIZE\ = 4 bytes (int)
    /*
 	* ler até o fim do registro para determinar seu tamanho
 	* allocar um vetor do tamanho encontrado
@@ -34,8 +49,8 @@ char* buscaRegistro_NumeroFixo(FILE *fp){
 	int tamanho, i, tamanhoFixo, tamanhoVariado;
 
 	char c = fgetc(fp);
-    if(feof(fp)) return reg;
-    fseek(fp, -1, SEEK_CUR);
+   	if(feof(fp)) return reg;
+  	fseek(fp, -1, SEEK_CUR);
 
 	tamanhoFixo = documentoSize + dataHoraCadastroSize + dataHoraAtualizacaoSize + ticketSize;
 	tamanhoVariado = 0;
@@ -54,20 +69,27 @@ char* buscaRegistro_NumeroFixo(FILE *fp){
 	return reg;
 }
 
-
+/**
+	buscaRRN_NumeroFixo
+	Busca com o indicador de final de registro o rrn desejado.
+	
+	PARAMETRO -fp- | ponteiro do arquivo
+	PARAMETRO -RRN- | rrn desejado
+	RETORNA | vetor de bytes, que contém o registro encontrado
+**/
 char* buscaRRN_NumeroFixo(FILE *fp, int RRN){
-	int i = -1;
-	char* reg;
+	int RRNatual = -1;//variável que guarda o RRN atual do arquivo
+	char* reg;// variável que guarda o registro encontrado
 
-	fseek(fp, 0, SEEK_SET);
-	while(!feof(fp) && i<RRN){
-		reg = buscaRegistro_NumeroFixo(fp);
-		if (reg == NULL) return reg;
-		i++;
-		if(i < RRN) free(reg);
+	fseek(fp, 0, SEEK_SET);//a partir do inicio do arquivo
+	while(!feof(fp) && RRNatual<RRN){//enquanto não for fim de arquivo e o RRN atual é menor do que o procurado
+		reg = buscaRegistro_NumeroFixo(fp);//recupera o próxmo registro do arquivo
+		if (reg == NULL) return reg;//se não achar um registro no arquivo retorna NULL
+		RRNatual++;//incrementa o RRN atual
+		if(RRnatual < RRN) free(reg);//se não for o registro desejado, desaloca o registro
 	}
-	if(feof(fp)){
+	if(feof(fp)){//se percorreu o arquivo inteiro e não achou o o registro desejado retorna NULL
 		return NULL;
 	}
-	else return reg;
+	else return reg;//retorna o registro encontrado
 }
