@@ -1,3 +1,11 @@
+/**
+    delimitador
+    Funções que manipulam um arquivo unico de campos de tamanho
+    variaveis com indicador de tamanho, campos de tamanho fixos e
+    registros de tamanhos variaveis com delimitador de final de registro, 
+    incluindo a criacao de arquivo e busca de um registro.
+**/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -5,6 +13,10 @@
 #include "registro.h"
 #include "delimitador.h"
 
+/**
+	CONSTANTE: DELIMITADOR
+	Caractere usado como delimitador entre registros.
+**/
 #define DELIMITADOR -1
 
 /**
@@ -14,7 +26,7 @@
 	quanto ao tamanho, à ordem e a forma com que cada campo é armazenado.
 	
 	PARAMETRO -csv- | campos lidos do arquivo CSV
-    	PARAMETRO -fds- | arquivo de saida
+    PARAMETRO -fds- | arquivo de saida
 **/
 void insereRegistro_Delimitador(char **csv, FILE *fds){
 	int tamanho;// variável que recebrá o tamanho do resgistro criado pela função criaRegistro
@@ -29,11 +41,11 @@ void insereRegistro_Delimitador(char **csv, FILE *fds){
 }
 
 /**
-        BuscaRegistro_Delimitador
-        Le o registro na posicao que o ponteiro do arquivo está apontando.
-	
-        PARAMETRO -fp- | ponteiro do arquivo
-        RETORNA | vetor de bytes, que contém o registro encontrado
+    buscaRegistro_Delimitador
+    Le o registro na posicao que o ponteiro do arquivo está apontando.
+
+    PARAMETRO -fp- | ponteiro do arquivo
+    RETORNA | vetor de bytes, que contém o registro encontrado
 **/
 char *buscaRegistro_Delimitador(FILE *fp){
         char *registro = NULL;//váriavel que guarda o registro encontrado
@@ -67,10 +79,8 @@ char *buscaRegistro_Delimitador(FILE *fp){
 	Busca com o indicador de final de registro o rrn desejado.
 	
 	PARAMETRO -fp- | ponteiro do arquivo
-	PARAMETRO -rrn- | rrn desejado
+	PARAMETRO -RRN- | rrn desejado
 	RETORNA | vetor de bytes, que contém o registro encontrado
-
-
 **/
 char* buscaRRN_Delimitador(FILE *fp, int RRN){
 	int RRNatual = -1;//variável que guarda o RRN atual do arquivo

@@ -89,21 +89,21 @@ typedef enum {
 } Menu_CampoBuscar;
 
 /**
-	CONSTANTES: SAIDA_INDICADORTAMANHO
+	CONSTANTE: SAIDA_INDICADORTAMANHO
 	Nome do arquivo binário gerado pela organização
 	de registros por indicadores de tamanho.
 **/
 #define SAIDA_INDICADORTAMANHO 	"dados_indicadortamanho.dat"
 
 /**
-	CONSTANTES: SAIDA_DELIMITADOR
+	CONSTANTE: SAIDA_DELIMITADOR
 	Nome do arquivo binário gerado pela organização
 	de registros por delimitadores.
 **/
 #define SAIDA_DELIMITADOR		"dados_delimitador.dat"
 
 /**
-	CONSTANTES: SAIDA_NUMEROFIXO
+	CONSTANTE: SAIDA_NUMEROFIXO
 	Nome do arquivo binário gerado pela organização
 	de registros por número fixo de campos.
 **/
