@@ -10,6 +10,7 @@
 #include <string.h>
 
 #include "caractere.h"
+#include "registro.h"
 
 /**
     criaRegistro

@@ -70,7 +70,7 @@ char *buscaRegistro_Indicador(FILE *fp){
 char *buscaRRN_Indicador(FILE *fp, int rrn){
 	char *registro;//vetor de bytes que irá armazena os campos do registro e os indicadores de tamanho dos campos de tamanho variável
 	registro= NULL;	
-	nt tam; //variável que contem o tamanho total do registro
+	int tam; //variável que contem o tamanho total do registro
 	int i = 0; // variável que será o contador
 	char c;//variavel que recebe o byte para o qual o ponteiro do arquivo está apontando
 

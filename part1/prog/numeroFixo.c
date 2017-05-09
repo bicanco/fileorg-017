@@ -45,9 +45,9 @@ char* buscaRegistro_NumeroFixo(FILE *fp){
 	int i; // variavel para iteração de laço
 	int tamanhoVariado; // tamanho dos campos de tamanho variavel do registro
 
-	c = fgetc(fp);//confere se o arquivo está no fim
-    if(feof(fp)) return registro;//retorna NULL se estiver no fim
-    fseek(fp, -1, SEEK_CUR);//retorna para o arquivo para a posição inicial
+	char c = fgetc(fp); //confere se o arquivo está no fim
+    if(feof(fp)) return reg; //retorna NULL se estiver no fim
+    fseek(fp, -1, SEEK_CUR); //retorna para o arquivo para a posição inicial
 
     // calculo do tamanho dos campos fixos
 	tamanhoVariado = 0; // zerando contador do tamanho de campos de tamanho variavel
@@ -79,11 +79,11 @@ char* buscaRRN_NumeroFixo(FILE *fp, int RRN){
 	char* reg;// variável que guarda o registro encontrado
 
 	fseek(fp, 0, SEEK_SET);//a partir do inicio do arquivo
-	while(!feof(fp) && RRNatual<RRN){//enquanto não for fim de arquivo e o RRN atual é menor do que o procurado
+	while(!feof(fp) && RRNatual < RRN){//enquanto não for fim de arquivo e o RRN atual é menor do que o procurado
 		reg = buscaRegistro_NumeroFixo(fp);//recupera o próxmo registro do arquivo
 		if (reg == NULL) return reg;//se não achar um registro no arquivo retorna NULL
 		RRNatual++;//incrementa o RRN atual
-		if(RRnatual < RRN) free(reg);//se não for o registro desejado, desaloca o registro
+		if(RRNatual < RRN) free(reg);//se não for o registro desejado, desaloca o registro
 	}
 	if(feof(fp)){//se percorreu o arquivo inteiro e não achou o o registro desejado retorna NULL
 		return NULL;
