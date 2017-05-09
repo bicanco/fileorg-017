@@ -1,5 +1,5 @@
 /**
-    Registro
+    registro
     Funções que manipulam um registro único e seus campos, como
     criação de registro a partir de dados de entrada, impressão
     de um registro e busca e comparação de campos em um registro.
@@ -95,14 +95,14 @@ char *criaRegistro(char **entradas, int *tamanhoRegistro){
     return registro;
 }
 
-/*
+/**
     mapeiaRegistro
     Localiza e armaneza o endereco do primeiro byte de cada campo do registro.
 
-    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na ordem dos campos do arquivo binário
+    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na ordem dos 
+                           campos do arquivo binário
     RETORNA | vetor de inteiros, que contém o endereço do primeiro byte de cada campo
-
-*/
+**/
 int *mapeiaRegistro(char *registro){
     int *mapaIndices = (int *) malloc(sizeof(int) * 8);
     int i, indiceAux, tamanhoCampo;
@@ -128,14 +128,15 @@ int *mapeiaRegistro(char *registro){
 
     return mapaIndices;
 }
-/*
+
+/**
     imprimeRegistro
     Imprime todos campos de um registro numa ordem compreensível ao usuário.
 
-    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na ordem dos campos do arquivo binário
-    RETORNA | 
+    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado
+                           na ordem dos campos do arquivo binário
 
-*/
+**/
 void imprimeRegistro(char *registro){
     // sequência de campos da entrada do arquivo binário a ser
     // impressa na tela     
@@ -168,15 +169,15 @@ void imprimeRegistro(char *registro){
 
     free(indicesCampos);
 }
-/*
+
+/**
     imprimeCampo
     Imprime um campo - escolhido pelo usuário - de um registro.
 
-    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na ordem dos campos do arquivo binário
+    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na
+                           ordem dos campos do arquivo binário
     PARAMETRO -campo- | valor inteiro que representa o campo desejado a ser impresso
-    RETORNA | 
-
-*/
+**/
 void imprimeCampo(char *registro, int campo){
     int *indicesCampos = mapeiaRegistro(registro);
     int indice =  indicesCampos[campo]; // indice recebe o endereço do primeiro byte do campo escolhido
@@ -198,15 +199,18 @@ void imprimeCampo(char *registro, int campo){
    free(indicesCampos);  
 
 }
-/*
+
+/**
     comparaCampo
     Compara um campo de um registro com uma chave - escolhida pelo usuário.
 
-    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na ordem dos campos do arquivo binário
+    PARAMETRO -registro- | vetor de bytes, que contém o registro organizado na 
+                           ordem dos campos do arquivo binário
     PARAMETRO -campo- | valor inteiro que representa o campo desejado a ser impresso
     PARAMETRO -chave- | vetor de bytes, que contém a chave que será comparada com o campo escolhido
+    RETORNA | 0, caso a chave seja igual ao campo
 
-*/
+**/
 int comparaCampo(char *registro, int campo, char *chave){
     int tam_chave = strlen(chave);
     char *campo_cpy;
