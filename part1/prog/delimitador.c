@@ -3,7 +3,7 @@
     Funções que manipulam um arquivo unico de campos de tamanho
     variaveis com indicador de tamanho, campos de tamanho fixos e
     registros de tamanhos variaveis com delimitador de final de registro, 
-    incluindo a criacao de arquivo e busca de um registro.
+    incluindo a inserção e busca de dados nesse padrão.
 **/
 
 #include <stdlib.h>
@@ -76,7 +76,7 @@ char *buscaRegistro_Delimitador(FILE *fp){
 
 /**
 	buscaRRN_Delimitador
-	Busca com o indicador de final de registro o rrn desejado.
+	Busca com o indicador de final de registro o RRN desejado.
 	
 	PARAMETRO -fp- | ponteiro do arquivo
 	PARAMETRO -RRN- | rrn desejado

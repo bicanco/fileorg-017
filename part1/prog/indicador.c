@@ -1,22 +1,27 @@
+/**
+    indicador
+    Funções que manipulam um arquivo unico de campos de tamanho
+    variaveis com indicador de tamanho, campos de tamanho fixos e
+    registros de tamanhos variaveis com indicadores de tamanho, 
+    incluindo a inserção e busca de dados nesse padrão.
+**/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
 #include "registro.h"
 #include "CSV.h"
 
 /**
-	CriaRegistro Com Indicador
-	Cria e arruma um registro de tamanho variavel com indicador de tamanho,
+	insereRegistro_Indicador
+	Cria e escreve no arquivo de saida um registro de tamanho variavel com indicador de tamanho,
 	de acordo com dados recebidos do arquivo CSV e a documentação do trabalho, 
 	quanto ao tamanho, à ordem e a forma com que cada campo é armazenado.
-
+	
 	PARAMETRO -csv- | campos lidos do arquivo CSV
-    PARAMETRO -tamanhoRegistro- | endereco de um inteiro, para ser retornado o tamanho do registro
-    RETORNA | vetor de bytes, que contém o registro criado
-
-
+    PARAMETRO -fds- | arquivo de saida
 **/
-
 void insereRegistro_Indicador(char** csv, FILE *fds){
 	int tamanho;
 	//lendo um registro com campos de tamanhos fixos e campos tamanhos variaveis respectivamente
@@ -27,13 +32,13 @@ void insereRegistro_Indicador(char** csv, FILE *fds){
 	free(registro);
 }
 
-/*
-	BuscaRegistro Com Indicador
-	Le o registro na posicao que o ponteiro do arquivo está apontando.
-	PARAMETRO -fp- | ponteiro do arquivo
-	RETORNA | vetor de bytes, que contém o registro criado
+/**
+    buscaRegistro_Indicador
+    Le o registro na posicao que o ponteiro do arquivo está apontando.
 
-*/
+    PARAMETRO -fp- | ponteiro do arquivo
+    RETORNA | vetor de bytes, que contém o registro encontrado
+**/
 char *buscaRegistro_Indicador(FILE *fp){
 	char *registro= NULL;
 	int tam;
@@ -51,14 +56,15 @@ char *buscaRegistro_Indicador(FILE *fp){
 	//retorna registro pronto
 	return registro;
 }
-/*
-	BuscaRRN Com Indicador
-	Busca com o indicador de tamanho o rrn desejado.
-	PARAMETRO -fp- | ponteiro do arquivo
-	PARAMETRO -rrn- | rrn desejado
-	RETORNA | vetor de bytes, que contém o registro criado
 
-*/
+/**
+	buscaRRN_Indicador
+	Busca com o indicador de final de registro o RRN desejado.
+	
+	PARAMETRO -fp- | ponteiro do arquivo
+	PARAMETRO -rrn- | RRN desejado
+	RETORNA | vetor de bytes, que contém o registro encontrado
+**/
 char *buscaRRN_Indicador(FILE *fp, int rrn){
 	char *registro= NULL;
 	int tam;
