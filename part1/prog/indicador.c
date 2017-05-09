@@ -23,11 +23,12 @@
     PARAMETRO -fds- | arquivo de saida
 **/
 void insereRegistro_Indicador(char** csv, FILE *fds){
-	int tamanho;
+	int tamanho; //variável que contem o tamanho total do registro
 	//lendo um registro com campos de tamanhos fixos e campos tamanhos variaveis respectivamente
-	char *registro = criaRegistro(csv,&tamanho);
-	fwrite(&tamanho,sizeof(int),1,fds);
-	fwrite(registro,sizeof(char),tamanho,fds);
+	char *registro; // vetor de bytes que irá armazena os campos do registro e os indicadores de tamanho dos campos de tamanho variável
+	registro = criaRegistro(csv,&tamanho); 
+	fwrite(&tamanho,sizeof(int),1,fds); // escrevendo no arquivo binário o tamanho do registro
+	fwrite(registro,sizeof(char),tamanho,fds); // escrevendo no arquivo binário o registro
 
 	free(registro);
 }
@@ -40,17 +41,19 @@ void insereRegistro_Indicador(char** csv, FILE *fds){
     RETORNA | vetor de bytes, que contém o registro encontrado
 **/
 char *buscaRegistro_Indicador(FILE *fp){
-	char *registro= NULL;
-	int tam;
-	char c;
+	char *registro;//vetor de bytes que irá armazena os campos do registro e os indicadores de tamanho dos campos de tamanho variável
+	registro= NULL;	
+	int tam; //variável que contem o tamanho total do registro
+	char c; //variavel que recebe o byte para o qual o ponteiro do arquivo está apontando
 
-	c = fgetc(fp);
-    if(feof(fp)) return registro;
-    fseek(fp, -1, SEEK_CUR);	
+	c = fgetc(fp); 
+    	if(feof(fp)) return registro; //se chegou no final do arquivo retorna a string NULL
+   	//se no chegou no final do arquivo
+	fseek(fp, -1, SEEK_CUR); //leva o ponteiro do arquivo para a posição anterior
 
-	//le o tamanho do registro
+	//le o tamanho do registro do arquivo binário
 	fread(&tam,sizeof(int),1,fp);
-	//aloca memoria e armazena todo registro
+	//aloca memoria usando com base o tamanho e armazena todo registro na string registro 
 	registro = (char*)realloc(registro,sizeof(char)*tam);
 	fread(registro,sizeof(char),tam,fp);
 	//retorna registro pronto
@@ -66,42 +69,47 @@ char *buscaRegistro_Indicador(FILE *fp){
 	RETORNA | vetor de bytes, que contém o registro encontrado
 **/
 char *buscaRRN_Indicador(FILE *fp, int rrn){
-	char *registro= NULL;
-	int tam;
-	int pos = ftell(fp); //vai armazenar a posicao original do fp
-	int i = 0;
-	char c;
+	char *registro;//vetor de bytes que irá armazena os campos do registro e os indicadores de tamanho dos campos de tamanho variável
+	registro= NULL;	
+	nt tam; //variável que contem o tamanho total do registro
+	int pos = ftell(fp); //vai armazenar a posicao original do ponteiro do arquivo
+	int i = 0; // variável que será o contador
+	char c;//variavel que recebe o byte para o qual o ponteiro do arquivo está apontando
 
 	// mandando o fp para o inicio do arquivo
 	fseek(fp,0,SEEK_SET);
 
 	// procurando o rrn
 	while(i != rrn && !feof(fp)){
+		
 		c = fgetc(fp);
-		if(feof(fp)){
+		if(feof(fp)){ //se chegou no final do arquivo retorna a string NULL
 			return registro;
 		}
-        fseek(fp, -1, SEEK_CUR);
-
+        fseek(fp, -1, SEEK_CUR);//leva o ponteiro do arquivo para a posição anteriro
+		//le o tamanho do registro do arquivo binário
 		fread(&tam,sizeof(int),1,fp);
+		//leva o ponteiro do arquivo para o endereço do primeiro byte do indicador de tamanho do próximo registro
 		fseek(fp,tam,SEEK_CUR);
 		i++;
 	}
-
+	// conferindo se o arquivo está no fim
 	c = fgetc(fp);
 	c = fgetc(fp);
-	if(feof(fp)) return registro;
-    fseek(fp, -2, SEEK_CUR);
+	if(feof(fp)) return registro; //se chegou no final do arquivo retorna a string NULL
+	//se no chegou no final do arquivo
+    	fseek(fp, -2, SEEK_CUR); //leva o ponteiro do arquivo para a posições anteriores
 
-	// lendo o tamanho do registro
+	// lendo o tamanho do registro do arquivo binário
 	fread(&tam,sizeof(int),1,fp);
-	//alocando memoria e guardando o registro numa string
+	//alocando memoria usando com base o tamanho 
 	registro = (char*)realloc(registro,sizeof(char)*tam);
+	//armazenando o registro em uma string
 	fread(registro,sizeof(char), tam, fp);
-	//vontado fp para a posicao que estava no inicio da funcao
+	//voltando fp para a posicao que estava no inicio da funcao
 	fseek(fp,pos,SEEK_SET);
 
-	return registro;
+	return registro; // retornando o registro pronto
 }
 
 
