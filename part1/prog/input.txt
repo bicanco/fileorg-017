@@ -1,0 +1,34 @@
+0 - indicador tamanho
+1 - delimitador
+2 - numero fixo
+
+----------------------
+
+while(!=4){
+
+	0 - mostrar tudo
+
+	1 - busca por campo (nome do campo){
+		documento
+		ticket
+		dominio
+		nome
+		cidade
+		uf
+	}
+
+	2 - busca por rrn
+
+	3 - busca de campo por rrn{
+		0 - documento(cnpj)
+		1 - ticket(int)
+		2 - dominio(www...)
+		3 - nome
+		4 - cidade
+		5 - uf
+	}
+
+	4 - sair4
+}
+
+

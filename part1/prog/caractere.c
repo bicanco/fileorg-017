@@ -13,12 +13,13 @@
 || Entrega:														|| 
 ||     	09/05/2017				 								||
 ||   															||
+|| Arquivo: 													||
+||   	caractere.c												||
+||   															||
+|| Descrição:													||
+||		Biblioteca com funções auxiliares para o tratamento 	||
+||		de texto.   											||
 \*==============================================================*/
-
-/**
-	caractere
-	Biblioteca com funções auxiliares para o tratamento de texto.
-**/
 
 #include <stdlib.h>
 #include <stdio.h>
