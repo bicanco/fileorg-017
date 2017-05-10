@@ -23,20 +23,8 @@
  ################################################################
 
 all:
-	gcc interface.c CSV.c registro.c indicador.c delimitador.c numeroFixo.c caractere.c -o dominios -I./
-
-test:
-	gcc test.c CSV.c registro.c -o dominiostest -I./
+	@gcc interface.c CSV.c registro.c indicador.c delimitador.c numeroFixo.c caractere.c -o dominios -I./
 
 run:
-	./dominios
-
-runtest:
-	./dominiostest
-
-runcl:
-	clear
+	@clear
 	@./dominios
-
-debug:
-	valgrind -v --leak-check=full --track-origins=yes ./dominios
