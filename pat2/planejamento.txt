@@ -1,16 +1,16 @@
-Atualização e adptação da interface da parte 1 para a parte 2
+Atualização e adptação da interface da parte 1 para a parte 2 #Toschi
 
-Gerar 3 arquivos de saída em função da leitura dos registros de um arquivo .csv
+Gerar 3 arquivos de saída em função da leitura dos registros de um arquivo .csv #Toschi
 
 Para cada arquivo de dados(de saída) criar um índice primário sobre o campo ticket
 
-Implementar a remoção lógica dos registros nos arquivos de saída deguida da remoção lógica nos arquivos de índice:
+Implementar a remoção lógica dos registros nos arquivos de saída seguida da remoção lógica nos arquivos de índice:
 	buscar o registro desejado utilizando o índice
-	realizar remoção lógica do registro no arquivo de dados
-	realizar remoção física no arquivo de índices
+	realizar remoção lógica do registro no arquivo de dados#David
+	realizar remoção física no arquivo de índices#Toschi
 	mostrar mensagem informando o sucesso ou não da remoção
 
-Permitir a inserção de arquivos adicionais com aproveitamento dinâmico do espaço:
+Permitir a inserção de arquivos adicionais com aproveitamento dinâmico do espaço: #David
 	arquivo 1 First-fit
 	arquivo 2 Best-fit
 	arquivo 3 Worst-fit
