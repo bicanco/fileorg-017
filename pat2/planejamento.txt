@@ -1,1 +1,24 @@
+Atualização e adptação da interface da parte 1 para a parte 2
 
+Gerar 3 arquivos de saída em função da leitura dos registros de um arquivo .csv
+
+Para cada arquivo de dados(de saída) criar um índice primário sobre o campo ticket
+
+Implementar a remoção lógica dos registros nos arquivos de saída deguida da remoção lógica nos arquivos de índice:
+	buscar o registro desejado utilizando o índice
+	realizar remoção lógica do registro no arquivo de dados
+	realizar remoção física no arquivo de índices
+	mostrar mensagem informando o sucesso ou não da remoção
+
+Permitir a inserção de arquivos adicionais com aproveitamento dinâmico do espaço:
+	arquivo 1 First-fit
+	arquivo 2 Best-fit
+	arquivo 3 Worst-fit
+	Para cada um deve-se:
+		inserir o registro
+		inserir o registro no índice
+		mostrar mensagem de sucesso ou não da remoção(? estava na descrição assim)
+
+Visualização de estatísticas sobre os arquivos de índice
+
+Visualização de estatísticas sobre as listas de registros removidos
