@@ -23,8 +23,8 @@
  ################################################################
 
 all:
-	# @gcc interface.c CSV.c registro.c delimitador.c caractere.c -o dominios -I./
-	@gcc test.c CSV.c registro.c delimitador.c caractere.c -o test -I./
+	# @gcc interface.c CSV.c registro.c delimitador.c caractere.c indice.c -o dominios -I./
+	@gcc test.c CSV.c registro.c delimitador.c caractere.c indice.c -o test -I./
 
 run:
 	@clear

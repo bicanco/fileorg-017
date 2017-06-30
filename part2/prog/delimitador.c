@@ -30,6 +30,7 @@
 
 #include "registro.h"
 #include "delimitador.h"
+#include "indice.h"
 
 /**
 	CONSTANTE: DELIMITADOR
@@ -58,6 +59,24 @@ int insereRegistro_Delimitador(char **csv, FILE *fds){
 	free(registro);
 
 	return tamanho;
+}
+
+void insereRegistro_Inicializa(char **csv, FILE *fds, Indice *indice){
+	int tamanho;// variável que recebrá o tamanho do resgistro criado pela função criaRegistro
+	char *registro;// variável que recberá o resgistro criado pela função criaRegistro
+	char delimitador = (char) DELIMITADOR;//variável que guarda o delimitador
+
+	registro = criaRegistro(csv, &tamanho);//cria-se o registro para escrever no arquivo
+
+	int offset = ftell(fds);
+	int ticket = retornaTicket(registro);
+	
+	fwrite(registro, sizeof(char), tamanho, fds);//escreve-se o registro
+	fwrite(&delimitador, sizeof(char), 1, fds);//escreve-se o delimitador de final de registro
+
+	inicializaIndice(indice, ticket, offset);
+
+	free(registro);
 }
 
 /**

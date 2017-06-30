@@ -148,6 +148,15 @@ int *mapeiaRegistro(char *registro){
     return mapaIndices;
 }
 
+int retornaTicket(char *registro){
+    int *indicesCampos = mapeiaRegistro(registro);
+    int ticket;
+
+    memcpy(&ticket, &registro[indicesCampos[3]], sizeof(int));
+    free(indicesCampos);
+    return ticket;
+}
+
 /**
     imprimeRegistro
     Imprime todos campos de um registro numa ordem compreensível ao usuário.

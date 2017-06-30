@@ -27,7 +27,10 @@
 #ifndef _DELIMITADOR_H_
 #define _DELIMITADOR_H_
 
+#include "indice.h"
+
 int insereRegistro_Delimitador(char **, FILE *);
+void insereRegistro_Inicializa(char **csv, FILE *fds, Indice *indice);
 char *buscaRegistro_Delimitador(FILE *);
 char *buscaRRN_Delimitador(FILE *, int);
 

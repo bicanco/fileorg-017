@@ -75,6 +75,7 @@
 #define NUM_CAMPOS_VARIAVEIS 4
 
 char *criaRegistro(char **, int *);
+int retornaTicket(char *registro);
 void imprimeRegistro(char *);
 void imprimeCampo(char *, int);
 int comparaCampo(char *, int, char *);

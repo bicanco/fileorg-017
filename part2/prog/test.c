@@ -7,20 +7,32 @@
 #include "registro.h"
 #include "delimitador.h"
 #include "caractere.h"
+#include "indice.h"
 
 int main(int argc, char *argv[]){
 	
-	printf("ue2\n");
-	FILE *fp = fopen("r", "test.csv");
-	printf("ue3\n");
-	FILE *saida = fopen("w", "test.out");
+	FILE *fp = fopen("test.csv", "r");
+	FILE *saida = fopen("test.out", "w");
+	Indice *ind = criaIndice("test.idx");
 
-	//char **data = leCSV(fp);
-	printf("ue\n");
-	//int tam = insereRegistro_Delimitador(data, saida);
+	char **data;
+
+	while (!feof(fp)){ // enquanto ainda houver dados
+		data = leCSV(fp); // leia um registro do arquivo de entrada
+		
+		// insere no arquivo de saída e libera a memória alocada para ele
+		insereRegistro_Inicializa(data, saida, ind);
+		liberaCSV(data);
+
+		// caso tenha chegado ao fim do arquivo, pare de ler
+		if (feof(fp)) break;
+	}
+
+	imprimeIndice(ind);
 
 	fclose(fp);
-	//fclose(saida);
+	fclose(saida);
+	liberaIndice(ind);
 
 	return 0;
 }
