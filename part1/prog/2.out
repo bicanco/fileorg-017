@@ -1,0 +1,2655 @@
+valgrind -v --leak-check=full --track-origins=yes ./dominios
+
+CONFIGURACAO: metodo de separacao dos registros
+0. Indicadores de tamanho
+1. Delimitadores entre registros
+2. Numero fixo de registros
+>> Escolha um metodo: 
+CONFIGURACAO: arquivo de entrada de dados
+>> Digite o nome do arquivo de entrada: 
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+DOMINIO: eletrobras.gov.br (ticket 5023)
+Cadastro feito em 09/01/1996 12:00:00
+Ultima atualizacao em 02/07/2014 19:56:36
+
+ORGAO/ENTIDADE:
+CENTRAIS ELETRICAS BRASILEIRAS SA
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.001.180/0002-07
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: premioconservacaoenergia.gov.br (ticket 5379045)
+Cadastro feito em 24/03/2009 20:07:14
+Ultima atualizacao em 15/04/2013 21:36:17
+
+ORGAO/ENTIDADE:
+CENTRAIS ELETRICAS BRASILEIRAS SA
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.001.180/0002-07
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: procel.gov.br (ticket 453438)
+Cadastro feito em 06/11/2000 18:41:03
+Ultima atualizacao em 05/10/2009 18:54:36
+
+ORGAO/ENTIDADE:
+CENTRAIS ELETRICAS BRASILEIRAS SA
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.001.180/0002-07
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: proinfa.gov.br (ticket 784297)
+Cadastro feito em 18/04/2002 14:55:25
+Ultima atualizacao em 15/04/2013 21:36:41
+
+ORGAO/ENTIDADE:
+CENTRAIS ELETRICAS BRASILEIRAS SA
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.001.180/0002-07
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: reluz.gov.br (ticket 453442)
+Cadastro feito em 06/11/2000 18:41:04
+Ultima atualizacao em 05/10/2009 18:35:49
+
+ORGAO/ENTIDADE:
+CENTRAIS ELETRICAS BRASILEIRAS SA
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.001.180/0002-07
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: bacen.gov.br (ticket 0)
+Cadastro feito em 26/11/1996 11:00:00
+Ultima atualizacao em 17/06/2015 22:19:54
+
+ORGAO/ENTIDADE:
+Banco Central do Brasil
+Brasília (Distrito Federal)
+CNPJ: 000.038.166/0001-05
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: bancocentral.gov.br (ticket 135008)
+Cadastro feito em 31/12/1998 00:24:21
+Ultima atualizacao em 17/06/2015 22:20:15
+
+ORGAO/ENTIDADE:
+Banco Central do Brasil
+Brasília (Distrito Federal)
+CNPJ: 000.038.166/0001-05
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: bc.gov.br (ticket 133801)
+Cadastro feito em 30/12/1998 18:22:39
+Ultima atualizacao em 17/06/2015 22:20:33
+
+ORGAO/ENTIDADE:
+Banco Central do Brasil
+Brasília (Distrito Federal)
+CNPJ: 000.038.166/0001-05
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: bcb.gov.br (ticket 5153)
+Cadastro feito em 24/01/1996 12:00:00
+Ultima atualizacao em 17/06/2015 22:20:50
+
+ORGAO/ENTIDADE:
+Banco Central do Brasil
+Brasília (Distrito Federal)
+CNPJ: 000.038.166/0001-05
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cidadaniafinanceira.gov.br (ticket 13971449)
+Cadastro feito em 31/03/2015 16:27:25
+Ultima atualizacao em 17/06/2015 22:21:48
+
+ORGAO/ENTIDADE:
+Banco Central do Brasil
+Brasília (Distrito Federal)
+CNPJ: 000.038.166/0001-05
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: sisbacen.gov.br (ticket 135007)
+Cadastro feito em 31/12/1998 00:24:19
+Ultima atualizacao em 18/05/2016 21:19:24
+
+ORGAO/ENTIDADE:
+Banco Central do Brasil
+Brasília (Distrito Federal)
+CNPJ: 000.038.166/0001-05
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: selic.gov.br (ticket 7082360)
+Cadastro feito em 28/07/2010 12:18:08
+Ultima atualizacao em 30/03/2011 02:25:07
+
+ORGAO/ENTIDADE:
+Banco Central do Brasil
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.038.166/0010-98
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dnocs.gov.br (ticket 139185)
+Cadastro feito em 10/02/1999 19:09:57
+Ultima atualizacao em 04/09/2015 14:09:16
+
+ORGAO/ENTIDADE:
+DEPARTAMENTO NACIONAL DE OBRAS CONTRA AS SECAS
+Fortaleza (Ceará)
+CNPJ: 000.043.711/0001-43
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dnocspb.gov.br (ticket 165937)
+Cadastro feito em 14/06/1999 16:47:03
+Ultima atualizacao em 11/03/2016 13:47:39
+
+ORGAO/ENTIDADE:
+Segundo Distrito de Engenharia Rural
+João Pessoa (Paraíba)
+CNPJ: 000.043.711/0008-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: fhdf.gov.br (ticket 1)
+Cadastro feito em 01/01/1996 12:00:00
+Ultima atualizacao em 19/02/2008 20:18:44
+
+ORGAO/ENTIDADE:
+Secretaria de Saúde do Distrito Federal
+Brasília (Distrito Federal)
+CNPJ: 000.054.015/0001-32
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: funai.gov.br (ticket 83785)
+Cadastro feito em 10/02/1998 13:07:35
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Fundação Nacional do Indio
+Brasília (Distrito Federal)
+CNPJ: 000.059.311/0001-26
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: museudoindio.gov.br (ticket 1373769)
+Cadastro feito em 23/10/2003 16:28:14
+Ultima atualizacao em 11/05/2016 12:47:47
+
+ORGAO/ENTIDADE:
+Museu do Índio - Fundação Nacional do Índio
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.059.311/0002-07
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: eletrosul.gov.br (ticket 12785)
+Cadastro feito em 27/07/1996 12:00:00
+Ultima atualizacao em 29/12/2014 18:59:18
+
+ORGAO/ENTIDADE:
+Eletrosul Centrais Elétricas S.A.
+Florianópolis (Santa Catarina)
+CNPJ: 000.073.957/0001-68
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: bcdam.gov.br (ticket 145756)
+Cadastro feito em 
+Ultima atualizacao em 05/08/2015 18:20:34
+
+ORGAO/ENTIDADE:
+COMPANHIA DE PESQUISA DE RECURSOS MINERAIS
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.091.652/0002-60
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cprm.gov.br (ticket 5443)
+Cadastro feito em 16/02/1996 12:00:00
+Ultima atualizacao em 25/11/2015 15:20:16
+
+ORGAO/ENTIDADE:
+COMPANHIA DE PESQUISA DE RECURSOS MINERAIS
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.091.652/0002-60
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: redegeochronos.gov.br (ticket 2788606)
+Cadastro feito em 19/05/2006 11:22:45
+Ultima atualizacao em 24/04/2014 17:36:06
+
+ORGAO/ENTIDADE:
+COMPANHIA DE PESQUISA DE RECURSOS MINERAIS
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.091.652/0002-60
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cprm-ma.gov.br (ticket 500371)
+Cadastro feito em 23/01/2001 12:07:05
+Ultima atualizacao em 30/12/2002 14:57:15
+
+ORGAO/ENTIDADE:
+Companhia de Pesquisa de Recursos Minerais CPRM
+Manaus (Amazonas)
+CNPJ: 000.091.652/0004-21
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cprm-be.gov.br (ticket 28066)
+Cadastro feito em 18/01/1997 11:00:00
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+COMPANHIA DE PESQUISA DE RECURSOS MINERAIS
+Belém (Paraná)
+CNPJ: 000.091.652/0005-02
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cprmba.gov.br (ticket 523307)
+Cadastro feito em 09/03/2001 12:12:55
+Ultima atualizacao em 22/06/2002 14:25:00
+
+ORGAO/ENTIDADE:
+Companhia de Pesquisa de Recursos Minerais
+Salvador (Bahia)
+CNPJ: 000.091.652/0007-74
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cprm-sp.gov.br (ticket 95976)
+Cadastro feito em 04/05/1998 17:43:41
+Ultima atualizacao em 05/05/1998 12:00:00
+
+ORGAO/ENTIDADE:
+Companhia de Pesquisa de Recursos Minerais
+São Paulo (São Paulo)
+CNPJ: 000.091.652/0008-55
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cprmpa.gov.br (ticket 104099)
+Cadastro feito em 18/07/1998 13:55:22
+Ultima atualizacao em 17/11/1999 18:49:59
+
+ORGAO/ENTIDADE:
+Companhia de Pesquisas de Recursos Minerais CPRM
+Porto Alegre (Rio Grande do Sul)
+CNPJ: 000.091.652/0009-36
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cprmbh.gov.br (ticket 460087)
+Cadastro feito em 17/11/2000 14:03:42
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Companhia de Pesquisa de Recursos Minerais - CPRM
+Belo Horizonte (Minas Gerais)
+CNPJ: 000.091.652/0010-70
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: saofrancisco.gov.br (ticket 204971)
+Cadastro feito em 13/10/1999 16:52:31
+Ultima atualizacao em 13/04/2016 16:16:32
+
+ORGAO/ENTIDADE:
+Companhia de Pesquisa de Recursos Minerais - CPRM
+Belo Horizonte (Minas Gerais)
+CNPJ: 000.091.652/0010-70
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: reste.gov.br (ticket 85216)
+Cadastro feito em 10/02/1998 12:07:21
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Companhia de Pesquisa de Recursos Minerais
+Teresina (Piauí)
+CNPJ: 000.091.652/0015-84
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: crecidf.gov.br (ticket 9323584)
+Cadastro feito em 12/01/2012 13:23:50
+Ultima atualizacao em 14/10/2015 17:07:34
+
+ORGAO/ENTIDADE:
+CONSELHO REGIONAL DE CORRETORES DE IMOVEIS CRECI
+Brasília (Distrito Federal)
+CNPJ: 000.105.650/0001-00
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cfmv.gov.br (ticket 7629594)
+Cadastro feito em 29/12/2010 12:54:29
+Ultima atualizacao em 06/01/2017 01:06:21
+
+ORGAO/ENTIDADE:
+CONSELHO FEDERAL DE MEDICINA VETERINARIA
+Brasília (Distrito Federal)
+CNPJ: 000.119.784/0001-71
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: eafrs.gov.br (ticket 866902)
+Cadastro feito em 
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Escola Agrotécnica Federal de Rio do Sul
+Rio do Sul (Santa Catarina)
+CNPJ: 000.147.606/0001-54
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: inb.gov.br (ticket 89158)
+Cadastro feito em 17/03/1998 19:26:24
+Ultima atualizacao em 27/01/2017 14:24:11
+
+ORGAO/ENTIDADE:
+Industrias Nucleares do Brasil S/A
+Resende (Rio de Janeiro)
+CNPJ: 000.322.818/0020-93
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: agritempo.gov.br (ticket 1236028)
+Cadastro feito em 05/06/2003 18:42:46
+Ultima atualizacao em 29/07/2015 18:33:32
+
+ORGAO/ENTIDADE:
+EMPRESA BRASILEIRA DE PESQUISA AGROPECUARIA
+Campinas (São Paulo)
+CNPJ: 000.348.003/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: agrolivre.gov.br (ticket 1480690)
+Cadastro feito em 03/02/2004 18:31:07
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+EMPRESA BRASILEIRA DE PESQUISA AGROPECUARIA
+Campinas (São Paulo)
+CNPJ: 000.348.003/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: pimentalonga.gov.br (ticket 449661)
+Cadastro feito em 25/10/2000 12:50:34
+Ultima atualizacao em 27/11/2000 14:39:49
+
+ORGAO/ENTIDADE:
+Embrapa - Acre
+Rio Branco (Acre)
+CNPJ: 000.348.003/0068-28
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: embrapa.gov.br (ticket 357901)
+Cadastro feito em 09/06/2000 20:26:57
+Ultima atualizacao em 03/11/2016 17:39:03
+
+ORGAO/ENTIDADE:
+Empresa Brasileira de Pesquisa Agropecuaria
+Boa Vista (Roraima)
+CNPJ: 000.348.003/0101-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: aeroportodebrasilia.gov.br (ticket 1008124)
+Cadastro feito em 12/11/2002 10:56:02
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+INFRAERO - EMPRESA BRASILEIRA DE INFRA-ESTRUTURA
+Brasília (Distrito Federal)
+CNPJ: 000.352.294/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: aeroportodesalvador.gov.br (ticket 1012775)
+Cadastro feito em 12/11/2002 10:56:02
+Ultima atualizacao em 09/01/2013 11:34:38
+
+ORGAO/ENTIDADE:
+INFRAERO - EMPRESA BRASILEIRA DE INFRA-ESTRUTURA
+Brasília (Distrito Federal)
+CNPJ: 000.352.294/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: aeroportoindustria.gov.br (ticket 719691)
+Cadastro feito em 29/01/2002 18:45:42
+Ultima atualizacao em 09/01/2013 11:34:34
+
+ORGAO/ENTIDADE:
+INFRAERO - EMPRESA BRASILEIRA DE INFRA-ESTRUTURA
+Brasília (Distrito Federal)
+CNPJ: 000.352.294/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: aeroportoindustrial.gov.br (ticket 719697)
+Cadastro feito em 29/01/2002 18:45:44
+Ultima atualizacao em 09/01/2013 11:34:28
+
+ORGAO/ENTIDADE:
+INFRAERO - EMPRESA BRASILEIRA DE INFRA-ESTRUTURA
+Brasília (Distrito Federal)
+CNPJ: 000.352.294/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: aeroshopping.gov.br (ticket 719666)
+Cadastro feito em 29/01/2002 18:45:38
+Ultima atualizacao em 09/01/2013 11:34:13
+
+ORGAO/ENTIDADE:
+INFRAERO - EMPRESA BRASILEIRA DE INFRA-ESTRUTURA
+Brasília (Distrito Federal)
+CNPJ: 000.352.294/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: infraero.gov.br (ticket 21425)
+Cadastro feito em 05/11/1996 11:00:00
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+INFRAERO - EMPRESA BRASILEIRA DE INFRA-ESTRUTURA
+Brasília (Distrito Federal)
+CNPJ: 000.352.294/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: sivnet.gov.br (ticket 719669)
+Cadastro feito em 29/01/2002 18:45:39
+Ultima atualizacao em 09/01/2013 11:34:23
+
+ORGAO/ENTIDADE:
+INFRAERO - EMPRESA BRASILEIRA DE INFRA-ESTRUTURA
+Brasília (Distrito Federal)
+CNPJ: 000.352.294/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: tecanet.gov.br (ticket 719687)
+Cadastro feito em 29/01/2002 18:45:41
+Ultima atualizacao em 09/01/2013 11:34:18
+
+ORGAO/ENTIDADE:
+INFRAERO - EMPRESA BRASILEIRA DE INFRA-ESTRUTURA
+Brasília (Distrito Federal)
+CNPJ: 000.352.294/0001-10
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: novoaeroportorecife.gov.br (ticket 596093)
+Cadastro feito em 10/07/2001 11:41:34
+Ultima atualizacao em 15/02/2013 12:12:41
+
+ORGAO/ENTIDADE:
+INFRAERO - EMPRESA BRASILEIRA DE INFRA-ESTRUTURA
+Recife (PE)
+CNPJ: 000.352.294/0014-35
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: amazonasenergia.gov.br (ticket 639230)
+Cadastro feito em 28/09/2001 20:14:55
+Ultima atualizacao em 16/10/2015 20:59:14
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: belomonte.gov.br (ticket 810126)
+Cadastro feito em 08/05/2002 14:33:37
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: boavistaenergia.gov.br (ticket 414884)
+Cadastro feito em 12/09/2000 12:00:19
+Ultima atualizacao em 15/06/2016 01:15:39
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: bvenergia.gov.br (ticket 414885)
+Cadastro feito em 12/09/2000 12:00:20
+Ultima atualizacao em 09/01/2010 16:52:25
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cbee.gov.br (ticket 714185)
+Cadastro feito em 24/01/2002 14:02:30
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: coegv.gov.br (ticket 122146)
+Cadastro feito em 12/11/1998 19:22:22
+Ultima atualizacao em 08/05/2008 14:13:21
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: eletronorte.gov.br (ticket 396358)
+Cadastro feito em 09/08/2000 22:35:19
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: eln.gov.br (ticket 2)
+Cadastro feito em 30/05/1995 12:00:00
+Ultima atualizacao em 02/01/2013 16:53:26
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: energiaboavista.gov.br (ticket 414887)
+Cadastro feito em 12/09/2000 12:00:20
+Ultima atualizacao em 10/12/2008 12:11:46
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: energiabv.gov.br (ticket 414889)
+Cadastro feito em 12/09/2000 12:00:21
+Ultima atualizacao em 10/12/2008 12:11:56
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: redefloresta.gov.br (ticket 1546935)
+Cadastro feito em 05/03/2004 12:48:15
+Ultima atualizacao em 12/05/2010 11:22:33
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: topawa-kaa.gov.br (ticket 1546938)
+Cadastro feito em 05/03/2004 12:48:15
+Ultima atualizacao em 12/05/2010 11:22:53
+
+ORGAO/ENTIDADE:
+Centrais Eletricas do Norte do Brasil
+Brasilia (Distrito Federal)
+CNPJ: 000.357.038/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cadastrominhacasaminhavida.gov.br (ticket 15397059)
+Cadastro feito em 25/03/2016 20:12:18
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixa.gov.br (ticket 53140)
+Cadastro feito em 20/08/1997 12:00:00
+Ultima atualizacao em 29/11/2016 02:08:42
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixacultural.gov.br (ticket 2119071)
+Cadastro feito em 17/05/2005 11:42:54
+Ultima atualizacao em 16/07/2015 18:55:07
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixaeconomica.gov.br (ticket 53141)
+Cadastro feito em 20/08/1997 12:00:00
+Ultima atualizacao em 16/07/2015 19:03:08
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixaeconomicafederal.gov.br (ticket 120970)
+Cadastro feito em 20/10/1998 13:51:47
+Ultima atualizacao em 16/07/2015 19:08:55
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixamaisqueumbanco.gov.br (ticket 8785977)
+Cadastro feito em 12/09/2011 18:52:35
+Ultima atualizacao em 16/07/2015 19:35:35
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixamasterpass.gov.br (ticket 14823420)
+Cadastro feito em 27/10/2015 19:33:35
+Ultima atualizacao em 27/10/2015 19:33:35
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixaoperadoradeseguros.gov.br (ticket 14436705)
+Cadastro feito em 16/07/2015 17:39:31
+Ultima atualizacao em 16/07/2015 19:38:13
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixapostal.gov.br (ticket 223289)
+Cadastro feito em 23/11/1999 16:04:45
+Ultima atualizacao em 16/07/2015 19:40:19
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixaseguridade.gov.br (ticket 14436714)
+Cadastro feito em 16/07/2015 17:39:31
+Ultima atualizacao em 16/07/2015 19:42:44
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cef.gov.br (ticket 3)
+Cadastro feito em 01/01/1996 12:00:00
+Ultima atualizacao em 16/07/2015 20:39:01
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: creditoruralcaixa.gov.br (ticket 13323025)
+Cadastro feito em 17/09/2014 15:09:31
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: fgts.gov.br (ticket 5512241)
+Cadastro feito em 29/04/2009 16:21:42
+Ultima atualizacao em 16/07/2015 21:00:13
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: postal.gov.br (ticket 223294)
+Cadastro feito em 23/11/1999 16:04:46
+Ultima atualizacao em 16/07/2015 21:27:26
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: seliganacaixa.gov.br (ticket 13323021)
+Cadastro feito em 17/09/2014 15:09:31
+Ultima atualizacao em 16/07/2015 21:34:41
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0001-04
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: investidoresinstitucionais.gov.br (ticket 689142)
+Cadastro feito em 13/12/2001 13:28:42
+Ultima atualizacao em 16/07/2015 21:17:50
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0262-51
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caminhaodasorte.gov.br (ticket 323560)
+Cadastro feito em 02/05/2000 13:26:04
+Ultima atualizacao em 16/07/2015 19:43:47
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caminhaofederal.gov.br (ticket 323559)
+Cadastro feito em 
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cartelafederal.gov.br (ticket 323555)
+Cadastro feito em 02/05/2000 13:26:05
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: loteriaesportiva.gov.br (ticket 323558)
+Cadastro feito em 02/05/2000 13:26:12
+Ultima atualizacao em 16/07/2015 21:20:13
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: loteriafederal.gov.br (ticket 323556)
+Cadastro feito em 02/05/2000 13:26:13
+Ultima atualizacao em 16/07/2015 21:20:48
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: quina.gov.br (ticket 323557)
+Cadastro feito em 02/05/2000 13:26:17
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: sena.gov.br (ticket 323554)
+Cadastro feito em 02/05/2000 13:26:19
+Ultima atualizacao em 16/07/2015 21:35:04
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: supercaminhaodasorte.gov.br (ticket 323561)
+Cadastro feito em 02/05/2000 13:26:20
+Ultima atualizacao em 16/07/2015 21:35:42
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: trevodaloteria.gov.br (ticket 323553)
+Cadastro feito em 02/05/2000 13:26:23
+Ultima atualizacao em 16/07/2015 21:39:08
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: trincadasorte.gov.br (ticket 323562)
+Cadastro feito em 02/05/2000 13:26:25
+Ultima atualizacao em 16/07/2015 21:41:15
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0643-40
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: bolsadacaixa.gov.br (ticket 399411)
+Cadastro feito em 04/08/2000 21:17:42
+Ultima atualizacao em 16/07/2015 18:31:57
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixaqui.gov.br (ticket 399412)
+Cadastro feito em 04/08/2000 21:17:44
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixavirtual.gov.br (ticket 399413)
+Cadastro feito em 04/08/2000 21:17:44
+Ultima atualizacao em 16/07/2015 19:43:13
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: esportiva.gov.br (ticket 399414)
+Cadastro feito em 04/08/2000 21:17:49
+Ultima atualizacao em 16/07/2015 20:56:09
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: federal.gov.br (ticket 399415)
+Cadastro feito em 04/08/2000 21:17:49
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: govbankingcaixa.gov.br (ticket 399416)
+Cadastro feito em 04/08/2000 21:17:52
+Ultima atualizacao em 16/07/2015 21:02:57
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: instantanea.gov.br (ticket 399419)
+Cadastro feito em 04/08/2000 21:17:54
+Ultima atualizacao em 16/07/2015 21:07:40
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: mega-sena.gov.br (ticket 399420)
+Cadastro feito em 04/08/2000 21:17:57
+Ultima atualizacao em 16/07/2015 21:23:18
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: megasena.gov.br (ticket 1337598)
+Cadastro feito em 22/09/2003 12:32:38
+Ultima atualizacao em 16/07/2015 21:23:55
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: rapidinha.gov.br (ticket 399421)
+Cadastro feito em 04/08/2000 21:18:00
+Ultima atualizacao em 16/07/2015 21:31:10
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: supersenaduplachance.gov.br (ticket 399422)
+Cadastro feito em 04/08/2000 21:18:01
+Ultima atualizacao em 16/07/2015 21:36:07
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0655-83
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: apostasurpresa.gov.br (ticket 399383)
+Cadastro feito em 04/08/2000 20:46:54
+Ultima atualizacao em 16/07/2015 18:28:44
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixaresolve.gov.br (ticket 399386)
+Cadastro feito em 04/08/2000 20:46:55
+Ultima atualizacao em 16/07/2015 19:41:37
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: chequeazul.gov.br (ticket 399389)
+Cadastro feito em 04/08/2000 20:46:57
+Ultima atualizacao em 16/07/2015 20:40:04
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: construcard.gov.br (ticket 399390)
+Cadastro feito em 04/08/2000 20:46:58
+Ultima atualizacao em 16/07/2015 20:44:20
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: federalcap.gov.br (ticket 399404)
+Cadastro feito em 04/08/2000 21:17:50
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: federalcard.gov.br (ticket 399405)
+Cadastro feito em 04/08/2000 21:17:50
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: guiafacilgps.gov.br (ticket 399406)
+Cadastro feito em 04/08/2000 21:17:53
+Ultima atualizacao em 16/07/2015 21:06:06
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: loterias.gov.br (ticket 399407)
+Cadastro feito em 04/08/2000 21:17:55
+Ultima atualizacao em 16/07/2015 21:21:07
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: officebankingsocial.gov.br (ticket 399409)
+Cadastro feito em 04/08/2000 21:17:59
+Ultima atualizacao em 16/07/2015 21:26:37
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: teimozinha.gov.br (ticket 399410)
+Cadastro feito em 04/08/2000 21:18:02
+Ultima atualizacao em 16/07/2015 21:36:41
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0674-46
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: bolaofederal.gov.br (ticket 323563)
+Cadastro feito em 02/05/2000 13:26:04
+Ultima atualizacao em 16/07/2015 18:31:09
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: lojacaixa.gov.br (ticket 1850408)
+Cadastro feito em 19/10/2004 18:53:37
+Ultima atualizacao em 16/07/2015 21:19:12
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: loteca.gov.br (ticket 323569)
+Cadastro feito em 02/05/2000 13:26:11
+Ultima atualizacao em 16/07/2015 21:19:57
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: loto-tauloteriadacopa.gov.br (ticket 323575)
+Cadastro feito em 02/05/2000 13:26:14
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: raspadinhadacaixa.gov.br (ticket 323570)
+Cadastro feito em 02/05/2000 13:26:18
+Ultima atualizacao em 16/07/2015 21:32:03
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: raspadinhafederal.gov.br (ticket 323571)
+Cadastro feito em 02/05/2000 13:26:18
+Ultima atualizacao em 16/07/2015 21:32:23
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: shoppingcaixa.gov.br (ticket 1850414)
+Cadastro feito em 19/10/2004 18:53:37
+Ultima atualizacao em 16/07/2015 21:35:22
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: supertrinca.gov.br (ticket 323567)
+Cadastro feito em 
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: trevodasorte.gov.br (ticket 323577)
+Cadastro feito em 02/05/2000 13:26:23
+Ultima atualizacao em 16/07/2015 21:39:23
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: trevofederal.gov.br (ticket 323580)
+Cadastro feito em 02/05/2000 13:26:24
+Ultima atualizacao em 16/07/2015 21:40:29
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: trinca.gov.br (ticket 323568)
+Cadastro feito em 02/05/2000 13:26:25
+Ultima atualizacao em 16/07/2015 21:40:49
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: trinka.gov.br (ticket 323565)
+Cadastro feito em 02/05/2000 13:26:26
+Ultima atualizacao em 16/07/2015 21:41:46
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/0688-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixadasorte.gov.br (ticket 399423)
+Cadastro feito em 04/08/2000 21:17:42
+Ultima atualizacao em 16/07/2015 18:56:03
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixadotesouro.gov.br (ticket 399424)
+Cadastro feito em 04/08/2000 21:17:43
+Ultima atualizacao em 16/07/2015 18:59:03
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixaforte.gov.br (ticket 399425)
+Cadastro feito em 04/08/2000 21:17:43
+Ultima atualizacao em 16/07/2015 19:31:54
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: carrocampeao.gov.br (ticket 399426)
+Cadastro feito em 04/08/2000 21:17:45
+Ultima atualizacao em 16/07/2015 19:44:21
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dinheiroaqui.gov.br (ticket 399427)
+Cadastro feito em 
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dinheiroemcaixa.gov.br (ticket 399428)
+Cadastro feito em 04/08/2000 21:17:46
+Ultima atualizacao em 16/07/2015 20:49:29
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dinheiroinstantaneo.gov.br (ticket 399429)
+Cadastro feito em 04/08/2000 21:17:47
+Ultima atualizacao em 16/07/2015 20:49:55
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dinheirovivo.gov.br (ticket 399431)
+Cadastro feito em 04/08/2000 21:17:48
+Ultima atualizacao em 16/07/2015 20:50:12
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: duplasena.gov.br (ticket 1342309)
+Cadastro feito em 30/09/2003 19:48:18
+Ultima atualizacao em 16/07/2015 20:50:44
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: loteriascaixa.gov.br (ticket 399432)
+Cadastro feito em 04/08/2000 21:17:56
+Ultima atualizacao em 16/07/2015 21:21:50
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: lotofacil.gov.br (ticket 399433)
+Cadastro feito em 04/08/2000 21:17:56
+Ultima atualizacao em 16/07/2015 21:22:23
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: lotomania.gov.br (ticket 1342303)
+Cadastro feito em 30/09/2003 19:48:18
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2399-13
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixaaqui.gov.br (ticket 628476)
+Cadastro feito em 05/09/2001 20:08:24
+Ultima atualizacao em 16/07/2015 18:51:27
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixainvest.gov.br (ticket 650493)
+Cadastro feito em 25/10/2001 19:55:47
+Ultima atualizacao em 16/07/2015 19:34:29
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: caixainveste.gov.br (ticket 650495)
+Cadastro feito em 25/10/2001 19:55:48
+Ultima atualizacao em 16/07/2015 19:34:57
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: e-conta.gov.br (ticket 628473)
+Cadastro feito em 05/09/2001 20:08:23
+Ultima atualizacao em 18/12/2002 15:53:27
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: e-contacaixa.gov.br (ticket 685789)
+Cadastro feito em 17/12/2001 19:18:37
+Ultima atualizacao em 18/12/2002 15:53:43
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: e-pagamentos.gov.br (ticket 685791)
+Cadastro feito em 17/12/2001 19:18:38
+Ultima atualizacao em 18/12/2002 15:53:57
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: e-pagamentoscaixa.gov.br (ticket 685790)
+Cadastro feito em 17/12/2001 19:18:38
+Ultima atualizacao em 18/12/2002 15:54:12
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: ecobrancacaixa.gov.br (ticket 768337)
+Cadastro feito em 01/04/2002 18:33:13
+Ultima atualizacao em 18/12/2002 15:54:29
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: investcaixa.gov.br (ticket 650496)
+Cadastro feito em 25/10/2001 19:55:49
+Ultima atualizacao em 18/12/2002 15:55:00
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: investecaixa.gov.br (ticket 650497)
+Cadastro feito em 25/10/2001 19:55:49
+Ultima atualizacao em 18/12/2002 15:55:17
+
+ORGAO/ENTIDADE:
+CAIXA ECONOMICA FEDERAL
+Brasília (Distrito Federal)
+CNPJ: 000.360.305/2714-85
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: geipot.gov.br (ticket 20961)
+Cadastro feito em 31/10/1996 11:00:00
+Ultima atualizacao em 30/07/2014 18:42:20
+
+ORGAO/ENTIDADE:
+EMPRESA BRASILEIRA DE PLANEJAMENTO DE
+Brasília (Distrito Federal)
+CNPJ: 000.366.914/0001-70
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dpu.gov.br (ticket 3957938)
+Cadastro feito em 05/10/2007 17:05:55
+Ultima atualizacao em 22/11/2016 13:18:43
+
+ORGAO/ENTIDADE:
+Defensoria Pública-Geral da União
+Brasília (Distrito Federal)
+CNPJ: 000.375.114/0001-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: incra.gov.br (ticket 11611)
+Cadastro feito em 12/07/1996 12:00:00
+Ultima atualizacao em 22/03/2017 22:12:39
+
+ORGAO/ENTIDADE:
+INCRA/INSTITUTO NACIONAL DE COLON E REF. AGRARIA
+Brasília (Distrito Federal)
+CNPJ: 000.375.972/0002-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: nead.gov.br (ticket 146549)
+Cadastro feito em 07/04/1999 11:58:19
+Ultima atualizacao em 03/08/2011 15:57:51
+
+ORGAO/ENTIDADE:
+INCRA/INSTITUTO NACIONAL DE COLON E REF. AGRARIA
+Brasília (Distrito Federal)
+CNPJ: 000.375.972/0002-41
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: incra-pe.gov.br (ticket 123516)
+Cadastro feito em 25/11/1998 14:12:52
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Superint. Estadual de Pernambuco - Incra
+Recife (PE)
+CNPJ: 000.375.972/0005-94
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: incrarn.gov.br (ticket 99023)
+Cadastro feito em 17/06/1998 12:30:34
+Ultima atualizacao em 04/09/2003 12:27:34
+
+ORGAO/ENTIDADE:
+Instituto Nacional de Colonizacao e Ref. Agraria
+Natal (Rio Grande do Norte)
+CNPJ: 000.375.972/0018-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: fnde.gov.br (ticket 124561)
+Cadastro feito em 17/11/1998 15:57:35
+Ultima atualizacao em 24/02/2016 12:06:54
+
+ORGAO/ENTIDADE:
+FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCACAO
+Brasília (Distrito Federal)
+CNPJ: 000.378.257/0001-81
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dnpm.gov.br (ticket 35177)
+Cadastro feito em 02/04/1997 12:00:00
+Ultima atualizacao em 04/02/2015 17:05:05
+
+ORGAO/ENTIDADE:
+Departamento Nacional de Producao Mineral
+Brasília (Distrito Federal)
+CNPJ: 000.381.056/0001-33
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: pormin.gov.br (ticket 4136215)
+Cadastro feito em 11/01/2008 19:24:38
+Ultima atualizacao em 04/02/2015 17:05:28
+
+ORGAO/ENTIDADE:
+Departamento Nacional de Producao Mineral
+Brasília (Distrito Federal)
+CNPJ: 000.381.056/0001-33
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dnpm-pe.gov.br (ticket 957607)
+Cadastro feito em 01/10/2002 12:12:23
+Ultima atualizacao em 16/08/2013 12:43:47
+
+ORGAO/ENTIDADE:
+4 Distrito DNPM - PE
+Recife (PE)
+CNPJ: 000.381.056/0005-67
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dnpmsc.gov.br (ticket 825078)
+Cadastro feito em 07/05/2002 19:05:37
+Ultima atualizacao em 07/05/2007 21:38:38
+
+ORGAO/ENTIDADE:
+DNPM - 11� Distrito
+Florianópolis (Santa Catarina)
+CNPJ: 000.381.056/0012-96
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dnpmma.gov.br (ticket 944603)
+Cadastro feito em 04/09/2002 17:28:42
+Ultima atualizacao em 04/09/2002 14:28:42
+
+ORGAO/ENTIDADE:
+DNPM - Depart. Nacional de Produção Mineral
+sao luis (Maranhão)
+CNPJ: 000.381.056/0023-49
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: bndespar.gov.br (ticket 2800307)
+Cadastro feito em 17/05/2006 17:29:51
+Ultima atualizacao em 11/11/2014 20:48:56
+
+ORGAO/ENTIDADE:
+BNDES Participações S/A
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.383.281/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: aerofacil.gov.br (ticket 12368464)
+Cadastro feito em 23/12/2013 18:07:43
+Ultima atualizacao em 15/01/2014 20:30:54
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: aplicativos.gov.br (ticket 11895940)
+Cadastro feito em 26/08/2013 12:54:00
+Ultima atualizacao em 22/12/2016 19:21:36
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: brasil.gov.br (ticket 24188)
+Cadastro feito em 06/12/1996 11:00:00
+Ultima atualizacao em 22/12/2016 19:43:54
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: brazil.gov.br (ticket 24189)
+Cadastro feito em 06/12/1996 11:00:00
+Ultima atualizacao em 28/03/2010 17:35:34
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: brazilgovnews.gov.br (ticket 15887965)
+Cadastro feito em 25/07/2016 13:15:35
+Ultima atualizacao em 25/07/2016 13:15:35
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: casacivil.gov.br (ticket 5829920)
+Cadastro feito em 08/08/2009 18:51:56
+Ultima atualizacao em 28/04/2016 12:43:56
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cdes.gov.br (ticket 1105216)
+Cadastro feito em 12/02/2003 14:00:50
+Ultima atualizacao em 12/02/2003 12:00:50
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cnv.gov.br (ticket 10171985)
+Cadastro feito em 24/07/2012 10:50:50
+Ultima atualizacao em 15/01/2016 14:16:54
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: confiancabrasil.gov.br (ticket 5135023)
+Cadastro feito em 26/12/2008 12:22:25
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: confiancanobrasil.gov.br (ticket 5148848)
+Cadastro feito em 26/12/2008 12:22:25
+Ultima atualizacao em 26/12/2008 12:22:25
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: ctir.gov.br (ticket 1940214)
+Cadastro feito em 17/12/2004 17:03:07
+Ultima atualizacao em 14/09/2016 13:59:26
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dialoga.gov.br (ticket 14062641)
+Cadastro feito em 14/04/2015 17:49:35
+Ultima atualizacao em 14/04/2015 17:49:35
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: emdefesadademocracia.gov.br (ticket 15430403)
+Cadastro feito em 12/04/2016 15:25:31
+Ultima atualizacao em 12/04/2016 15:25:31
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: equilibriodecontas.gov.br (ticket 16163755)
+Cadastro feito em 07/10/2016 21:27:57
+Ultima atualizacao em 07/10/2016 21:27:57
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: fomezero.gov.br (ticket 1073518)
+Cadastro feito em 
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+null (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: gastospublicos.gov.br (ticket 16167275)
+Cadastro feito em 07/10/2016 10:56:36
+Ultima atualizacao em 07/10/2016 10:56:36
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: govbrasil.gov.br (ticket 11895959)
+Cadastro feito em 26/08/2013 12:54:00
+Ultima atualizacao em 26/08/2013 12:54:00
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: juventude.gov.br (ticket 3962921)
+Cadastro feito em 17/10/2007 19:13:26
+Ultima atualizacao em 03/10/2011 20:09:30
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: maisbrasil.gov.br (ticket 3955204)
+Cadastro feito em 11/10/2007 19:08:36
+Ultima atualizacao em 22/09/2014 17:06:58
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: minhacasaminhavida.gov.br (ticket 5419701)
+Cadastro feito em 08/04/2009 00:23:47
+Ultima atualizacao em 08/04/2009 00:23:47
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: nae.gov.br (ticket 2478043)
+Cadastro feito em 23/11/2005 12:17:24
+Ultima atualizacao em 28/02/2008 23:13:57
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: observatoriodegenero.gov.br (ticket 5206019)
+Cadastro feito em 22/01/2009 10:18:04
+Ultima atualizacao em 22/01/2009 10:18:04
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: odmbrasil.gov.br (ticket 9831924)
+Cadastro feito em 21/05/2012 13:31:12
+Ultima atualizacao em 21/05/2012 13:31:12
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: pesquisademidia.gov.br (ticket 16424434)
+Cadastro feito em 07/12/2016 10:01:30
+Ultima atualizacao em 07/12/2016 10:01:30
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: planalto.gov.br (ticket 6787)
+Cadastro feito em 16/04/1996 12:00:00
+Ultima atualizacao em 21/12/2016 20:21:47
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: portosdobrasil.gov.br (ticket 3736210)
+Cadastro feito em 16/07/2007 13:37:21
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: ppi.gov.br (ticket 16161706)
+Cadastro feito em 07/10/2016 21:27:57
+Ultima atualizacao em 07/10/2016 21:27:57
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: presidencia.gov.br (ticket 276235)
+Cadastro feito em 03/03/2000 13:28:22
+Ultima atualizacao em 19/09/2011 00:22:20
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: presidenciadarepublica.gov.br (ticket 337135)
+Cadastro feito em 11/05/2000 21:20:23
+Ultima atualizacao em 29/03/2006 18:27:45
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: projetocrescer.gov.br (ticket 15961256)
+Cadastro feito em 15/08/2016 18:22:41
+Ultima atualizacao em 15/08/2016 18:22:41
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: prplanalto.gov.br (ticket 12244593)
+Cadastro feito em 13/11/2013 18:13:53
+Ultima atualizacao em 10/04/2015 22:04:19
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: reformadaprevidencia.gov.br (ticket 16409586)
+Cadastro feito em 02/12/2016 13:17:30
+Ultima atualizacao em 02/12/2016 13:17:30
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: regulacao.gov.br (ticket 5602143)
+Cadastro feito em 01/06/2009 19:37:13
+Ultima atualizacao em 01/06/2009 19:37:13
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: sae.gov.br (ticket 62181)
+Cadastro feito em 09/10/1997 11:00:00
+Ultima atualizacao em 18/08/2016 20:10:39
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: senad.gov.br (ticket 123648)
+Cadastro feito em 29/10/1998 13:09:47
+Ultima atualizacao em 04/01/2012 13:47:35
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: splp.gov.br (ticket 3746202)
+Cadastro feito em 16/07/2007 13:37:22
+Ultima atualizacao em 16/07/2007 13:37:22
+
+ORGAO/ENTIDADE:
+PRESIDÊNCIA DA REPÚBLICA
+Brasília (Distrito Federal)
+CNPJ: 000.394.411/0001-09
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cbnb.gov.br (ticket 2392361)
+Cadastro feito em 24/10/2005 16:34:04
+Ultima atualizacao em 20/08/2014 13:45:42
+
+ORGAO/ENTIDADE:
+TERCEIRO COMANDO AEREO REGIONAL
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.394.429/0023-16
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dac.gov.br (ticket 35808)
+Cadastro feito em 08/04/1997 12:00:00
+Ultima atualizacao em 11/09/2012 17:33:18
+
+ORGAO/ENTIDADE:
+DEPARTAMENTO DE AVIACAO CIVIL - DAC
+Brasília (Distrito Federal)
+CNPJ: 000.394.429/0043-60
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: brmcc.gov.br (ticket 2215475)
+Cadastro feito em 08/07/2005 20:03:00
+Ultima atualizacao em 08/07/2005 17:03:00
+
+ORGAO/ENTIDADE:
+Departamento de Controle do Espaço Aéreo
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.394.429/0048-74
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cernai.gov.br (ticket 1735827)
+Cadastro feito em 
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Departamento de Controle do Espaço Aéreo
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.394.429/0048-74
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cgna.gov.br (ticket 701713)
+Cadastro feito em 26/12/2001 18:40:12
+Ultima atualizacao em 14/09/2015 17:29:59
+
+ORGAO/ENTIDADE:
+Departamento de Controle do Espaço Aéreo
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.394.429/0048-74
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: dcea.gov.br (ticket 700710)
+Cadastro feito em 20/12/2001 19:59:27
+Ultima atualizacao em 24/01/2014 11:54:38
+
+ORGAO/ENTIDADE:
+Departamento de Controle do Espaço Aéreo
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.394.429/0048-74
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: decea.gov.br (ticket 705211)
+Cadastro feito em 26/12/2001 18:40:17
+Ultima atualizacao em 23/01/2017 14:51:51
+
+ORGAO/ENTIDADE:
+Departamento de Controle do Espaço Aéreo
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.394.429/0048-74
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: depv.gov.br (ticket 284049)
+Cadastro feito em 20/03/2000 12:08:06
+Ultima atualizacao em 24/01/2014 11:55:16
+
+ORGAO/ENTIDADE:
+Departamento de Controle do Espaço Aéreo
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.394.429/0048-74
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: icea.gov.br (ticket 1463809)
+Cadastro feito em 
+Ultima atualizacao em 
+
+ORGAO/ENTIDADE:
+Departamento de Controle do Espaço Aéreo
+null (Rio de Janeiro)
+CNPJ: 000.394.429/0048-74
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: cindacta2.gov.br (ticket 7100525)
+Cadastro feito em 28/07/2010 11:05:52
+Ultima atualizacao em 04/06/2014 00:30:59
+
+ORGAO/ENTIDADE:
+Segundo Centro Integrado de Contr. Trafego Aéreo
+Curitiba (Paraná)
+CNPJ: 000.394.429/0055-01
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: pame.gov.br (ticket 1924674)
+Cadastro feito em 14/12/2004 12:24:14
+Ultima atualizacao em 23/03/2015 18:13:17
+
+ORGAO/ENTIDADE:
+Parque de Material de Eletrônica da Aeronáutica
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.394.429/0069-07
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+DOMINIO: serac4.gov.br (ticket 2228294)
+Cadastro feito em 12/07/2005 16:00:47
+Ultima atualizacao em 30/11/2006 13:18:46
+
+ORGAO/ENTIDADE:
+MAER QUARTO SERVIÇO REGIONAL DE AVIAÇÃO CIVIL
+São Paulo (São Paulo)
+CNPJ: 000.394.429/0086-08
+
+
+
+
+Aperte ENTER para mostrar o proximo registro...
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+DOMINIO: proinfa.gov.br (ticket 784297)
+Cadastro feito em 18/04/2002 14:55:25
+Ultima atualizacao em 15/04/2013 21:36:41
+
+ORGAO/ENTIDADE:
+CENTRAIS ELETRICAS BRASILEIRAS SA
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.001.180/0002-07
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 

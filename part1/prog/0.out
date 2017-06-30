@@ -1,0 +1,2099 @@
+valgrind -v --leak-check=full --track-origins=yes ./dominios
+
+CONFIGURACAO: metodo de separacao dos registros
+0. Indicadores de tamanho
+1. Delimitadores entre registros
+2. Numero fixo de registros
+>> Escolha um metodo: 
+CONFIGURACAO: arquivo de entrada de dados
+>> Digite o nome do arquivo de entrada: 
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Metodo invalido. Escolha outro.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Domínio: bc.gov.br
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Função invalida. Escolha outro.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Função invalida. Escolha outro.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Função invalida. Escolha outro.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Metodo invalido. Escolha outro.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Domínio: bc.gov.br
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Função invalida. Escolha outro.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Função invalida. Escolha outro.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Função invalida. Escolha outro.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+Entrada invalida. Digite novamente.
+>> Digite a identificacao numerica do registro: 
+
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: 
+Entrada invalida. Digite novamente.
+0. Numero do documento
+1. Data e hora do cadastro
+2. Data e hora da ultima atualizacao
+3. Ticket de cadastro
+4. Dominio
+5. Nome do(a) orgao/entidade
+6. Cidade
+7. UF
+>> Escolha um campo a ser buscado: Orgao/Entidade: CENTRAIS ELETRICAS BRASILEIRAS SA
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+Entrada invalida. Digite novamente.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: 
+
+0. Numero do documento
+1. Ticket de cadastro
+2. Dominio
+3. Nome do(a) orgao/entidade
+4. Cidade
+5. UF
+>> Escolha que campo vai ser usado como critério de busca: 
+
+>> Digite o que deve ser buscado: 
+Entrada invalida. Digite novamente.
+>> Digite o que deve ser buscado: 
+
+Nenhum registro foi encontrado.
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: >> Digite a identificacao numerica do registro: 
+
+DOMINIO: proinfa.gov.br (ticket 784297)
+Cadastro feito em 18/04/2002 14:55:25
+Ultima atualizacao em 15/04/2013 21:36:41
+
+ORGAO/ENTIDADE:
+CENTRAIS ELETRICAS BRASILEIRAS SA
+Rio de Janeiro (Rio de Janeiro)
+CNPJ: 000.001.180/0002-07
+
+
+
+**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**
+0. Mostrar todos os registros
+1. Buscar um registro por um campo
+2. Buscar um registro por identificacao numerica
+3. Buscar um campo por identificacao numerica
+4. Sair do programa
+>> Escolha uma funcao para ser executada: DIGITOU 4 SAIU

@@ -4,7 +4,7 @@
 documento 			(com \0)	| 20 chars (20 bytes)
 dataHoraCadastro 	(com \0)	| 20 chars (20 bytes)
 dataHoraAtualiza	(com \0)	| 20 chars (20 bytes)
-ticket							| unsigned int (4 bytes)
+ticket							| int (4 bytes)
 
 =======TAMANHO VARIAVEL======
 dominio, nome, cidade, UF (strings com )
