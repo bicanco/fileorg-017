@@ -68,3 +68,19 @@ void insereIndice(Indice *indice, int chave, int offset){
 	// atualiza tamanho do indice
 	indice->tamanho++;
 }
+
+int buscaIndice(Indice *indice, int chave){
+	int esq, meio, dir;
+
+	esq = 0;
+	dir = indice->tamanho - 1;
+
+	while (esq <= dir){
+		meio = (esq + dir) / 2;
+		if (chave == indice->dados[meio].chave) return indice->dados[meio].offset;
+		if (chave > indice->dados[meio].chave) esq = meio + 1;
+		else dir = meio - 1;
+	}
+
+	return -1;
+}
