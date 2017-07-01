@@ -32,8 +32,7 @@ int removeRegistro_FirstFit(FILE *arquivo, Indice *indice, int chave){
 void insereRegistro_FirstFit(FILE *arquivo, Indice *indice, char *reg, int tamanho){
 	int topo = retornaTopoArquivo(arquivo);
 	int topo_anterior = -1;
-	int aux;
-	int espaco;
+	int aux, espaco, offset;
 	char delimitador = DELIMITADOR;
 
 
@@ -51,12 +50,12 @@ void insereRegistro_FirstFit(FILE *arquivo, Indice *indice, char *reg, int taman
 
 
 	if(topo == -1){
-		if(topo_anterior != -1){
+/*		if(topo_anterior != -1){
 			fseek(arquivo, topo_anterior+5, SEEK_SET);
 			fwrite(&topo, sizeof(int), 1, arquivo);
 		}else{
 			atualizaTopoArquivo(arquivo, topo);
-		}
+		}*/
 		fseek(arquivo, 0, SEEK_END);
 	}else{
 		if((espaco-tamanho) >= 10){
@@ -76,8 +75,11 @@ void insereRegistro_FirstFit(FILE *arquivo, Indice *indice, char *reg, int taman
 		}
 		fseek(arquivo, topo+espaco-tamanho,SEEK_SET);
 	}
+	offset = ftell(arquivo);
 	fwrite(reg, sizeof(char), tamanho, arquivo);
 	fwrite(&delimitador, sizeof(char), 1, arquivo);
+
+	insereIndice(indice, chave, offset);
 }
 /*
 void firstFit(FILE* fp, char **csv, int tamanho, int byteoffset, int byteoffset_anterior){

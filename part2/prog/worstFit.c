@@ -2,24 +2,37 @@
 #include<stdio.h>
 
 #include"delimitador.h"
+#include"indice.h"
 
-
-void worstFit(FILE *fp, char **csv, int tamanho, int list_top){
-	int espaco;
+void insereResgistro_WorstFit(FILE *arquivo, Indice *indice, char *reg, int chave, int tamanho){
+	int topo = retornaTopoArquivo(arquivo);
+	int topo_anterior = -1;
+	int aux, espaco, offset;
 	char delimitador = DELIMITADOR;
 
-	fseek(fp, list_top, SEEK_SET);
-	fgetc(fp);
-	fread(&espaco, sizeof(int), 1, fp);
+	fseek(arquivo, topo, SEEK_SET);
+	fgetc(arquivo);
+	fread(&espaco, sizeof(int), 1, arquivo);
 
 	if(espaco < tamanho){
-		fseek(fp,0,SEEK_END);
-		insereRegistro_Delimitador(csv,fp);
-		return;
+		fseek(arquivo, 0, SEEK_END);
 	}else{
-		fseek(fp, list_top+(espaco-tamanho-1),SEEK_SET);
-		fwrite(&delimitador,sizeof(char),1,fp);
-		insereRegistro_Delimitador(csv,fp);
-		return;
+	       	if((espaco-tamanho) >= 10){
+			fseek(arquivo, topo, SEEK_SET);
+			aux = espaco-tamanho-1;
+			fwrite(&aux, sizeof(int), 1, arquivo);
+			fseek(arquivo, aux-5,SEEK_CUR);
+			fwrite(&delimitador,sizeof(char),1,arquivo);
+		}else{
+			fread(&aux, sizeof(int), 1, arquivo);
+			atualizaTopoArquivo(arquivo, aux);
+		}
+		fseek(arquivo, topo+espaco-tamanho,SEEK_SET)
 	}
+
+	offset = ftell(arquivo);
+	fwrite(reg, sizeof(char), tamanho, arquivo);
+	fwrite(&delimitador, sizeof(char), 1, arquivo);
+
+	insereIndice(indice, chave, offset);
 }
