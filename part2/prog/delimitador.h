@@ -27,10 +27,18 @@
 #ifndef _DELIMITADOR_H_
 #define _DELIMITADOR_H_
 
+#define FIM_DE_LISTA -1
+#define REMOVIDO -2
+
 #include "indice.h"
 
 int insereRegistro_Delimitador(char **, FILE *);
 void insereRegistro_Inicializa(char **csv, FILE *fds, Indice *indice);
+FILE *inicializaArquivo(char *nomeArquivo);
+int retornaTopoArquivo(FILE *arquivo);
+void atualizaTopoArquivo(FILE *arquivo, int novoTopo);
+int tamanhoRegistro_Delimitador(FILE *fp);
+void estatisticasLista(FILE *arquivo);
 char *buscaRegistro_Delimitador(FILE *);
 char *buscaRRN_Delimitador(FILE *, int);
 

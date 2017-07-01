@@ -8,15 +8,15 @@
 #include "delimitador.h"
 #include "caractere.h"
 #include "indice.h"
+#include "firstFit.h"
 
 int main(int argc, char *argv[]){
 	
 	FILE *fp = fopen("test.csv", "r");
-	FILE *saida = fopen("test.out", "w");
+	FILE *saida = inicializaArquivo("test.out");
 	Indice *ind = criaIndice("test.idx");
 
 	char **data;
-
 	while (!feof(fp)){ // enquanto ainda houver dados
 		data = leCSV(fp); // leia um registro do arquivo de entrada
 		
@@ -28,16 +28,20 @@ int main(int argc, char *argv[]){
 		if (feof(fp)) break;
 	}
 
+	printf("topo = %d\n", retornaTopoArquivo(saida));
+
 	ordenaIndice(ind);
-	insereIndice(ind, 100000, 5555);
-	insereIndice(ind, 20000000, 7777);
-	insereIndice(ind, -1, 9999);
 	imprimeIndice(ind);
 
-	removeIndice(ind, 1373769);
-	removeIndice(ind, 100000);
-	removeIndice(ind, 123456);
+	removeRegistro_FirstFit(saida, ind, 83785);
+	removeRegistro_FirstFit(saida, ind, 0);
+	removeRegistro_FirstFit(saida, ind, 13971449);
+	removeRegistro_FirstFit(saida, ind, 135007);
+	removeRegistro_FirstFit(saida, ind, 453442);
+	removeRegistro_FirstFit(saida, ind, 0);
+	printf("topo = %d\n", retornaTopoArquivo(saida));
 	imprimeIndice(ind);
+	estatisticasLista(saida);
 
 	fclose(fp);
 	fclose(saida);

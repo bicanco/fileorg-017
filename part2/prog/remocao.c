@@ -1,11 +1,11 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include"remocao.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include "remocao.h"
 
 #define INDICADOR_DE_REMOCAO -2
 
 void remocao(FILE *fp, int rrn, int stack_top){
-    	char *registro = NULL;//váriavel que guarda o registro encontrado
+  char *registro = NULL;//váriavel que guarda o registro encontrado
 	char c;//variável utilizada para verificar a condição de final de registro
 	int tamanho = 0; //variável utilizada par guadar o tamanho do registro
 	int aux;///variável utilizada para guadar o tamanho dos campos de tamanho variável

@@ -79,6 +79,60 @@ void insereRegistro_Inicializa(char **csv, FILE *fds, Indice *indice){
 	free(registro);
 }
 
+FILE *inicializaArquivo(char *nomeArquivo){
+	int cabecalhoInicial = FIM_DE_LISTA;
+
+	FILE *arquivo = fopen(nomeArquivo, "w+");
+	fwrite(&cabecalhoInicial, sizeof(int), 1, arquivo);
+
+	return arquivo;
+}
+
+int retornaTopoArquivo(FILE *arquivo){
+	int topo;
+
+	fseek(arquivo, 0, SEEK_SET);
+	fread(&topo, sizeof(int), 1, arquivo);
+
+	return topo;
+}
+
+void atualizaTopoArquivo(FILE *arquivo, int novoTopo){
+	fseek(arquivo, 0, SEEK_SET);
+	fwrite(&novoTopo, sizeof(int), 1, arquivo);
+}
+
+int tamanhoRegistro_Delimitador(FILE *fp){
+	int tamanho = 0;
+	char c;
+
+	do {
+		c = fgetc(fp);
+		if (!feof(fp) && c != DELIMITADOR) tamanho++;
+	} while (!feof(fp) && c != DELIMITADOR);
+
+	return tamanho;
+}
+
+void estatisticasLista(FILE *arquivo){
+	int quebraContador = 0;
+	int proximo, tamanho;
+
+	int aux = retornaTopoArquivo(arquivo);
+	while (aux != FIM_DE_LISTA){
+		fseek(arquivo, aux + 1, SEEK_SET);
+		fread(&proximo, sizeof(int), 1, arquivo);
+		fread(&tamanho, sizeof(int), 1, arquivo);
+
+		printf("[%d | %d]--> ", aux, tamanho);
+		
+		if (++quebraContador % 4 == 0) printf("\n");
+		aux = proximo;
+	}
+
+	printf("FIM\n");
+}
+
 /**
     buscaRegistro_Delimitador
     Le o registro na posicao que o ponteiro do arquivo está apontando.
