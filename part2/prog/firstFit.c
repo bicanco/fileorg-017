@@ -29,7 +29,7 @@ int removeRegistro_FirstFit(FILE *arquivo, Indice *indice, int chave){
 	return 1;
 }
 
-void insereRegistro_FirstFit(FILE *arquivo, Indice *indice, char *reg, int tamanho){
+void insereRegistro_FirstFit(FILE *arquivo, Indice *indice, char *reg, int tamanho, int chave){
 	int topo = retornaTopoArquivo(arquivo);
 	int topo_anterior = -1;
 	int aux, espaco, offset;
