@@ -34,9 +34,10 @@ int main(int argc, char *argv[]){
 	insereIndice(ind, -1, 9999);
 	imprimeIndice(ind);
 
-	printf("%d -> %d\n", 1373769, buscaIndice(ind, 1373769));
-	printf("%d -> %d\n", 100000, buscaIndice(ind, 100000));
-	printf("%d -> %d\n", 123456, buscaIndice(ind, 123456));
+	removeIndice(ind, 1373769);
+	removeIndice(ind, 100000);
+	removeIndice(ind, 123456);
+	imprimeIndice(ind);
 
 	fclose(fp);
 	fclose(saida);

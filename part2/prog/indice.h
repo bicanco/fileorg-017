@@ -19,5 +19,7 @@ void imprimeIndice(Indice *indice);
 void ordenaIndice(Indice *indice);
 void insereIndice(Indice *indice, int chave, int offset);
 int buscaIndice(Indice *indice, int chave);
+int offsetIndice(Indice *indice, int chave);
+void removeIndice(Indice *indice, int chave);
 
 #endif

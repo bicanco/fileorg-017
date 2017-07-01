@@ -27,7 +27,7 @@ void inicializaIndice(Indice *indice, int chave, int offset){
 void imprimeIndice(Indice *indice){
 	int i;
 	for (i = 0; i < indice->tamanho; i++)
-		printf("C: %d\t\t| OFF: %d\n", indice->dados[i].chave, indice->dados[i].offset);
+		printf("[%d] C: %d\t\t| OFF: %d\n", i, indice->dados[i].chave, indice->dados[i].offset);
 }
 
 int comparaIndiceItem(const void *a, const void *b){
@@ -77,10 +77,32 @@ int buscaIndice(Indice *indice, int chave){
 
 	while (esq <= dir){
 		meio = (esq + dir) / 2;
-		if (chave == indice->dados[meio].chave) return indice->dados[meio].offset;
+		if (chave == indice->dados[meio].chave) return meio;
 		if (chave > indice->dados[meio].chave) esq = meio + 1;
 		else dir = meio - 1;
 	}
 
 	return -1;
+}
+
+int offsetIndice(Indice *indice, int chave){
+	int posicao = buscaIndice(indice, chave);
+
+	if (posicao != -1) return indice->dados[posicao].offset;
+		else return -1;
+}
+
+void removeIndice(Indice *indice, int chave){
+	int i;
+	int posicao = buscaIndice(indice, chave);
+
+	if (posicao == -1) return;
+
+	for (i = posicao + 1; i < indice->tamanho; i++){
+		indice->dados[i-1].chave = indice->dados[i].chave;
+		indice->dados[i-1].offset = indice->dados[i].offset;
+	}
+
+	indice->tamanho--;
+	indice->dados = (IndiceItem *) realloc(indice->dados, sizeof(IndiceItem) * indice->tamanho);
 }
