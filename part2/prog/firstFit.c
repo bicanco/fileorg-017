@@ -20,13 +20,13 @@ void firstFit(FILE* fp, char **csv, int tamanho, int byteoffset, int byteoffset_
 	fread(&espaco, sizeof(int), 1, fp):
 	fread(&proximo, sizeof(int), 1, fp);
 
-	if( espaço == tamanho){
+	if( espaco == tamanho){
 		fseek(fp, byteoffset, SEEK_SET);
 		insereRegistro_Delimitador(csv,fp);
 		fseek(fp, byteoffset_anterior+5,SEEK_SET);
 		fwrite(&proximo, sizeof(int),1,fp);
 		return;
-	}else if(espaço >= tamanho+10){
+	}else if(espaço >= tamanho){
 		aux = espaco-(tamanho+1);
 
 		fseek(fp, byteoffset+1, SEEK_SET);
