@@ -28,7 +28,7 @@ void remocao(FILE *fp, int rrn, int stack_top){
 
    	fseek(fp, 1, SEEK_CUR);//avança uma posição no arquivo(DELIMITADOR)
 	free(registro);
-	tmanho++;
+
 	fseek(fp, rrn, SEEK_SET);
 
 	fwrite(INDICADOR_DE_REMOCAO,sizeof(char),1,fp);
