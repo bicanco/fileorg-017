@@ -26,7 +26,7 @@ void firstFit(FILE* fp, char **csv, int tamanho, int byteoffset, int byteoffset_
 		fseek(fp, byteoffset_anterior+5,SEEK_SET);
 		fwrite(&proximo, sizeof(int),1,fp);
 		return;
-	}else if(espaço >= tamanho){
+	}else if(espaco >= tamanho){
 		aux = espaco-(tamanho+1);
 
 		fseek(fp, byteoffset+1, SEEK_SET);
