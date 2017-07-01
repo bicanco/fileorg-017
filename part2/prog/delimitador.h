@@ -27,6 +27,11 @@
 #ifndef _DELIMITADOR_H_
 #define _DELIMITADOR_H_
 
+/**
+	CONSTANTE: DELIMITADOR
+	Caractere usado como delimitador entre registros.
+**/
+#define DELIMITADOR -1
 #define FIM_DE_LISTA -1
 #define REMOVIDO -2
 

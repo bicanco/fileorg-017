@@ -33,12 +33,6 @@
 #include "indice.h"
 
 /**
-	CONSTANTE: DELIMITADOR
-	Caractere usado como delimitador entre registros.
-**/
-#define DELIMITADOR -1
-
-/**
 	insereRegistro_Delimitador
 	Cria e escreve no arquivo de saida um registro de tamanho variavel com delimitador de final de registro,
 	de acordo com dados recebidos do arquivo CSV e a documentação do trabalho, 
@@ -121,8 +115,8 @@ void estatisticasLista(FILE *arquivo){
 	int aux = retornaTopoArquivo(arquivo);
 	while (aux != FIM_DE_LISTA){
 		fseek(arquivo, aux + 1, SEEK_SET);
-		fread(&proximo, sizeof(int), 1, arquivo);
 		fread(&tamanho, sizeof(int), 1, arquivo);
+		fread(&proximo, sizeof(int), 1, arquivo);
 
 		printf("[%d | %d]--> ", aux, tamanho);
 		

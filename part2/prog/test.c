@@ -9,6 +9,7 @@
 #include "caractere.h"
 #include "indice.h"
 #include "firstFit.h"
+#include "bestFit.h"
 
 int main(int argc, char *argv[]){
 	
@@ -33,12 +34,12 @@ int main(int argc, char *argv[]){
 	ordenaIndice(ind);
 	imprimeIndice(ind);
 
-	removeRegistro_FirstFit(saida, ind, 83785);
-	removeRegistro_FirstFit(saida, ind, 0);
-	removeRegistro_FirstFit(saida, ind, 13971449);
-	removeRegistro_FirstFit(saida, ind, 135007);
-	removeRegistro_FirstFit(saida, ind, 453442);
-	removeRegistro_FirstFit(saida, ind, 0);
+	removeRegistro_BestFit(saida, ind, 83785);
+	removeRegistro_BestFit(saida, ind, 0);
+	removeRegistro_BestFit(saida, ind, 13971449);
+	removeRegistro_BestFit(saida, ind, 135007);
+	removeRegistro_BestFit(saida, ind, 453442);
+	removeRegistro_BestFit(saida, ind, 0);
 	printf("topo = %d\n", retornaTopoArquivo(saida));
 	imprimeIndice(ind);
 	estatisticasLista(saida);
