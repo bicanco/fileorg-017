@@ -39,3 +39,32 @@ int comparaIndiceItem(const void *a, const void *b){
 void ordenaIndice(Indice *indice){
 	qsort(indice->dados, indice->tamanho, sizeof(IndiceItem), comparaIndiceItem);
 }
+
+void insereIndice(Indice *indice, int chave, int offset){
+	int i;
+
+	// aumenta espaco no vetor de indices
+	indice->dados = (IndiceItem *) realloc(indice->dados, sizeof(IndiceItem) * (indice->tamanho + 1));
+
+	// percorre vetor de indices do final para o comeco
+	for (i = indice->tamanho-1; i >= 0; i--){
+		// caso a chave seja maior que o item, encontrou a posicao de inserir
+		if (chave > indice->dados[i].chave){
+			indice->dados[i+1].chave = chave;
+			indice->dados[i+1].offset = offset;
+			break; // ja foi inserido, nao precisa mais do laco
+		} else { // nao encontrou, joga o item atual para baixo e continua procurando
+			indice->dados[i+1].chave = indice->dados[i].chave;
+			indice->dados[i+1].offset = indice->dados[i].offset;
+		}
+	}
+
+	// caso tenha jogado todo o indice pra baixo, coloque na primeira posicao
+	if (i == -1){
+		indice->dados[0].chave = chave;
+		indice->dados[0].offset = offset;
+	}
+
+	// atualiza tamanho do indice
+	indice->tamanho++;
+}

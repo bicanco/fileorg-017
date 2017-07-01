@@ -29,6 +29,9 @@ int main(int argc, char *argv[]){
 	}
 
 	ordenaIndice(ind);
+	insereIndice(ind, 100000, 5555);
+	insereIndice(ind, 20000000, 7777);
+	insereIndice(ind, -1, 9999);
 	imprimeIndice(ind);
 
 	fclose(fp);
