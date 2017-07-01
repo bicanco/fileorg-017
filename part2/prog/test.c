@@ -28,6 +28,7 @@ int main(int argc, char *argv[]){
 		if (feof(fp)) break;
 	}
 
+	ordenaIndice(ind);
 	imprimeIndice(ind);
 
 	fclose(fp);

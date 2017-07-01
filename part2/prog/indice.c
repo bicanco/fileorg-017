@@ -29,3 +29,13 @@ void imprimeIndice(Indice *indice){
 	for (i = 0; i < indice->tamanho; i++)
 		printf("C: %d\t\t| OFF: %d\n", indice->dados[i].chave, indice->dados[i].offset);
 }
+
+int comparaIndiceItem(const void *a, const void *b){
+	IndiceItem A = *(IndiceItem*)a;
+	IndiceItem B = *(IndiceItem*)b;
+	return (A.chave - B.chave);
+}
+
+void ordenaIndice(Indice *indice){
+	qsort(indice->dados, indice->tamanho, sizeof(IndiceItem), comparaIndiceItem);
+}

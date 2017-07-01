@@ -16,5 +16,6 @@ Indice *criaIndice(char *nomeArquivo);
 void liberaIndice(Indice *indice);
 void inicializaIndice(Indice *indice, int chave, int offset);
 void imprimeIndice(Indice *indice);
+void ordenaIndice(Indice *indice);
 
 #endif
