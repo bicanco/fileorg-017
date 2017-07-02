@@ -37,8 +37,6 @@ void insereRegistro_FirstFit(FILE *arquivo, Indice *indice, char *reg, int taman
 	int anterior = FIM_DE_LISTA;
 	int tamanhoAux, proximo, offset, antigoTopo;
 
-	tamanho++; // tamanho considera o delimitador
-
 	// percorre a lista
 	while (aux != FIM_DE_LISTA){
 		fseek(arquivo, aux + 1, SEEK_SET);

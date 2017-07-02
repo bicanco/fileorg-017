@@ -105,7 +105,7 @@ int tamanhoRegistro_Delimitador(FILE *fp){
 		if (!feof(fp) && c != DELIMITADOR) tamanho++;
 	} while (!feof(fp) && c != DELIMITADOR);
 
-	return tamanho + 1;
+	return tamanho;
 }
 
 void estatisticasLista(FILE *arquivo){
