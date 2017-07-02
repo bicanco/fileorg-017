@@ -98,6 +98,9 @@ int main (int argc, char *argv[]){
 	int pararMostrar; // indicador de que deve parar de mostrar as estatisticas de indice
 	char comandoParada; // guarda o comando de parada nas estatisticas de indice
 
+	char **dadosInsercao; // guarda os dados a serem inseridos como novo registro
+	int insCont; // contador para percorrer os campos da insercao
+
 	int campoImprimir; // guarda o campo a ser impresso na funcao de busca de campo por RRN
 	int campoBuscar; // guarda o campo a ser usado como chave de busca
 	int buscaConcluida; // indicador de que a busca retornou resultados
@@ -169,11 +172,6 @@ int main (int argc, char *argv[]){
 			insereIndice(indiceBest, chaveAux, offsetAux);
 			insereIndice(indiceWorst, chaveAux, offsetAux);
 
-			// ordena os indices
-			ordenaIndice(indiceFirst);
-			ordenaIndice(indiceBest);
-			ordenaIndice(indiceWorst);
-
 			// libera a memória alocada para armazená-lo
 			free(registroAux);
 		}
@@ -182,7 +180,6 @@ int main (int argc, char *argv[]){
 	/*********** MENU PRINCIPAL E FUNÇÕES DE MANIPULAÇÃO ***********/
 
 	while (funcaoMenu != FUNCAO_SAIR){ // enquanto a opção de sair não for escolhida
-
 		// escolhendo a função do programa a ser executada
 		while (funcaoMenu == FUNCAO_VAZIO){
 			printf("\n**BANCO DE DADOS DE DOMINIOS GOVERNAMENTAIS DE INTERNET**\n");
@@ -254,6 +251,68 @@ int main (int argc, char *argv[]){
 			case FUNCAO_INSERIR:
 				// Função: INSERIR REGISTRO
 
+				/*
+				********* ORDEM NO CSV
+				[0] dominio
+				[1] documento
+				[2] nome
+				[3] UF
+				[4] cidade
+				[5] dataHoraCadastro
+				[6] dataHoraAtualiza
+				[7] ticket
+				*/
+
+				// inicializando vetor de campos
+				dadosInsercao = (char **) calloc(NUM_CAMPOS, sizeof(char *));
+
+				// leia cada um dos campos de um registro
+				for (insCont = 0; insCont < NUM_CAMPOS; insCont++){
+					// escolha a frase a ser mostrada para o usuario
+					switch (insCont){
+						case 0:	printf("\nDigite o dominio: "); break;
+						case 1: printf("\nDigite o documento (xxx.xxx.xxx/xxxx-xx):\n"); break;
+						case 2: printf("\nDigite o nome do orgao/entidade: "); break;
+						case 3: printf("\nDigite o UF do orgao/entidade: "); break;
+						case 4: printf("\nDigite a cidade do orgao/entidade: "); break;
+						case 5: printf("\nDigite a data e hora do cadastro (dd/mm/aaaa hh:mm:ss):\n"); break;
+						case 6: printf("\nDigite a data e hora da ultima atualizacao (dd/mm/aaaa hh:mm:ss):\n"); break;
+						case 7: printf("\nDigite o ticket: "); break;
+					}
+
+					// faca a leitura do dado
+					while (dadosInsercao[insCont] == NULL){
+						// cheque leitura de strings com tamanho fixo
+						switch (insCont){
+							case 1: dadosInsercao[insCont] = leStringFixa(TAM_DOCUMENTO-1); break;
+							case 5: dadosInsercao[insCont] = leStringFixa(TAM_DATAHORACADASTRO-1); break;
+							case 6: dadosInsercao[insCont] = leStringFixa(TAM_DATAHORAATUALIZA-1); break;
+							default: dadosInsercao[insCont] = leString();
+						}
+
+						// caso a entrada digitada esteja vazia, peça outra entrada
+						if (dadosInsercao[insCont] == NULL || dadosInsercao[insCont][0] == '\0'){
+							printf("\nEntrada invalida. Digite novamente.\n");
+							if (dadosInsercao[insCont] != NULL){
+								free(dadosInsercao[insCont]);
+								dadosInsercao[insCont] = NULL;
+							}
+						}
+					}
+				}
+
+				// gera o registro a partir dos dados
+				registroAux = criaRegistro(dadosInsercao, &tamanhoAux);
+
+				// pega o ticket do registro criado
+				chaveAux = retornaTicket(registroAux);
+
+				// insere o novo registro no sistema
+				insereRegistro_FirstFit(dadosFirst, indiceFirst, registroAux, tamanhoAux, chaveAux);
+				insereRegistro_BestFit(dadosBest, indiceBest, registroAux, tamanhoAux, chaveAux);
+				insereRegistro_WorstFit(dadosWorst, indiceWorst, registroAux, tamanhoAux, chaveAux);
+
+				printf("Registro inserido com sucesso.\n");
 			break;
 
 			case FUNCAO_IND_ESTAT:
@@ -328,7 +387,7 @@ int main (int argc, char *argv[]){
 					printf("%d. Visualizar a lista First-Fit\n", ESTAT_FIRST);
 					printf("%d. Visualizar a lista Best-Fit\n", ESTAT_BEST);
 					printf("%d. Visualizar a lista Worst-Fit\n", ESTAT_WORST);
-					printf("%d. Nao, voltar ao menu principal\n", ESTAT_SAIR);
+					printf("%d. Voltar ao menu principal\n", ESTAT_SAIR);
 					printf("Deseja ver alguma das listas de registros removidos? ");
 
 					// caso não tenha sido escrito um número, peça outra entrada

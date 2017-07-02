@@ -33,6 +33,7 @@
 
 void limpaEntrada();
 char *leString();
+char *leStringFixa(int tamanho);
 void stringMaiusculaAcentos(char *);
 char acentoWin1252_UTF8(char);
 

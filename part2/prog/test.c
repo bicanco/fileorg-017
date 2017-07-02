@@ -69,6 +69,9 @@ int main(int argc, char *argv[]){
 		printf(">>>> tam = %d, tam2 = %d\n", tam, tam2);
 	}
 
+	reg = leStringFixa(5);
+	printf(">> %s\n", reg);
+
 	fclose(fp);
 	fclose(saida);
 	liberaIndice(ind);

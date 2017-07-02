@@ -100,12 +100,9 @@ void insereRegistro_BestFit(FILE *arquivo, Indice *indice, char *reg, int tamanh
 		// adiciona no indice
 		insereIndice(indice, chave, aux);
 
-		printf("aux = %d, tamaux = %d, tamanho = %d\n", aux, tamanhoAux, tamanho);
 		if (tamanhoAux - tamanho - 1 >= 10){ // tratar fragmentacao interna
 			tamanhoAux -= tamanho + 1; // recupera novo tamanho do espaco que sobrou
 			offset = ftell(arquivo); // recupera offset do espaco que sobrou, apos a insercao dos dados
-
-			printf("tamaux = %d, offset = %d\n", tamanhoAux, offset);
 
 			// insere na lista de forma ordenada ascendente
 			insereLista_Ascendente(arquivo, offset, tamanhoAux);

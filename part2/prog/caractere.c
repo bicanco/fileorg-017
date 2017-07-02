@@ -79,6 +79,36 @@ char *leString(){
 }
 
 /**
+	leStringFixa
+	Le uma string da entrada padrão até uma quebra de linha.
+
+	RETORNA | endereço de memória da string lida
+**/
+char *leStringFixa(int tamanho){
+	char *str = NULL; // ponteiro para armazenar o endereço da string
+	char c; // caractere auxiliar para leitura de caracteres
+	int contador = 0; // contador de caracteres lidos
+
+	do {
+		c = fgetc(stdin); // leia um caractere da entrada padrão
+		// realoque memória para colocar o novo caractere lido
+		str = (char *) realloc(str, sizeof(char) * (contador + 1));
+		// coloque o caractere lido na string, atualize o contador
+		str[contador++] = c;
+	} while (contador < tamanho); // até que seja lido uma quebra de linha
+
+	// realoque memória para colocar o indicador de fim de string
+	str = (char *) realloc(str, sizeof(char) * (contador + 1));
+
+	// coloca o indicador de fim de string
+	str[contador] = '\0';
+
+	// limpa a entrada, caso ainda tenha resquicios
+	if (c != '\n') limpaEntrada();
+	return str;
+}
+
+/**
 	stringMaiusculaAcentos
 	Converte todas as letras de uma string para letras maiúsculas,
 	incluindo letras acentuadas.
