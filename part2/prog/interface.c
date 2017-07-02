@@ -77,8 +77,9 @@ typedef enum {
 #define INDICE_WORSTFIT "worstfit.idx"
 
 int main (int argc, char *argv[]){
-	Indice *indiceFirst, *indiceBest, *indiceWorst;
-	FILE *dadosFirst, *dadosBest, *dadosWorst;
+	Indice *indiceFirst, *indiceBest, *indiceWorst; // estruturas de indice para cada um dos tipos
+	FILE *dadosFirst, *dadosBest, *dadosWorst; // arquivos de dados para cada um dos tipos
+	IndiceItem itemFirst, itemBest, itemWorst; // itens de indice auxiliares para cada um dos tipos
 
 	char *nomeArquivoEntrada = NULL; // guarda o nome do arquivo de entrada dos dados
 	FILE *arquivoEntrada; // representa o arquivo de entrada dos dados
@@ -92,6 +93,10 @@ int main (int argc, char *argv[]){
 	int funcaoMenu = FUNCAO_VAZIO; // guarda a funcao escolhida no menu principal
 	int estatMenu = ESTAT_VAZIO; // guarda o tipo de arquivo escolhido nas estatisticas
 
+	int indCont; // contador para percorrer os indices
+	int indTam; // tamanho do indice percorrido
+	int pararMostrar; // indicador de que deve parar de mostrar as estatisticas de indice
+	char comandoParada; // guarda o comando de parada nas estatisticas de indice
 
 	int campoImprimir; // guarda o campo a ser impresso na funcao de busca de campo por RRN
 	int campoBuscar; // guarda o campo a ser usado como chave de busca
@@ -121,13 +126,13 @@ int main (int argc, char *argv[]){
 
 	// criando e inicializando arquivos de saida e estruturas de indice
 	dadosFirst = inicializaArquivo(DADOS_FIRSTFIT); // First-Fit
-	indiceFirst = criaIndice(INDICE_FIRSTFIT);
+	indiceFirst = criaIndice();
 
 	dadosBest = inicializaArquivo(DADOS_BESTFIT); // Best-Fit
-	indiceBest = criaIndice(INDICE_BESTFIT);
+	indiceBest = criaIndice();
 
 	dadosWorst = inicializaArquivo(DADOS_WORSTFIT); // Worst-Fit
-	indiceWorst = criaIndice(INDICE_WORSTFIT);
+	indiceWorst = criaIndice();
 
 	// preparando os arquivos de dados
 	while (!feof(arquivoEntrada)){ // enquanto ainda houver dados
@@ -163,6 +168,11 @@ int main (int argc, char *argv[]){
 			insereIndice(indiceFirst, chaveAux, offsetAux);
 			insereIndice(indiceBest, chaveAux, offsetAux);
 			insereIndice(indiceWorst, chaveAux, offsetAux);
+
+			// ordena os indices
+			ordenaIndice(indiceFirst);
+			ordenaIndice(indiceBest);
+			ordenaIndice(indiceWorst);
 
 			// libera a memória alocada para armazená-lo
 			free(registroAux);
@@ -249,11 +259,54 @@ int main (int argc, char *argv[]){
 			case FUNCAO_IND_ESTAT:
 				// Função: ESTATISTICAS SOBRE OS ARQUIVOS DE INDICE
 
+				// mostra tamanho de cada estrutura de indice
+				printf("\n\n**********ARQUIVOS DE INDICE**********\n");
+				printf("Indice usando First-Fit: %d registro(s) indexados\n",
+					tamanhoIndice(indiceFirst));
+				printf("Indice usando Best-Fit: %d registro(s) indexados\n",
+					tamanhoIndice(indiceBest));
+				printf("Indice usando Worst-Fit: %d registro(s) indexados\n",
+					tamanhoIndice(indiceFirst));
+				printf("\n\n");
 			break;
 			
 			case FUNCAO_IND_SIMUL:
 				// Função: VISUALIZAR INDICES SIMULTANEAMENTE
 
+				// inicializar variaveis auxiliares
+				indTam = tamanhoIndice(indiceFirst);
+				pararMostrar = 0;
+
+				// percorre todas as posicoes da estrutura de dados
+				for (indCont = 0; indCont < indTam && !pararMostrar; indCont++){
+					// recupera os dados da posicao atual
+					itemFirst = dadosPosIndice(indiceFirst, indCont);
+					itemBest = dadosPosIndice(indiceBest, indCont);
+					itemWorst = dadosPosIndice(indiceWorst, indCont);
+
+					// imprime em qual posicao esta
+					printf("\n>>> POSICAO %d DOS INDICES:\n", indCont);
+
+					// imprime o registro de indice nesta posicao
+					printf("> FIRST-FIT || Ticket: %d | Byte Offset: %d |\n",
+						itemFirst.chave, itemFirst.offset);
+					printf("> BEST-FIT  || Ticket: %d | Byte Offset: %d |\n",
+						itemBest.chave, itemBest.offset);
+					printf("> WORST-FIT || Ticket: %d | Byte Offset: %d |\n",
+						itemWorst.chave, itemWorst.offset);
+
+					// caso ainda tenha registros a serem impressos,
+					// espere uma ação do usuário para mostrar o próximo
+					if (indCont < indTam - 1){
+						printf("\n\nDigite 'v' para voltar ao menu ou qualquer outra coisa para mostrar o proximo: ");
+						comandoParada = fgetc(stdin);
+						switch (comandoParada){
+							case '\n': break; // entrada do teclado ja foi limpa
+							case  'v': pararMostrar = 1; limpaEntrada(); break; // voltar ao menu
+							  default: limpaEntrada(); break; // deve-se limpar a entrada e continuar
+						}
+					}
+				}
 			break;
 
 			case FUNCAO_ESTAT_REMOV:
@@ -303,7 +356,6 @@ int main (int argc, char *argv[]){
 					}
 					printf("\n");
 				}
-
 			break;
 		}
 

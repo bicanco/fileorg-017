@@ -3,7 +3,7 @@
 
 #include "indice.h"
 
-Indice *criaIndice(char *nomeArquivo){
+Indice *criaIndice(){
 	Indice *indice = (Indice *) calloc(1, sizeof(Indice));
 	return indice;
 }
@@ -90,6 +90,16 @@ int offsetIndice(Indice *indice, int chave){
 		else return -1;
 }
 
+IndiceItem dadosPosIndice(Indice *indice, int posicao){
+	if (posicao >= 0 && posicao < indice->tamanho)
+		return indice->dados[posicao];
+
+	IndiceItem retornoNulo;
+	retornoNulo.offset = -1;
+	retornoNulo.chave = -1;
+	return retornoNulo;
+}
+
 void removeIndice(Indice *indice, int chave){
 	int i;
 	int posicao = buscaIndice(indice, chave);
@@ -103,4 +113,8 @@ void removeIndice(Indice *indice, int chave){
 
 	indice->tamanho--;
 	indice->dados = (IndiceItem *) realloc(indice->dados, sizeof(IndiceItem) * indice->tamanho);
+}
+
+int tamanhoIndice(Indice *indice){
+	return indice->tamanho;
 }
