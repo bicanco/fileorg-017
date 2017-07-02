@@ -35,13 +35,18 @@ int main(int argc, char *argv[]){
 	ordenaIndice(ind);
 	imprimeIndice(ind);
 
-	removeRegistro_WorstFit(saida, ind, 83785);
-	removeRegistro_WorstFit(saida, ind, 0);
-	removeRegistro_WorstFit(saida, ind, 13971449);
-	removeRegistro_WorstFit(saida, ind, 135007);
-	removeRegistro_WorstFit(saida, ind, 453442);
-	removeRegistro_WorstFit(saida, ind, 0);
+	removeRegistro_FirstFit(saida, ind, 83785);
+	removeRegistro_FirstFit(saida, ind, 0);
+	removeRegistro_FirstFit(saida, ind, 13971449);
+	removeRegistro_FirstFit(saida, ind, 135007);
+	//removeRegistro_FirstFit(saida, ind, 453442);
+	removeRegistro_FirstFit(saida, ind, 0);
 	printf("topo = %d\n", retornaTopoArquivo(saida));
+	imprimeIndice(ind);
+	estatisticasLista(saida);
+
+	char *test = leString();
+	insereRegistro_FirstFit(saida, ind, test, strlen(test), 0);
 	imprimeIndice(ind);
 	estatisticasLista(saida);
 

@@ -5,6 +5,6 @@
 #include "indice.h"
 
 int removeRegistro_FirstFit(FILE *arquivo, Indice *indice, int chave);
-//void firstFit(FILE*, char **, int, int, int);
+void insereRegistro_FirstFit(FILE *arquivo, Indice *indice, char *reg, int tamanho, int chave);
 
 #endif
