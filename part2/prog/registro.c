@@ -147,7 +147,13 @@ int *mapeiaRegistro(char *registro){
 
     return mapaIndices;
 }
+/**
+	retornaTicket
 
+	Função que retorna o campo Ticket
+	PARAMTRO -registro- | o registro de que se deseja o ticket
+	RETORNA | o ticket
+**/
 int retornaTicket(char *registro){
     int *indicesCampos = mapeiaRegistro(registro);
     int ticket;

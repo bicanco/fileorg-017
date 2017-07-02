@@ -25,7 +25,15 @@
 #include "delimitador.h"
 #include "indice.h"
 #include "firstFit.h"
+/**
+ 	removeRegistro_FirstFit
 
+ 	Função que remove um registro de um arquivo que utiliza o método de First-Fit
+	PARAMETRO -arquivo- | o arquivo do qual se quer remover o registro
+	PARAMETRO -indice- | o indice primario do arquivo de dados
+	PARAMETRO -chave- | a chave de busca a do registro a ser removido
+	RETORNA | 0 se não há o registro no arquivo de dados e 1 se houver
+**/
 int removeRegistro_FirstFit(FILE *arquivo, Indice *indice, int chave){
 	int offsetRemover = offsetIndice(indice, chave);
 	if (offsetRemover == -1) return 0;
@@ -49,7 +57,17 @@ int removeRegistro_FirstFit(FILE *arquivo, Indice *indice, int chave){
 
 	return 1;
 }
+/**
+ 	insereRegistro_FisrtFit
 
+	Função que insere de maneira dinâmica um novo registro em um arquivo de dados segundo o mátodo First-Fit
+	PARAMETRO -arquivo- | o arquivo em que se quer inserir
+	PARAMETRO -indice- | o índice do arquivo em que se quer inserir
+	PARAMETRO -reg- | o registro que se quer inserir
+	PARAMETRO -tamanho- | o tamanho do registro que se quer inserir
+	PARAMETRO -chave- | a chave de busca do novo registro
+
+**/
 void insereRegistro_FirstFit(FILE *arquivo, Indice *indice, char *reg, int tamanho, int chave){
 	char delimitador = DELIMITADOR;
 	char indicador = REMOVIDO;
@@ -117,87 +135,3 @@ void insereRegistro_FirstFit(FILE *arquivo, Indice *indice, char *reg, int taman
 		} // caso nao seja capaz de colocar os dados da remocao logica, temos fragmentacao externa
 	}
 }
-/*
-void insereRegistro_FirstFit1(FILE *arquivo, Indice *indice, char *reg, int tamanho, int chave){
-	int topo = retornaTopoArquivo(arquivo);
-	int topo_anterior = -1;
-	int aux, espaco, offset;
-	char delimitador = DELIMITADOR;
-
-
-	while(topo != -1){
-		fseek(arquivo, topo, SEEK_SET);
-		fgetc(arquivo);
-		fread(&espaco, sizeof(int), 1, arquivo);
-		if(espaco >= tamanho){
-			break;
-		}
-		topo_anterior = topo;
-		fread(&topo, sizeof(int), 1, arquivo);		
-	}
-
-
-
-	if(topo == -1){
-		fseek(arquivo, 0, SEEK_END);
-	}else{
-		if((espaco-tamanho) >= 10){
-			fseek(arquivo, topo, SEEK_SET);
-			aux = espaco-tamanho-1;
-			fwrite(&aux, sizeof(int), 1, arquivo);
-			fseek(arquivo, aux-5,SEEK_CUR);
-			fwrite(&delimitador,sizeof(char),1,arquivo);
-		}else if(topo_anterior != -1){
-			fseek(arquivo, topo+5, SEEK_SET);
-			fread(&aux, sizeof(int), 1, arquivo);
-			fseek(arquivo, topo_anterior+5, SEEK_SET);
-			fwrite(&aux, sizeof(int), 1, arquivo);
-		}else{
-			fread(&aux, sizeof(int), 1, arquivo);
-			atualizaTopoArquivo(arquivo, aux);
-		}
-		fseek(arquivo, topo+espaco-tamanho,SEEK_SET);
-	}
-	offset = ftell(arquivo);
-	fwrite(reg, sizeof(char), tamanho, arquivo);
-	fwrite(&delimitador, sizeof(char), 1, arquivo);
-
-	insereIndice(indice, chave, offset);
-}*/
-/*
-void firstFit(FILE* fp, char **csv, int tamanho, int byteoffset, int byteoffset_anterior){
-	int espaco, proximo;
-	char delimitador = DELIMITADOR;
-
-	if(byteoffset == -1){
-		fseek(fp, 0,SEEK_END);
-		insereRegistro_Delimitador(csv, fp);
-		return;
-	}
-
-	fseek(fp, byteoffset, SEEK_SET);
-
-	fgetc(fp);
-	fread(&espaco, sizeof(int), 1, fp):
-	fread(&proximo, sizeof(int), 1, fp);
-
-	if( espaco == tamanho){
-		fseek(fp, byteoffset, SEEK_SET);
-		insereRegistro_Delimitador(csv,fp);
-		fseek(fp, byteoffset_anterior+5,SEEK_SET);
-		fwrite(&proximo, sizeof(int),1,fp);
-		return;
-	}else if(espaco >= tamanho){
-		aux = espaco-(tamanho+1);
-
-		fseek(fp, byteoffset+1, SEEK_SET);
-		fwrite(&aux,sizeof(int),1,fp);
-		fseek(fp, byteoffset+aux, SEEK_SET);
-		fwrite(delimitador, sizeof(char),1,fp);
-		insereRegistro_Delimitador(csv,fp);
-		return;
-	}else{
-		firstFit(fp, csv, tamanho, proximo, byteoffset);
-	}
-}
-*/

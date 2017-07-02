@@ -33,7 +33,15 @@
 	Caractere usado como delimitador entre registros.
 **/
 #define DELIMITADOR -1
+/**
+	CONSTANTE: FIM_DE_LISTA
+	Caractere usado como indicador de final da lista de registro removidos.
+**/
 #define FIM_DE_LISTA -1
+/**
+	CONSTANTE: REMOVIDO
+	Caractere usado como indicador de remoção lógica.
+**/
 #define REMOVIDO -2
 
 #include "indice.h"

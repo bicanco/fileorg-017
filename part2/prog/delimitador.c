@@ -34,6 +34,7 @@
 
 /**
 	insereRegistro_Delimitador
+
 	Cria e escreve no arquivo de saida um registro de tamanho variavel com delimitador de final de registro,
 	de acordo com dados recebidos do arquivo CSV e a documentaÃ§Ã£o do trabalho, 
 	quanto ao tamanho, Ã  ordem e a forma com que cada campo Ã© armazenado.
@@ -55,24 +56,13 @@ int insereRegistro_Delimitador(char **csv, FILE *fds){
 	return tamanho;
 }
 
-void insereRegistro_Inicializa(char **csv, FILE *fds, Indice *indice){
-	int tamanho;// variÃ¡vel que recebrÃ¡ o tamanho do resgistro criado pela funÃ§Ã£o criaRegistro
-	char *registro;// variÃ¡vel que recberÃ¡ o resgistro criado pela funÃ§Ã£o criaRegistro
-	char delimitador = (char) DELIMITADOR;//variÃ¡vel que guarda o delimitador
+/**
+	inicializaArquivo
 
-	registro = criaRegistro(csv, &tamanho);//cria-se o registro para escrever no arquivo
-
-	int offset = ftell(fds);
-	int ticket = retornaTicket(registro);
-	
-	fwrite(registro, sizeof(char), tamanho, fds);//escreve-se o registro
-	fwrite(&delimitador, sizeof(char), 1, fds);//escreve-se o delimitador de final de registro
-
-	inicializaIndice(indice, ticket, offset);
-
-	free(registro);
-}
-
+	Função que inicializa um arquivo
+	PARAMETRO -nomeArquivo- | o nome do arquivo que se quer incializar
+	RETORNA | o ponterio do arquivo inicializado
+**/
 FILE *inicializaArquivo(char *nomeArquivo){
 	int cabecalhoInicial = FIM_DE_LISTA;
 	//função que incializa um arquivo com resgistro de cabeçalho
@@ -82,6 +72,13 @@ FILE *inicializaArquivo(char *nomeArquivo){
 	return arquivo;
 }
 
+/**
+	retornaTopoArquivo
+
+	Função que retorna o topo da lista de registros removidos
+	PARAMETRO -arquivo- | o arquivo de dados
+	RETORNA | o bysteoofset do topo da lista de registros removidos
+**/
 int retornaTopoArquivo(FILE *arquivo){
 	int topo;
 	//função que retorna o conteúdo do registro de cabeçalho
@@ -90,13 +87,27 @@ int retornaTopoArquivo(FILE *arquivo){
 
 	return topo;
 }
-
+/**
+	atualizaTopoArquivo
+	
+	Função que atualiza o topo da lista de registros removidos
+	PARAMETRO -arquivo- | o arquivo de dados
+	PARAMETRO -novoTopo- | o novo topo da lista
+**/
 void atualizaTopoArquivo(FILE *arquivo, int novoTopo){
 	fseek(arquivo, 0, SEEK_SET);
 	fwrite(&novoTopo, sizeof(int), 1, arquivo);
 	//função que atualiza o registro de cabeçalho
 }
 
+/**
+	tamanhoListaArquivo
+
+	Função que retorna o tamanho da lista de registros removidos
+	PARAMETRO -arquivo- | o arquivo de dados
+	RETORNA | o tamanho da lista de registros removidos
+
+**/
 int tamanhoListaArquivo(FILE *arquivo){
 	int contador = 0;
 	//função que retorna o tamanho da lista de registros removidos
@@ -110,10 +121,18 @@ int tamanhoListaArquivo(FILE *arquivo){
 	return contador;
 }
 
+/**
+	tamanhoRegistro_Delimitador
+
+	Função que retorna o tamanho de um registro
+	PARAMETRO -fp- | o arquivo de dados
+	RETORNA | o tamanho de um registro
+
+**/
 int tamanhoRegistro_Delimitador(FILE *fp){
 	int tamanho = 0;
 	char c;
-	//função que retorna o tmanho do registro
+	//função que retorna o tamanho de um registro
 	do {
 		c = fgetc(fp);
 		if (!feof(fp) && c != DELIMITADOR) tamanho++;
@@ -122,6 +141,12 @@ int tamanhoRegistro_Delimitador(FILE *fp){
 	return tamanho;
 }
 
+/**
+	estatisticaLista
+
+	Função que imprime as estatísticas da lista de registros removidos
+	PARAMETRO -arquivo- | o arquivo de dados
+**/
 void estatisticasLista(FILE *arquivo){
 	int quebraContador = 0;
 	int proximo, tamanho;

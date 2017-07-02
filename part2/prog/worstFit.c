@@ -24,7 +24,14 @@
 
 #include "delimitador.h"
 #include "indice.h"
+/**
+ 	insereLista_Descendente
 
+ 	Função que insere o registro removido em uma lista descendente
+	PARAMETRO -arquivo- | o arquivo do qual se quer remover o registro
+	PARAMETRO -offset- | o byteoffset do registro que se quer remover
+	PARAMETRO -tamanho- | o tamanho do registro a ser removido
+**/
 void insereLista_Descendente(FILE *arquivo, int offset, int tamanho){
 	char indicador = REMOVIDO;
 	
@@ -56,7 +63,15 @@ void insereLista_Descendente(FILE *arquivo, int offset, int tamanho){
 	fwrite(&tamanho, sizeof(int), 1, arquivo);
 	fwrite(&aux, sizeof(int), 1, arquivo);
 }
+/**
+ 	removeRegistro_WorstFit
 
+ 	Função que remove um registro de um arquivo que utiliza o método de Worst-Fit
+	PARAMETRO -arquivo- | o arquivo do qual se quer remover o registro
+	PARAMETRO -indice- | o indice primario do arquivo de dados
+	PARAMETRO -chave- | a chave de busca a do registro a ser removido
+	RETORNA | 0 se não há o registro no arquivo de dados e 1 se houver
+**/
 int removeRegistro_WorstFit(FILE *arquivo, Indice *indice, int chave){
 	int offsetRemover = offsetIndice(indice, chave);
 	if (offsetRemover == -1) return 0;
@@ -72,7 +87,17 @@ int removeRegistro_WorstFit(FILE *arquivo, Indice *indice, int chave){
 
 	return 1;
 }
+/**
+ 	insereRegistro_WorstFit
 
+	Função que insere de maneira dinâmica um novo registro em um arquivo de dados segundo o mátodo Worst-Fit
+	PARAMETRO -arquivo- | o arquivo em que se quer inserir
+	PARAMETRO -indice- | o índice do arquivo em que se quer inserir
+	PARAMETRO -reg- | o registro que se quer inserir
+	PARAMETRO -tamanho- | o tamanho do registro que se quer inserir
+	PARAMETRO -chave- | a chave de busca do novo registro
+
+**/
 void insereRegistro_WorstFit(FILE *arquivo, Indice *indice, char *reg, int tamanho, int chave){
 	char delimitador = DELIMITADOR;
 	int espaco, offset, proximo;
