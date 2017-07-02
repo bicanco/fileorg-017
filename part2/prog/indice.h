@@ -9,7 +9,7 @@ typedef struct IndiceItem {
 typedef struct Indice {
 	int tamanho;
 	IndiceItem *dados;
-	FILE *arquivo;
+	char *nomeArquivo;
 } Indice;
 
 Indice *criaIndice(char *nomeArquivo);

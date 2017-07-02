@@ -96,6 +96,19 @@ void atualizaTopoArquivo(FILE *arquivo, int novoTopo){
 	fwrite(&novoTopo, sizeof(int), 1, arquivo);
 }
 
+int tamanhoListaArquivo(FILE *arquivo){
+	int contador = 0;
+
+	int aux = retornaTopoArquivo(arquivo);
+	while (aux != FIM_DE_LISTA){
+		contador++;
+		fseek(arquivo, aux + 1 + sizeof(int), SEEK_SET);
+		fread(&aux, sizeof(int), 1, arquivo);
+	}
+
+	return contador;
+}
+
 int tamanhoRegistro_Delimitador(FILE *fp){
 	int tamanho = 0;
 	char c;
@@ -134,7 +147,7 @@ void estatisticasLista(FILE *arquivo){
     PARAMETRO -fp- | ponteiro do arquivo
     RETORNA | vetor de bytes, que contém o registro encontrado
 **/
-char *buscaRegistro_Delimitador(FILE *fp){
+char *buscaRegistro_Delimitador(FILE *fp, int *tamanhoRegistro){
     char *registro = NULL;//váriavel que guarda o registro encontrado
     char c;//variável utilizada para verificar a condição de final de registro
     int tamanho = 0; //variável utilizada par guadar o tamanho do registro
@@ -158,31 +171,7 @@ char *buscaRegistro_Delimitador(FILE *fp){
     } while(c != DELIMITADOR);//se for lido o delimitador, acabou o registro
 
     fseek(fp, 1, SEEK_CUR);//avança uma posição no arquivo(DELIMITADOR)
+
+    *tamanhoRegistro = tamanho + TAM_CAMPOS_FIXOS;
     return registro;//retorna o registro lido em forma de char*
 }
-
-/**
-	buscaRRN_Delimitador
-	Busca com o indicador de final de registro o RRN desejado.
-	
-	PARAMETRO -fp- | ponteiro do arquivo
-	PARAMETRO -RRN- | rrn desejado
-	RETORNA | vetor de bytes, que contém o registro encontrado
-**/
-char* buscaRRN_Delimitador(FILE *fp, int RRN){
-	int RRNatual = -1;//variável que guarda o RRN atual do arquivo
-	char* reg;// variável que guarda o registro encontrado
-
-	fseek(fp, 0, SEEK_SET);//a partir do inicio do arquivo
-	while(!feof(fp) && RRNatual<RRN){//enquanto não for fim de arquivo e o RRN atual é menor do que o procurado
-		reg = buscaRegistro_Delimitador(fp);//recupera o próxmo registro do arquivo
-		if (reg == NULL) return reg;//se não achar um registro no arquivo retorna NULL
-		RRNatual++;//incrementa o RRN atual
-		if(RRNatual < RRN) free(reg);//se não for o registro desejado, desaloca o registro
-	}
-	if(feof(fp)){//se percorreu o arquivo inteiro e não achou o o registro desejado retorna NULL
-		return NULL;
-	}
-	else return reg;//retorna o registro encontrado
-}
-

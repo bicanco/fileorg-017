@@ -42,9 +42,9 @@ void insereRegistro_Inicializa(char **csv, FILE *fds, Indice *indice);
 FILE *inicializaArquivo(char *nomeArquivo);
 int retornaTopoArquivo(FILE *arquivo);
 void atualizaTopoArquivo(FILE *arquivo, int novoTopo);
+int tamanhoListaArquivo(FILE *arquivo);
 int tamanhoRegistro_Delimitador(FILE *fp);
 void estatisticasLista(FILE *arquivo);
-char *buscaRegistro_Delimitador(FILE *);
-char *buscaRRN_Delimitador(FILE *, int);
+char *buscaRegistro_Delimitador(FILE *fp, int *tamanhoRegistro);
 
 #endif

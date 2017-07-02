@@ -5,7 +5,6 @@
 
 Indice *criaIndice(char *nomeArquivo){
 	Indice *indice = (Indice *) calloc(1, sizeof(Indice));
-	indice->arquivo = fopen(nomeArquivo, "r");
 	return indice;
 }
 
@@ -13,7 +12,6 @@ void liberaIndice(Indice *indice){
 	if (indice != NULL){
 		if (indice->dados != NULL) free(indice->dados);
 		free(indice);
-		if (indice->arquivo != NULL) fclose(indice->arquivo);
 	}
 }
 

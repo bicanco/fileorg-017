@@ -32,22 +32,7 @@
 #include "numeroFixo.h"
 #include "caractere.h"
 
-/**
-	CONSTANTES: Menu_Metodo
-	Indica as opções de configuração para a organização dos
-	registros em um arquivo. METODO_VAZIO indica que nenhuma
-	opção foi escolhida e METODO_QUANT representa a quantidade
-	de opções.
-**/
-typedef enum {
-	METODO_VAZIO = -1,
-	METODO_INDICADOR_TAMANHO = 0,
-	METODO_DELIMITADOR,
-	METODO_NUMERO_FIXO,
-	METODO_QUANT
-} Menu_Metodo;
-
-/**
+ /**
 	CONSTANTES: Menu_Funcao
 	Indica as opções de funções do menu principal do
 	programa. FUNCAO_VAZIO indica que nenhuma função foi
@@ -56,10 +41,11 @@ typedef enum {
 **/
 typedef enum {
 	FUNCAO_VAZIO = -1,
-	FUNCAO_MOSTRAR_TODOS = 0,
-	FUNCAO_BUSCA_CAMPO,
-	FUNCAO_BUSCA_RRN,
-	FUNCAO_CAMPO_RRN,
+	FUNCAO_REMOVER = 0,
+	FUNCAO_INSERIR,
+	FUNCAO_IND_ESTAT,
+	FUNCAO_IND_SIMUL,
+	FUNCAO_ESTAT_REMOV,
 	FUNCAO_SAIR,
 	FUNCAO_QUANT
 } Menu_Funcao;
@@ -524,7 +510,7 @@ int main (int argc, char *argv[]){
 	}
 
 	// liberação de memória alocada
-	free(nomeArquivoEntrada);
+	/*free(nomeArquivoEntrada);
 	fclose(arquivoEntrada);
-	fclose(arquivoSaida);
+	fclose(arquivoSaida);*/
 }

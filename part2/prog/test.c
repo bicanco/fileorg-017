@@ -18,8 +18,11 @@ int main(int argc, char *argv[]){
 	FILE *saida = inicializaArquivo("test.out");
 	Indice *ind = criaIndice("test.idx");
 
+	int i;
+	char *reg;
 	char **data;
-	while (!feof(fp)){ // enquanto ainda houver dados
+	//while (!feof(fp)){ // enquanto ainda houver dados
+	for (i = 0; i < 7; i++){
 		data = leCSV(fp); // leia um registro do arquivo de entrada
 		
 		// insere no arquivo de saída e libera a memória alocada para ele
@@ -35,20 +38,36 @@ int main(int argc, char *argv[]){
 	ordenaIndice(ind);
 	imprimeIndice(ind);
 
-	removeRegistro_WorstFit(saida, ind, 83785);
-	removeRegistro_WorstFit(saida, ind, 0);
-	removeRegistro_WorstFit(saida, ind, 13971449);
-	removeRegistro_WorstFit(saida, ind, 135007);
-	removeRegistro_WorstFit(saida, ind, 453442);
-	removeRegistro_WorstFit(saida, ind, 0);
+	removeRegistro_FirstFit(saida, ind, 83785);
+	removeRegistro_FirstFit(saida, ind, 0);
+	removeRegistro_FirstFit(saida, ind, 13971449);
+	removeRegistro_FirstFit(saida, ind, 135007);
+	removeRegistro_FirstFit(saida, ind, 453442);
+	removeRegistro_FirstFit(saida, ind, 0);
 	printf("topo = %d\n", retornaTopoArquivo(saida));
 	imprimeIndice(ind);
 	estatisticasLista(saida);
 
-	char *test = leString();
-	insereRegistro_WorstFit(saida, ind, test, strlen(test), 0);
+	data = leCSV(fp); // leia um registro do arquivo de entrada
+	int tam, tam2;
+	reg = criaRegistro(data, &tam);
+	int ticket = retornaTicket(reg);
+	printf("tam = %d, ticket = %d\n", tam, ticket);
+
+	insereRegistro_FirstFit(saida, ind, reg, tam, ticket);
 	imprimeIndice(ind);
 	estatisticasLista(saida);
+	
+	for (i = 0; i < ind->tamanho; i++){
+		fseek(saida, ind->dados[i].offset, SEEK_SET);
+		tam = tamanhoRegistro_Delimitador(saida);
+
+		fseek(saida, ind->dados[i].offset, SEEK_SET);
+		reg = buscaRegistro_Delimitador(saida, &tam2);
+		imprimeRegistro(reg);
+
+		printf(">>>> tam = %d, tam2 = %d\n", tam, tam2);
+	}
 
 	fclose(fp);
 	fclose(saida);
