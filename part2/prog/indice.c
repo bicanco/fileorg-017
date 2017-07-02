@@ -118,3 +118,37 @@ void removeIndice(Indice *indice, int chave){
 int tamanhoIndice(Indice *indice){
 	return indice->tamanho;
 }
+
+int salvaIndice(Indice *indice, char *nomeArquivo){
+	FILE *arquivo = fopen(nomeArquivo, "w+");
+	if (arquivo == NULL) return 0;
+
+	int i, aux;
+
+	for (i = 0; i < indice->tamanho; i++){
+		aux = indice->dados[i].chave;
+		fwrite(&aux, sizeof(int), 1, arquivo);
+
+		aux = indice->dados[i].offset;
+		fwrite(&aux, sizeof(int), 1, arquivo);
+	}
+
+	fclose(arquivo);
+	return 1;
+}
+
+Indice *recuperaIndice(FILE *arquivo){
+	Indice *indice = criaIndice();
+	int chave, offset;
+
+	while (!feof(arquivo)){
+		fread(&chave, sizeof(int), 1, arquivo);
+		if (!feof(arquivo)){
+			fread(&offset, sizeof(int), 1, arquivo);
+			inicializaIndice(indice, chave, offset);
+		}
+	}
+
+	ordenaIndice(indice);
+	return indice;
+}
