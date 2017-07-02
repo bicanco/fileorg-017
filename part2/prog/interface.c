@@ -81,8 +81,9 @@ int main (int argc, char *argv[]){
 	FILE *dadosFirst, *dadosBest, *dadosWorst; // arquivos de dados para cada um dos tipos
 	IndiceItem itemFirst, itemBest, itemWorst; // itens de indice auxiliares para cada um dos tipos
 
+	FILE *indiceFirstArq, *indiceBestArq, *indiceWorstArq; // arquivos de indice para cada um dos tipos
 	char *nomeArquivoEntrada = NULL; // guarda o nome do arquivo de entrada dos dados
-	FILE *arquivoEntrada; // representa o arquivo de entrada dos dados
+	FILE *arquivoEntrada = NULL; // representa o arquivo de entrada dos dados
 	char **dadosEntrada; // guarda os dados de entrada lidos pelo programa
 
 	char *registroAux; // ponteiro auxiliar para guardar temporariamente registros
@@ -101,79 +102,109 @@ int main (int argc, char *argv[]){
 	char **dadosInsercao; // guarda os dados a serem inseridos como novo registro
 	int insCont; // contador para percorrer os campos da insercao
 
-	int campoImprimir; // guarda o campo a ser impresso na funcao de busca de campo por RRN
-	int campoBuscar; // guarda o campo a ser usado como chave de busca
-	int buscaConcluida; // indicador de que a busca retornou resultados
-	char *stringBusca; // guarda a chave de busca digitada pelo usuario
-	int RRNAux; // variavel auxiliar para iterar a busca por RRN
+	/******** INICIALIZACAO DO PROGRAMA **********/
+	// tenta recuperar os dados/indices do disco
+	dadosFirst = fopen(DADOS_FIRSTFIT, "r+");
+	dadosBest = fopen(DADOS_BESTFIT, "r+");
+	dadosWorst = fopen(DADOS_WORSTFIT, "r+");
 
-	/******** CONFIGURAÇÕES DO PROGRAMA **********/
+	indiceFirstArq = fopen(INDICE_FIRSTFIT, "r");
+	indiceBestArq = fopen(INDICE_BESTFIT, "r");
+	indiceWorstArq = fopen(INDICE_WORSTFIT, "r");
 
-	// encontrando o arquivo de entrada
-	while (nomeArquivoEntrada == NULL){
-		printf("\nCONFIGURACAO: arquivo de entrada de dados\n");
-		printf(">> Digite o nome do arquivo de entrada: ");
-		nomeArquivoEntrada = leString();
+	// caso todos tenham sido abertos com sucesso (nenhum deles == NULL)
+	if (dadosFirst && dadosBest && dadosWorst && indiceFirstArq && indiceBestArq && indiceWorstArq){
+		// leitura dos indices para memoria primaria
+		indiceFirst = recuperaIndice(indiceFirstArq);
+		indiceBest = recuperaIndice(indiceBestArq);
+		indiceWorst = recuperaIndice(indiceWorstArq);
 
-		// tentando abrir o arquivo indicado pelo usuário
-		arquivoEntrada = fopen(nomeArquivoEntrada, "r");
+		// fechando arquivos de indice antigos
+		fclose(indiceFirstArq);
+		fclose(indiceBestArq);
+		fclose(indiceWorstArq);
+	} else { // caso algum esteja faltando, recrie os arquivos a partir de uma nova entrada
+		// fechando os arquivos que estivessem presentes
+		if (dadosFirst != NULL) fclose(dadosFirst);
+		if (dadosBest != NULL) fclose(dadosBest);
+		if (dadosWorst != NULL) fclose(dadosWorst);
+		if (indiceFirstArq != NULL) fclose(indiceFirstArq);
+		if (indiceBestArq != NULL) fclose(indiceBestArq);
+		if (indiceWorstArq != NULL) fclose(indiceWorstArq);
 
-		// caso tenha erros na abertura do arquivo, peça outra entrada
-		if (arquivoEntrada == NULL){
-			printf("\nErro na abertura do arquivo. Verifique se o nome dele esta correto.\n");
-			if (nomeArquivoEntrada != NULL) free(nomeArquivoEntrada);
-			nomeArquivoEntrada = NULL;
-			continue;
+		// encontrando o arquivo de entrada
+		printf("\nArquivos de dados/indices nao encontrados.\n");
+		printf("Para continuar a execucao, novos arquivos de dados e indices devem ser criados.\n");
+		while (nomeArquivoEntrada == NULL){
+			printf(">> Digite o nome de um novo arquivo de entrada: ");
+			nomeArquivoEntrada = leString();
+
+			// tentando abrir o arquivo indicado pelo usuário
+			arquivoEntrada = fopen(nomeArquivoEntrada, "r");
+
+			// caso tenha erros na abertura do arquivo, peça outra entrada
+			if (arquivoEntrada == NULL){
+				printf("\nErro na abertura do arquivo. Verifique se o nome dele esta correto.\n");
+				if (nomeArquivoEntrada != NULL) free(nomeArquivoEntrada);
+				nomeArquivoEntrada = NULL;
+				continue;
+			}
 		}
-	}
 
-	// criando e inicializando arquivos de saida e estruturas de indice
-	dadosFirst = inicializaArquivo(DADOS_FIRSTFIT); // First-Fit
-	indiceFirst = criaIndice();
+		// criando e inicializando arquivos de saida e estruturas de indice
+		dadosFirst = inicializaArquivo(DADOS_FIRSTFIT); // First-Fit
+		indiceFirst = criaIndice();
 
-	dadosBest = inicializaArquivo(DADOS_BESTFIT); // Best-Fit
-	indiceBest = criaIndice();
+		dadosBest = inicializaArquivo(DADOS_BESTFIT); // Best-Fit
+		indiceBest = criaIndice();
 
-	dadosWorst = inicializaArquivo(DADOS_WORSTFIT); // Worst-Fit
-	indiceWorst = criaIndice();
+		dadosWorst = inicializaArquivo(DADOS_WORSTFIT); // Worst-Fit
+		indiceWorst = criaIndice();
 
-	// preparando os arquivos de dados
-	while (!feof(arquivoEntrada)){ // enquanto ainda houver dados
-		dadosEntrada = leCSV(arquivoEntrada); // leia um registro do arquivo de entrada
-		
-		// insere nos arquivos de dados e libera a memória alocada para ele
-		insereRegistro_Delimitador(dadosEntrada, dadosFirst);
-		insereRegistro_Delimitador(dadosEntrada, dadosBest);
-		insereRegistro_Delimitador(dadosEntrada, dadosWorst);
-		liberaCSV(dadosEntrada);
+		// preparando os arquivos de dados
+		while (!feof(arquivoEntrada)){ // enquanto ainda houver dados
+			dadosEntrada = leCSV(arquivoEntrada); // leia um registro do arquivo de entrada
+			
+			// insere nos arquivos de dados e libera a memória alocada para ele
+			insereRegistro_Delimitador(dadosEntrada, dadosFirst);
+			insereRegistro_Delimitador(dadosEntrada, dadosBest);
+			insereRegistro_Delimitador(dadosEntrada, dadosWorst);
+			liberaCSV(dadosEntrada);
 
-		// caso tenha chegado ao fim do arquivo, pare de ler
-		if (feof(arquivoEntrada)) break;
-	}
+			// caso tenha chegado ao fim do arquivo, pare de ler
+			if (feof(arquivoEntrada)) break;
+		}
 
-	// preparando as estruturas de indice
-	fseek(dadosFirst, sizeof(int), SEEK_SET); // voltando o arquivo a posicao inicial,
-											  // depois do registro de cabecalho
+		// preparando as estruturas de indice
+		fseek(dadosFirst, sizeof(int), SEEK_SET); // voltando o arquivo a posicao inicial,
+												  // depois do registro de cabecalho
 
-	// enquanto ainda houver dados no arquivo de saída
-	while (!feof(dadosFirst)){
-		// pegue um registro do arquivo de saída
-		registroAux = buscaRegistro_Delimitador(dadosFirst, &tamanhoAux);
+		// enquanto ainda houver dados no arquivo de saída
+		while (!feof(dadosFirst)){
+			// recupera o byte offset do registro
+			offsetAux = ftell(dadosFirst);
 
-		if (registroAux != NULL){ // caso ele tenha dados válidos
-			// calcula o byte offset do registro
-			offsetAux = ftell(dadosFirst) - tamanhoAux;
+			// pegue um registro do arquivo de saída
+			registroAux = buscaRegistro_Delimitador(dadosFirst, &tamanhoAux);
 
-			// recupera a chave utilizada no indice
-			chaveAux = retornaTicket(registroAux);
 
-			// adiciona o registro nas estruturas de indice
-			insereIndice(indiceFirst, chaveAux, offsetAux);
-			insereIndice(indiceBest, chaveAux, offsetAux);
-			insereIndice(indiceWorst, chaveAux, offsetAux);
+			if (registroAux != NULL){ // caso ele tenha dados válidos
+				// recupera a chave utilizada no indice
+				chaveAux = retornaTicket(registroAux);
 
-			// libera a memória alocada para armazená-lo
-			free(registroAux);
+				// adiciona o registro nas estruturas de indice
+				inicializaIndice(indiceFirst, chaveAux, offsetAux);
+				inicializaIndice(indiceBest, chaveAux, offsetAux);
+				inicializaIndice(indiceWorst, chaveAux, offsetAux);
+
+				// ordene os indices
+				ordenaIndice(indiceFirst);
+				ordenaIndice(indiceBest);
+				ordenaIndice(indiceWorst);
+
+				// libera a memória alocada para armazená-lo
+				free(registroAux);
+			}
 		}
 	}
 
@@ -251,18 +282,6 @@ int main (int argc, char *argv[]){
 			case FUNCAO_INSERIR:
 				// Função: INSERIR REGISTRO
 
-				/*
-				********* ORDEM NO CSV
-				[0] dominio
-				[1] documento
-				[2] nome
-				[3] UF
-				[4] cidade
-				[5] dataHoraCadastro
-				[6] dataHoraAtualiza
-				[7] ticket
-				*/
-
 				// inicializando vetor de campos
 				dadosInsercao = (char **) calloc(NUM_CAMPOS, sizeof(char *));
 
@@ -313,6 +332,9 @@ int main (int argc, char *argv[]){
 				insereRegistro_WorstFit(dadosWorst, indiceWorst, registroAux, tamanhoAux, chaveAux);
 
 				printf("Registro inserido com sucesso.\n");
+
+				free(registroAux);
+				liberaCSV(dadosInsercao);
 			break;
 
 			case FUNCAO_IND_ESTAT:
@@ -346,13 +368,27 @@ int main (int argc, char *argv[]){
 					// imprime em qual posicao esta
 					printf("\n>>> POSICAO %d DOS INDICES:\n", indCont);
 
-					// imprime o registro de indice nesta posicao
+					// imprime o registro de indice nesta posicao e o registro correspondente
 					printf("> FIRST-FIT || Ticket: %d | Byte Offset: %d |\n",
 						itemFirst.chave, itemFirst.offset);
+					fseek(dadosFirst, itemFirst.offset, SEEK_SET);
+					registroAux = buscaRegistro_Delimitador(dadosFirst, &tamanhoAux);
+					imprimeRegistro(registroAux);
+					free(registroAux);
+
 					printf("> BEST-FIT  || Ticket: %d | Byte Offset: %d |\n",
 						itemBest.chave, itemBest.offset);
+					fseek(dadosBest, itemBest.offset, SEEK_SET);
+					registroAux = buscaRegistro_Delimitador(dadosBest, &tamanhoAux);
+					imprimeRegistro(registroAux);
+					free(registroAux);
+
 					printf("> WORST-FIT || Ticket: %d | Byte Offset: %d |\n",
 						itemWorst.chave, itemWorst.offset);
+					fseek(dadosWorst, itemWorst.offset, SEEK_SET);
+					registroAux = buscaRegistro_Delimitador(dadosWorst, &tamanhoAux);
+					imprimeRegistro(registroAux);
+					free(registroAux);
 
 					// caso ainda tenha registros a serem impressos,
 					// espere uma ação do usuário para mostrar o próximo
@@ -423,8 +459,25 @@ int main (int argc, char *argv[]){
 		if (funcaoMenu != FUNCAO_SAIR) funcaoMenu = FUNCAO_VAZIO;
 	}
 
-	/*// liberação de memória alocada
-	free(nomeArquivoEntrada);
-	fclose(arquivoEntrada);
-	fclose(arquivoSaida);*/
+	// salvar indices em disco
+	if (!salvaIndice(indiceFirst, INDICE_FIRSTFIT))
+		printf("Ocorreu um erro durante o salvamento do arquivo %s.\n", INDICE_FIRSTFIT);
+
+	if (!salvaIndice(indiceBest, INDICE_BESTFIT))
+		printf("Ocorreu um erro durante o salvamento do arquivo %s.\n", INDICE_BESTFIT);
+
+	if (!salvaIndice(indiceWorst, INDICE_WORSTFIT))
+		printf("Ocorreu um erro durante o salvamento do arquivo %s.\n", INDICE_WORSTFIT);
+
+	// liberacao de memoria alocada
+	fclose(dadosFirst);
+	fclose(dadosBest);
+	fclose(dadosWorst);
+
+	liberaIndice(indiceFirst);
+	liberaIndice(indiceBest);
+	liberaIndice(indiceWorst);
+
+	if (nomeArquivoEntrada != NULL) free(nomeArquivoEntrada);
+	if (arquivoEntrada != NULL) fclose(arquivoEntrada);
 }

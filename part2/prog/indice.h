@@ -22,5 +22,7 @@ int offsetIndice(Indice *indice, int chave);
 IndiceItem dadosPosIndice(Indice *indice, int posicao);
 void removeIndice(Indice *indice, int chave);
 int tamanhoIndice(Indice *indice);
+int salvaIndice(Indice *indice, char *nomeArquivo);
+Indice *recuperaIndice(FILE *arquivo);
 
 #endif
