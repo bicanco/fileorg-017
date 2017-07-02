@@ -52,26 +52,72 @@ int removeRegistro_WorstFit(FILE *arquivo, Indice *indice, int chave){
 	return 1;
 }
 
-void insereResgistro_WorstFit(FILE *arquivo, Indice *indice, char *reg, int chave, int tamanho){
+void insereRegistro_WorstFit(FILE *arquivo, Indice *indice, char *reg, int tamanho, int chave){
+	char delimitador = DELIMITADOR;
+	int espaco, offset, proximo;
+
+	int topo = retornaTopoArquivo(arquivo);
+	if (topo != FIM_DE_LISTA){ // lista nao esta vazia
+		fseek(arquivo, topo + 1, SEEK_SET);
+		fread(&espaco, sizeof(int), 1, arquivo);
+		fread(&proximo, sizeof(int), 1, arquivo);
+		if (espaco >= tamanho){ // novo registro cabe, pode gerar fragmentacao interna/externa
+			// atualiza topo da lista para remover o espaco preenchido
+			atualizaTopoArquivo(arquivo, proximo);
+
+			// escrever novo registro no arquivo
+			fseek(arquivo, topo, SEEK_SET);
+			fwrite(reg, sizeof(char), tamanho, arquivo);
+			fwrite(&delimitador, sizeof(char), 1, arquivo);
+
+			// adiciona no indice
+			insereIndice(indice, chave, topo);
+
+			if (espaco - tamanho - 1 >= 10){ // tratar fragmentacao interna
+				espaco -= tamanho + 1; // recupera novo tamanho do espaco que sobrou
+				offset = ftell(arquivo); // recupera offset do espaco que sobrou, apos a insercao dos dados
+
+				// insere na lista de forma ordenada descendente
+				insereLista_Descendente(arquivo, offset, espaco);
+
+			} // caso nao seja capaz de colocar os dados da remocao logica, temos fragmentacao externa
+
+			return;
+		}
+	}
+
+	// caso a funcao nao acabou ainda, o registro deve ser colocado ao fim do arquivo
+	// posiciona no fim do arquivo
+	fseek(arquivo, 0, SEEK_END); 
+	offset = ftell(arquivo);
+
+	// escreve no final do arquivo
+	fwrite(reg, sizeof(char), tamanho, arquivo);
+	fwrite(&delimitador, sizeof(char), 1, arquivo);
+
+	// adiciona no indice
+	insereIndice(indice, chave, offset);
+}
+/*
+void insereRegistro_WorstFit(FILE *arquivo, Indice *indice, char *reg, int chave, int tamanho){
 	int topo = retornaTopoArquivo(arquivo);
 	int topo_anterior = -1;
 	int aux, espaco, offset;
 	char delimitador = DELIMITADOR;
 
-	fseek(arquivo, topo, SEEK_SET);
-	fgetc(arquivo);
+	fseek(arquivo, topo + 1, SEEK_SET);
 	fread(&espaco, sizeof(int), 1, arquivo);
 
 	if(espaco < tamanho){
 		fseek(arquivo, 0, SEEK_END);
-	}else{
-	       	if((espaco-tamanho) >= 10){
+	} else {
+	    if((espaco-tamanho-1) >= 10){
 			fseek(arquivo, topo, SEEK_SET);
 			aux = espaco-tamanho-1;
 			fwrite(&aux, sizeof(int), 1, arquivo);
 			fseek(arquivo, aux-5,SEEK_CUR);
 			fwrite(&delimitador,sizeof(char),1,arquivo);
-		}else{
+		} else { 
 			fread(&aux, sizeof(int), 1, arquivo);
 			atualizaTopoArquivo(arquivo, aux);
 		}
@@ -84,3 +130,4 @@ void insereResgistro_WorstFit(FILE *arquivo, Indice *indice, char *reg, int chav
 
 	insereIndice(indice, chave, offset);
 }
+*/
