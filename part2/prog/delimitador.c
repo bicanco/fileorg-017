@@ -1,27 +1,27 @@
 /*==============================================================*\
-||  Primeiro Trabalho PrÃ¡tico - OrganizaÃ§Ã£o de Arquivos(SCC215) ||
-||   															||
-|| Alunos:  									NÂº USP: 	    ||
-||   	David Souza Rodrigues							4461180 ||
-||   	Fernanda Tostes Marana  						4471070 ||
-||   	Gabriel Toschi de Oliveira  					9763039 ||
-||   	Marcelo de Moraes Carvalho da Silva 			9791048 ||
-||   															||
-|| Professora:  												|| 
-||   	Dra. Cristina Dutra de Aguiar Ciferri  					||
-||   															||
-|| Entrega:														|| 
-||     	09/05/2017				 								||
-||   															||
-||  Arquivo: 													||
-||   	delimitador.c											||
-||   															||
-|| DescriÃ§Ã£o:													||
-||    	FunÃ§Ãµes que manipulam um arquivo unico de campos de 	||
-||		tamanho variaveis com indicador de tamanho, campos de 	||
-||		tamanho fixos e registros de tamanhos variaveis com 	||
-||		delimitador de final de registro, incluindo a inserÃ§Ã£o 	||
-||		e busca de dados nesse padrÃ£o.							||
+||  Segundo Trabalho Prático - Organização de Arquivos(SCC215) ||
+||   				  			       ||
+|| Alunos:  				Nº USP: 	       ||
+||   	David Souza Rodrigues			       4461180 ||
+||   	Fernanda Tostes Marana  	               4471070 ||
+||   	Gabriel Toschi de Oliveira  		       9763039 ||
+||   	Marcelo de Moraes Carvalho da Silva 	       9791048 ||
+||							       ||
+|| Professora: 						       || 
+||   	Dra. Cristina Dutra de Aguiar Ciferri  	               ||
+||  							       ||
+|| Entrega:						       || 
+||     	02/07/2017					       ||
+||   							       ||
+|| Arquivo: 						       ||
+||   	delimitador.c					       ||
+||   							       ||
+|| Descrição:    					       ||
+||	Funções que manipulam um arquivo unico de campos de    ||
+||	tamanho variaveis com indicador de tamanho, campos de  ||
+||	tamanho fixos e registros de tamanhos variaveis com    ||
+||	delimitador de final de registro, incluindo a inserção ||
+||	e busca de dados nesse padrão.	           	       ||
 \*==============================================================*/
 
 #include <stdlib.h>
@@ -75,7 +75,7 @@ void insereRegistro_Inicializa(char **csv, FILE *fds, Indice *indice){
 
 FILE *inicializaArquivo(char *nomeArquivo){
 	int cabecalhoInicial = FIM_DE_LISTA;
-
+	//função que incializa um arquivo com resgistro de cabeçalho
 	FILE *arquivo = fopen(nomeArquivo, "w+");
 	fwrite(&cabecalhoInicial, sizeof(int), 1, arquivo);
 
@@ -84,7 +84,7 @@ FILE *inicializaArquivo(char *nomeArquivo){
 
 int retornaTopoArquivo(FILE *arquivo){
 	int topo;
-
+	//função que retorna o conteúdo do registro de cabeçalho
 	fseek(arquivo, 0, SEEK_SET);
 	fread(&topo, sizeof(int), 1, arquivo);
 
@@ -94,11 +94,12 @@ int retornaTopoArquivo(FILE *arquivo){
 void atualizaTopoArquivo(FILE *arquivo, int novoTopo){
 	fseek(arquivo, 0, SEEK_SET);
 	fwrite(&novoTopo, sizeof(int), 1, arquivo);
+	//função que atualiza o registro de cabeçalho
 }
 
 int tamanhoListaArquivo(FILE *arquivo){
 	int contador = 0;
-
+	//função que retorna o tamanho da lista de registros removidos
 	int aux = retornaTopoArquivo(arquivo);
 	while (aux != FIM_DE_LISTA){
 		contador++;
@@ -112,7 +113,7 @@ int tamanhoListaArquivo(FILE *arquivo){
 int tamanhoRegistro_Delimitador(FILE *fp){
 	int tamanho = 0;
 	char c;
-
+	//função que retorna o tmanho do registro
 	do {
 		c = fgetc(fp);
 		if (!feof(fp) && c != DELIMITADOR) tamanho++;
@@ -124,7 +125,7 @@ int tamanhoRegistro_Delimitador(FILE *fp){
 void estatisticasLista(FILE *arquivo){
 	int quebraContador = 0;
 	int proximo, tamanho;
-
+	//função que calcula as estíticas da lista de registros removidos
 	int aux = retornaTopoArquivo(arquivo);
 	while (aux != FIM_DE_LISTA){
 		fseek(arquivo, aux + 1, SEEK_SET);

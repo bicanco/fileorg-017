@@ -11,7 +11,7 @@
 ||   	Dra. Cristina Dutra de Aguiar Ciferri  	               ||
 ||  							       ||
 || Entrega:						       || 
-||     	09/05/2017					       ||
+||     	02/07/2017					       ||
 ||   							       ||
 || Arquivo: 						       ||
 ||   	bestFit.c					       ||
