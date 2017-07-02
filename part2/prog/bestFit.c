@@ -1,3 +1,25 @@
+/*==============================================================*\
+||  Segundo Trabalho Prático - Organização de Arquivos(SCC215) ||
+||   				  			       ||
+|| Alunos:  				Nº USP: 	       ||
+||   	David Souza Rodrigues			       4461180 ||
+||   	Fernanda Tostes Marana  	               4471070 ||
+||   	Gabriel Toschi de Oliveira  		       9763039 ||
+||   	Marcelo de Moraes Carvalho da Silva 	       9791048 ||
+||							       ||
+|| Professora: 						       || 
+||   	Dra. Cristina Dutra de Aguiar Ciferri  	               ||
+||  							       ||
+|| Entrega:						       || 
+||     	09/05/2017					       ||
+||   							       ||
+|| Arquivo: 						       ||
+||   	bestFit.c					       ||
+||   							       ||
+|| Descrição:    					       ||
+||     Biblioteca que aplica o método de Best-Fit              ||
+\*==============================================================*/
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -110,88 +132,3 @@ void insereRegistro_BestFit(FILE *arquivo, Indice *indice, char *reg, int tamanh
 		} // caso nao seja capaz de colocar os dados da remocao logica, temos fragmentacao externa
 	}
 }
-
-/*
-void insereRegistro_BestFit(FILE *arquivo, Indice *indice, char *reg, int tamanho, int chave){
-	int topo = retornaTopoArquivo(arquivo);
-	int topo_anterior = -1;
-	int aux, espaco, offset;
-	char delimitador = DELIMITADOR;
-
-
-	while( topo != -1){
-		fseek(arquivo, topo, SEEK_SET);
-		fgetc(arquivo);
-		fread(&espaco, sizeof(int), 1, arquivo);
-		if(espaco >= tamanho){
-			break;
-		}
-		topo_anterior = topo;
-		fread(&topo, sizeof(int), 1, arquivo);		
-	}
-
-
-
-	if(topo == -1){
-		fseek(arquivo, 0, SEEK_END);
-	}else{
-		if((espaco-tamanho) >= 10){
-			fseek(arquivo, topo, SEEK_SET);
-			aux = espaco-tamanho-1;
-			fwrite(&aux, sizeof(int), 1, arquivo);
-			fseek(arquivo, aux-5,SEEK_CUR);
-			fwrite(&delimitador,sizeof(char),1,arquivo);
-		}else if(topo_anterior != -1){
-			fseek(arquivo, topo+5, SEEK_SET);
-			fread(&aux, sizeof(int), 1, arquivo);
-			fseek(arquivo, topo_anterior+5, SEEK_SET);
-			fwrite(&aux, sizeof(int), 1, arquivo);
-		}else{
-			fread(&aux, sizeof(int), 1, arquivo);
-			atualizaTopoArquivo(arquivo, aux);
-		}
-		fseek(arquivo, topo+espaco-tamanho,SEEK_SET);
-	}
-	offset = ftell(arquivo);
-	fwrite(reg, sizeof(char), tamanho, arquivo);
-	fwrite(&delimitador, sizeof(char), 1, arquivo);
-
-	insereIndice(indice, chave, offset);
-}*/
-/*
-void bestFit(FILE* fp, char **csv, int tamanho, int byteoffset, int byteoffset_anterior){
-	int espaco, proximo, aux;
-	char delimitador = DELIMITADOR;
-
-	if(byteoffset == -1){
-		fseek(fp, 0, SEEK_END);
-		insereRegistro_Delimitador(csv, fp);
-		return;
-	}
-
-	fseek(fp, byteoffset, SEEK_SET);
-
-	fgetc(fp);
-	fread(&espaco, sizeof(int), 1, fp):
-	fread(&proximo, sizeof(int), 1, fp);
-
-	if( espaco == tamanho){
-		fseek(fp, byteoffset, SEEK_SET);
-		insereRegistro_Delimitador(csv,fp);
-		fseek(fp, byteoffset_anterior+5,SEEK_SET);
-		fwrite(&proximo, sizeof(int),1,fp);
-		return;
-	}else if(espaco > tamanho){
-		aux = espaco-(tamanho+1);
-
-		fseek(fp, byteoffset+1, SEEK_SET);
-		fwrite(&aux,sizeof(int),1,fp);
-		fseek(fp, byteoffset+aux, SEEK_SET);
-		fwrite(delimitador, sizeof(char),1,fp);
-		insereRegistro_Delimitador(csv,fp);
-		return;
-	}else{
-		bestFit(fp, csv, tamanho, proximo, byteoffset);
-	}
-}
-*/

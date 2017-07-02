@@ -1,3 +1,24 @@
+/*==============================================================*\
+||  Segundo Trabalho Prático - Organização de Arquivos(SCC215) ||
+||   				  			       ||
+|| Alunos:  				Nº USP: 	       ||
+||   	David Souza Rodrigues			       4461180 ||
+||   	Fernanda Tostes Marana  	               4471070 ||
+||   	Gabriel Toschi de Oliveira  		       9763039 ||
+||   	Marcelo de Moraes Carvalho da Silva 	       9791048 ||
+||							       ||
+|| Professora: 						       || 
+||   	Dra. Cristina Dutra de Aguiar Ciferri  	               ||
+||  							       ||
+|| Entrega:						       || 
+||     	09/05/2017					       ||
+||   							       ||
+|| Arquivo: 						       ||
+||   	worsttFit.c					       ||
+||   							       ||
+|| Descrição:    					       ||
+||     Biblioteca que aplica o método de Worst-Fit             ||
+\*==============================================================*/
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -98,36 +119,3 @@ void insereRegistro_WorstFit(FILE *arquivo, Indice *indice, char *reg, int taman
 	// adiciona no indice
 	insereIndice(indice, chave, offset);
 }
-/*
-void insereRegistro_WorstFit(FILE *arquivo, Indice *indice, char *reg, int chave, int tamanho){
-	int topo = retornaTopoArquivo(arquivo);
-	int topo_anterior = -1;
-	int aux, espaco, offset;
-	char delimitador = DELIMITADOR;
-
-	fseek(arquivo, topo + 1, SEEK_SET);
-	fread(&espaco, sizeof(int), 1, arquivo);
-
-	if(espaco < tamanho){
-		fseek(arquivo, 0, SEEK_END);
-	} else {
-	    if((espaco-tamanho-1) >= 10){
-			fseek(arquivo, topo, SEEK_SET);
-			aux = espaco-tamanho-1;
-			fwrite(&aux, sizeof(int), 1, arquivo);
-			fseek(arquivo, aux-5,SEEK_CUR);
-			fwrite(&delimitador,sizeof(char),1,arquivo);
-		} else { 
-			fread(&aux, sizeof(int), 1, arquivo);
-			atualizaTopoArquivo(arquivo, aux);
-		}
-		fseek(arquivo, topo+espaco-tamanho,SEEK_SET);
-	}
-
-	offset = ftell(arquivo);
-	fwrite(reg, sizeof(char), tamanho, arquivo);
-	fwrite(&delimitador, sizeof(char), 1, arquivo);
-
-	insereIndice(indice, chave, offset);
-}
-*/
