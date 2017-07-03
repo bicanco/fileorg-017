@@ -84,7 +84,7 @@ int main (int argc, char *argv[]){
 	FILE *indiceFirstArq, *indiceBestArq, *indiceWorstArq; // arquivos de indice para cada um dos tipos
 	char *nomeArquivoEntrada = NULL; // guarda o nome do arquivo de entrada dos dados
 	FILE *arquivoEntrada = NULL; // representa o arquivo de entrada dos dados
-	char **dadosEntrada; // guarda os dados de entrada lidos pelo programa
+	char **dadosEntrada = NULL; // guarda os dados de entrada lidos pelo programa
 
 	char *registroAux; // ponteiro auxiliar para guardar temporariamente registros
 	int tamanhoAux; // auxiliar para guardar tamanhos temporariamente
@@ -165,14 +165,19 @@ int main (int argc, char *argv[]){
 		while (!feof(arquivoEntrada)){ // enquanto ainda houver dados
 			dadosEntrada = leCSV(arquivoEntrada); // leia um registro do arquivo de entrada
 			
+			// caso tenha chegado ao fim do arquivo, pare de ler
+			if (feof(arquivoEntrada)){
+				if (dadosEntrada != NULL) liberaCSV(dadosEntrada);
+				break;
+			}
+
 			// insere nos arquivos de dados e libera a memória alocada para ele
 			insereRegistro_Delimitador(dadosEntrada, dadosFirst);
 			insereRegistro_Delimitador(dadosEntrada, dadosBest);
 			insereRegistro_Delimitador(dadosEntrada, dadosWorst);
-			liberaCSV(dadosEntrada);
 
-			// caso tenha chegado ao fim do arquivo, pare de ler
-			if (feof(arquivoEntrada)) break;
+			liberaCSV(dadosEntrada);
+			dadosEntrada = NULL;	
 		}
 
 		// preparando as estruturas de indice
@@ -188,7 +193,7 @@ int main (int argc, char *argv[]){
 			registroAux = buscaRegistro_Delimitador(dadosFirst, &tamanhoAux);
 
 
-			if (registroAux != NULL){ // caso ele tenha dados válidos
+			if (!feof(dadosFirst) && registroAux != NULL){ // caso ele tenha dados válidos
 				// recupera a chave utilizada no indice
 				chaveAux = retornaTicket(registroAux);
 
@@ -204,8 +209,11 @@ int main (int argc, char *argv[]){
 
 				// libera a memória alocada para armazená-lo
 				free(registroAux);
+				registroAux = NULL;
 			}
 		}
+
+		if (registroAux != NULL) free(registroAux);
 	}
 
 	/*********** MENU PRINCIPAL E FUNÇÕES DE MANIPULAÇÃO ***********/
