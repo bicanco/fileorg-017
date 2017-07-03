@@ -1,13 +1,45 @@
+/*==============================================================*\
+||  Segundo Trabalho Prático - Organização de Arquivos(SCC215) ||
+||   				  			       ||
+|| Alunos:  				Nº USP: 	       ||
+||   	David Souza Rodrigues			       4461180 ||
+||   	Fernanda Tostes Marana  	               4471070 ||
+||   	Gabriel Toschi de Oliveira  		       9763039 ||
+||   	Marcelo de Moraes Carvalho da Silva 	       9791048 ||
+||							       ||
+|| Professora: 						       || 
+||   	Dra. Cristina Dutra de Aguiar Ciferri  	               ||
+||  							       ||
+|| Entrega:						       || 
+||     	02/07/2017					       ||
+||   							       ||
+|| Arquivo: 						       ||
+||   	indice.c					       ||
+||   							       ||
+|| Descrição:    					       ||
+||	Biblioteca com funções de tratamento de Índice         ||
+\*==============================================================*/
 #include <stdlib.h>
 #include <stdio.h>
 
 #include "indice.h"
+/**
+	criaIndice
 
+	Função que cria um índice
+	RETORNA | o índice criado
+**/
 Indice *criaIndice(){
 	Indice *indice = (Indice *) calloc(1, sizeof(Indice));
 	return indice;
 }
 
+/**
+	liberaIndice
+
+	Função que apaga um índice da RAM
+	PARAMETRO -indice- | o índice que deseja-se apagar
+**/
 void liberaIndice(Indice *indice){
 	if (indice != NULL){
 		if (indice->dados != NULL) free(indice->dados);
@@ -15,6 +47,14 @@ void liberaIndice(Indice *indice){
 	}
 }
 
+/**
+	inicializaIndice
+
+	Função que inicializa o índice
+	PARAMETRO -indice- | o índice já criado
+	PARAMETRO -chave- | a chave primária do primeiro item a ser colocado
+	PARAMETRO -offset- | o byteoofset do registro indexado
+**/
 void inicializaIndice(Indice *indice, int chave, int offset){
 	indice->dados = (IndiceItem *) realloc(indice->dados, sizeof(IndiceItem) * (indice->tamanho + 1));
 	indice->dados[indice->tamanho].chave = chave;
@@ -22,22 +62,50 @@ void inicializaIndice(Indice *indice, int chave, int offset){
 	indice->tamanho++;
 }
 
+/**
+	imprimeIndice
+
+	Função que imprime um índice
+	PARAMETRO -indice- | o indice que deseja-se imprimir
+**/
 void imprimeIndice(Indice *indice){
 	int i;
 	for (i = 0; i < indice->tamanho; i++)
 		printf("[%d] C: %d\t\t| OFF: %d\n", i, indice->dados[i].chave, indice->dados[i].offset);
 }
 
+/**
+	comparaIndiceItem
+
+	Função que compara dos itens de um índice
+	PARAMETRO -a- | um dos itens a comparar
+	PARAMETRO -b- | o outro item a ser comaparado
+	RETORNA | a comparação
+**/
 int comparaIndiceItem(const void *a, const void *b){
 	IndiceItem A = *(IndiceItem*)a;
 	IndiceItem B = *(IndiceItem*)b;
 	return (A.chave - B.chave);
 }
 
+/**
+	ordenaIndice
+
+	Função que ordena um índice
+	PARAMETRO -indice- | o indice que deseja-se ordenar
+**/
 void ordenaIndice(Indice *indice){
 	qsort(indice->dados, indice->tamanho, sizeof(IndiceItem), comparaIndiceItem);
 }
 
+/**
+	insereIndice
+
+	Função que insere um elemento em um índice
+	PARAMETRO -indice- | o indice em que deseja-se inserir
+	PARAMETRO -chave- | a chave primaria
+	PARAMETRO -offset- | o byteoffset do registro indexado
+**/
 void insereIndice(Indice *indice, int chave, int offset){
 	int i;
 
@@ -66,7 +134,14 @@ void insereIndice(Indice *indice, int chave, int offset){
 	// atualiza tamanho do indice
 	indice->tamanho++;
 }
+/**
+	buscaIndice
 
+	Função que busca um elemento em um índice
+	PARAMETRO -indice- | o indice em que deseja-se inserir
+	PARAMETRO -chave- | a chave primaria de busca
+	RETORNA | -1 se não for encontrado e o bytsoffset se for
+**/
 int buscaIndice(Indice *indice, int chave){
 	int esq, meio, dir;
 
@@ -83,6 +158,14 @@ int buscaIndice(Indice *indice, int chave){
 	return -1;
 }
 
+/**
+	offsetIndice
+
+	Função que retorna o offset relacionada a chave de busaca passda
+	PARAMETRO -indice- | o indice em que deseja-se inserir
+	PARAMETRO -chave- | a chave primaria de busca
+	RETORNA | o offset relacionado a chave passada e -1 se não for encontrada a chave
+**/
 int offsetIndice(Indice *indice, int chave){
 	int posicao = buscaIndice(indice, chave);
 
@@ -90,6 +173,14 @@ int offsetIndice(Indice *indice, int chave){
 		else return -1;
 }
 
+/**
+	dadosPosIndice
+
+	Função que retorna o item do indice na posição desejada
+	PARAMETRO -indice- | o indice em que deseja-se inserir
+	PARAMETRO -posicao- | a posição desejada
+	RATORNA | o item da posição passada
+**/
 IndiceItem dadosPosIndice(Indice *indice, int posicao){
 	if (posicao >= 0 && posicao < indice->tamanho)
 		return indice->dados[posicao];
@@ -100,6 +191,13 @@ IndiceItem dadosPosIndice(Indice *indice, int posicao){
 	return retornoNulo;
 }
 
+/**
+	removeIndice
+
+	Função que remove um elemento em um índice
+	PARAMETRO -indice- | o indice em que deseja-se inserir
+	PARAMETRO -chave- | a chave primaria
+**/
 void removeIndice(Indice *indice, int chave){
 	int i;
 	int posicao = buscaIndice(indice, chave);
@@ -115,10 +213,25 @@ void removeIndice(Indice *indice, int chave){
 	indice->dados = (IndiceItem *) realloc(indice->dados, sizeof(IndiceItem) * indice->tamanho);
 }
 
+/**
+	tamanhoIndice
+
+	Função que retorna o tamanho do índice
+	PARAMETRO -indice- | o indice em que deseja-se inserir
+	RETORNA | o tamanho do indice
+**/
 int tamanhoIndice(Indice *indice){
 	return indice->tamanho;
 }
 
+/**
+	salvaIndice
+
+	Função que salva um índice em um arquivo
+	PARAMETRO -indice- | o indice em que deseja-se inserir
+	PARAMETRO -nomeArquivo- | o nome do arquivo em que se quer gravar o índice
+	RETORNA | 0 se for passado um nome inválido e 1 se for bem sucedido
+**/
 int salvaIndice(Indice *indice, char *nomeArquivo){
 	FILE *arquivo = fopen(nomeArquivo, "w+");
 	if (arquivo == NULL) return 0;
@@ -137,6 +250,13 @@ int salvaIndice(Indice *indice, char *nomeArquivo){
 	return 1;
 }
 
+/**
+	recuperaIndice
+
+	Função que um índice salvo em um arquivo
+	PARAMETRO -arquivo- | o arquivo de índice
+	RETORNA | o índice
+**/
 Indice *recuperaIndice(FILE *arquivo){
 	Indice *indice = criaIndice();
 	int chave, offset;
